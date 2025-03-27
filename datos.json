@@ -1,0 +1,242 @@
+[
+    {
+      "Elemento": "Olla de carne",
+      "Categoría": "Alimentos",
+      "Descripción": "Es un caldo sustancioso y tradicional que contiene carne de res, papas, zanahorias, chayote, yuca, tiquisque, plátano y otros vegetales. Es un plato reconfortante y nutritivo, ideal para días frescos o lluviosos."
+    },
+    {
+      "Elemento": "Gallo pinto",
+      "Categoría": "Alimentos",
+      "Descripción": "Es el plato nacional de Costa Rica. Consiste en arroz y frijoles negros o rojos, cocinados juntos con cebolla, chile dulce (pimiento) y culantro. Se suele servir en el desayuno, acompañado de huevos, queso o plátano maduro frito."
+    },
+    {
+      "Elemento": "Arroz guacho",
+      "Categoría": "Alimentos",
+      "Descripción": "Un tipo de arroz caldoso, similar a un risotto, que se prepara con carne de cerdo, pollo o mariscos, vegetales y especias. Es un plato abundante y sabroso."
+    },
+    {
+      "Elemento": "Ajiaco",
+      "Categoría": "Alimentos",
+      "Descripción": "Una sopa espesa y tradicional, que puede variar según la región. Generalmente contiene carne, papas, yuca, maíz y otros vegetales."
+    },
+    {
+      "Elemento": "Chilasquilas",
+      "Categoría": "Alimentos",
+      "Descripción": "Tortillas de maíz cortadas en trozos, fritas y luego cocinadas en una salsa de tomate y chile. Se sirven con queso, crema y otros acompañamientos."
+    },
+    {
+      "Elemento": "Empanadas de maíz",
+      "Categoría": "Alimentos",
+      "Descripción": "Masa de maíz rellena de carne, queso, frijoles o otros ingredientes, que se hornea o se fríe."
+    },
+    {
+      "Elemento": "Guisos",
+      "Categoría": "Alimentos",
+      "Descripción": "Preparaciones de carne, pollo o pescado cocinados a fuego lento en una salsa, con vegetales y especias."
+    },
+    {
+      "Elemento": "Picadillos",
+      "Categoría": "Alimentos",
+      "Descripción": "Vegetales picados finamente, como papas, chayote o vainicas, cocinados con carne molida o solos."
+    },
+    {
+      "Elemento": "Casado",
+      "Categoría": "Alimentos",
+      "Descripción": "Plato típico que incluye arroz, frijoles, carne (res, pollo, cerdo o pescado), ensalada, plátano maduro frito y a veces otros acompañamientos."
+    },
+    {
+      "Elemento": "Tamal asado",
+      "Categoría": "Alimentos",
+      "Descripción": "Masa de maíz rellena de carne, vegetales y especias, envuelta en hojas de plátano y cocinada al horno."
+    },
+    {
+      "Elemento": "Bizcochos",
+      "Categoría": "Alimentos",
+      "Descripción": "Panecillos dulces o salados, hechos con harina de trigo o maíz."
+    },
+    {
+      "Elemento": "Pasteles",
+      "Categoría": "Alimentos",
+      "Descripción": "Masa rellena de carne, pollo, queso o vegetales, horneada o frita."
+    },
+    {
+      "Elemento": "Lomos rellenos",
+      "Categoría": "Alimentos",
+      "Descripción": "Lomo de res o cerdo relleno de jamón, queso, vegetales u otros ingredientes."
+    },
+    {
+      "Elemento": "Tortas de maíz",
+      "Categoría": "Alimentos",
+      "Descripción": "Tortillas gruesas de maíz, que pueden ser dulces o saladas."
+    },
+    {
+      "Elemento": "Empanadas",
+      "Categoría": "Alimentos",
+      "Descripción": "Masa rellena, similares a las empanadas de maíz pero hechas con harina de trigo."
+    },
+    {
+      "Elemento": "Arepas",
+      "Categoría": "Alimentos",
+      "Descripción": "Tortillas gruesas de maíz, típicas de la región caribeña."
+    },
+    {
+      "Elemento": "Cajeta de coco",
+      "Categoría": "Alimentos",
+      "Descripción": "Dulce hecho con leche de coco, azúcar y coco rallado."
+    },
+    {
+      "Elemento": "Pan batido",
+      "Categoría": "Alimentos",
+      "Descripción": "Pan dulce, suave y esponjoso."
+    },
+    {
+      "Elemento": "Pan de rosa",
+      "Categoría": "Alimentos",
+      "Descripción": "Pan dulce, con un sabor característico y un color rosado."
+    },
+    {
+      "Elemento": "Quesadillas de queso",
+      "Categoría": "Alimentos",
+      "Descripción": "Masa rellena de queso, horneada o frita."
+    },
+    {
+      "Elemento": "Alfajores",
+      "Categoría": "Alimentos",
+      "Descripción": "Galletas rellenas de dulce de leche, cubiertas de azúcar glas."
+    },
+    {
+      "Elemento": "Piñonate",
+      "Categoría": "Alimentos",
+      "Descripción": "Dulce hecho con piña, azúcar y especias."
+    },
+    {
+      "Elemento": "Alborotos",
+      "Categoría": "Alimentos",
+      "Descripción": "Dulces hechos con azúcar y otros ingredientes, como maní o coco."
+    },
+    {
+      "Elemento": "Suspiros",
+      "Categoría": "Alimentos",
+      "Descripción": "Merengues pequeños y crujientes."
+    },
+    {
+      "Elemento": "Pasados",
+      "Categoría": "Alimentos",
+      "Descripción": "Frutas en almíbar, como higos o duraznos."
+    },
+    {
+      "Elemento": "Turrones",
+      "Categoría": "Alimentos",
+      "Descripción": "Dulces hechos con almendras, miel y azúcar."
+    },
+    {
+      "Elemento": "Rabanitos dulces",
+      "Categoría": "Alimentos",
+      "Descripción": "Rábanos cocinados en almíbar, un postre inusual."
+    },
+    {
+      "Elemento": "Ceviche",
+      "Categoría": "Alimentos",
+      "Descripción": "Pescado o mariscos crudos, marinados en jugo de limón, cebolla y cilantro."
+    },
+    {
+      "Elemento": "Vigorón",
+      "Categoría": "Alimentos",
+      "Descripción": "Plato que combina yuca, chicharrón (piel de cerdo frita) y repollo encurtido."
+    },
+    {
+      "Elemento": "Arroz con leche",
+      "Categoría": "Alimentos",
+      "Descripción": "Postre cremoso hecho con arroz, leche, azúcar y canela."
+    },
+    {
+      "Elemento": "Tamal pisque",
+      "Categoría": "Alimentos",
+      "Descripción": "Tamal hecho solo de masa de maíz, sin relleno."
+    },
+    {
+      "Elemento": "Rice and beans",
+      "Categoría": "Alimentos",
+      "Descripción": "Plato caribeño de arroz y frijoles cocinados con leche de coco y especias."
+    },
+    {
+      "Elemento": "Patí",
+      "Categoría": "Alimentos",
+      "Descripción": "Empanada rellena de carne sazonada, típica de la costa caribeña."
+    },
+    {
+      "Elemento": "Johnny cake",
+      "Categoría": "Alimentos",
+      "Descripción": "Pan plano frito, hecho con harina de maíz, típico de la costa caribeña."
+    },
+    {
+      "Elemento": "Pan bon",
+      "Categoría": "Alimentos",
+      "Descripción": "Pan dulce especiado, con frutas confitadas, típico de la costa caribeña."
+    },
+    {
+      "Elemento": "Aguadulce",
+      "Categoría": "Bebidas",
+      "Descripción": "Bebida caliente hecha con agua y dulce de tapa (azúcar de caña sin refinar)."
+    },
+    {
+      "Elemento": "Tibio",
+      "Categoría": "Bebidas",
+      "Descripción": "Bebida caliente hecha con leche, agua y dulce de tapa."
+    },
+    {
+      "Elemento": "Chocolate",
+      "Categoría": "Bebidas",
+      "Descripción": "Bebida caliente hecha con cacao, leche o agua y azúcar."
+    },
+    {
+      "Elemento": "Mistela",
+      "Categoría": "Bebidas",
+      "Descripción": "Bebida alcohólica dulce, hecha con jugo de frutas y aguardiente."
+    },
+    {
+      "Elemento": "Chicheme",
+      "Categoría": "Bebidas",
+      "Descripción": "Bebida fermentada hecha con maíz, agua y especias."
+    },
+    {
+      "Elemento": "Horchata",
+      "Categoría": "Bebidas",
+      "Descripción": "Bebida refrescante hecha con arroz, leche, azúcar y canela."
+    },
+    {
+      "Elemento": "Resbaladera",
+      "Categoría": "Bebidas",
+      "Descripción": "Bebida refrescante hecha con arroz, cebada, leche y especias."
+    },
+    {
+      "Elemento": "Pozol",
+      "Categoría": "Bebidas",
+      "Descripción": "Bebida espesa hecha con maíz, cacao y agua."
+    },
+    {
+      "Elemento": "Pinolillo",
+      "Categoría": "Bebidas",
+      "Descripción": "Bebida hecha con harina de maíz tostado, cacao y especias."
+    },
+    {
+      "Elemento": "Guarupo",
+      "Categoría": "Bebidas",
+      "Descripción": "Bebida fermentada hecha con frutas."
+    },
+    {
+      "Elemento": "Vinos de flores",
+      "Categoría": "Bebidas",
+      "Descripción": "Bebidas alcohólicas hechas con flores, como el vino de coyol."
+    },
+    {
+      "Elemento": "Agua de sapo",
+      "Categoría": "Bebidas",
+      "Descripción": "Bebida refrescante hecha con dulce de tapa, jengibre y limón."
+    },
+    {
+      "Elemento": "Refrescos",
+      "Categoría": "Bebidas",
+      "Descripción": "Jugos de frutas naturales, como naranja, piña o mora."
+    }
+  ]
