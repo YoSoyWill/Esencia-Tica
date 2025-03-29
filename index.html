@@ -110,7 +110,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             const listaElementos = document.getElementById('lista-elementos');
 
-            fetch('datos.json')
+            fetch('https://yosoywill.github.io/Esencia-Tica/datos.json')
                 .then(response => response.json())
                 .then(data => {
                     const elementosOrdenados = data.sort((a, b) => a.elemento.localeCompare(b.elemento));
