@@ -1,137 +1,236 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Elementos</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
     <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 56px; /* Altura del menú inferior */
+            box-sizing: border-box;
+            position: relative; /* Para que el pie de página se posicione absolutamente dentro de este contenedor */
+            min-height: 100vh; /* Asegura que el body ocupe al menos la altura de la pantalla */
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #003893;
+            text-align: center;
+            margin-bottom: 20px;
+        }
         #lista-elementos {
             list-style-type: none;
             padding: 0;
-            margin-top: 20px;
+            margin-top: 0;
         }
         #lista-elementos li {
             cursor: pointer;
-            padding: 15px;
-            border-bottom: 1px solid #ddd;
-            transition: background-color 0.3s;
-            border-radius: 8px;
+            padding: 12px;
+            border-bottom: 1px solid #e0e0e0;
+            transition: background-color 0.3s ease;
+            border-radius: 4px;
             background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
         }
         #lista-elementos li:hover {
-            background-color: #e9ecef;
+            background-color: #e0e0e0;
         }
         #lista-elementos li:last-child {
             border-bottom: none;
         }
-        .modal-header {
-            background-color: #007bff;
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #003893;
             color: white;
-            border-bottom: 1px solid #007bff;
-        }
-        .modal-title {
-            font-size: 20px;
-            font-weight: bold;
-        }
-        .modal-body {
-            padding: 20px;
-            font-size: 16px;
-        }
-        .modal-footer {
-            border-top: 1px solid #ddd;
-            padding: 15px;
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-around;
+            padding: 10px 0;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            flex-wrap: wrap; /* Permite que los botones se envuelvan en pantallas pequeñas */
         }
-        .btn-secondary {
-            background-color: #6c757d;
-            color: white;
+        .bottom-nav button {
+            background-color: transparent;
             border: none;
+            color: white;
             padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .btn-secondary:hover {
-            background-color: #5a6268;
-        }
-        h1 {
-            color: #2c3e50;
             text-align: center;
-            margin-bottom: 30px;
-            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 4px;
+            display: flex; /* Usamos flexbox para el layout interno del botón */
+            flex-direction: column; /* Apilamos el texto principal y la categoría verticalmente */
+            align-items: center; /* Centramos los elementos dentro del botón */
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        .bottom-nav button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
         }
-        #modal-elemento .modal-content {
-             border-radius: 10px;
+        .bottom-nav button:active {
+            background-color: rgba(255, 255, 255, 0.2);
         }
+        .bottom-nav button span {
+            font-size: 12px;
+            color: red;
+        }
+        @media (max-width: 600px) {
+            .bottom-nav {
+                flex-direction: column; /* Apilamos los botones verticalmente en pantallas pequeñas */
+            }
+            .bottom-nav button {
+                width: 100%; /* Los botones ocupan todo el ancho en pantallas pequeñas */
+                text-align: center; /* Centramos el texto en pantallas pequeñas */
+                padding: 12px 20px;
+            }
+        }
+
+        /* Estilos para la barra superior fija */
+        .header-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: red; /* Cambia el color de fondo a rojo */
+            z-index: 1000; /* Asegura que esté por encima de otros elementos */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            height: 50px; /* Altura de la barra superior */
+            display: flex;
+            align-items: center; /* Centra verticalmente el contenido */
+            padding: 0 10px; /* Añade padding horizontal */
+            box-sizing: border-box;
+            color: white;
+        }
+
+        .header-fixed h1 {
+            margin: 0; /* Elimina el margen del h1 para que no afecte al centrado */
+            font-size: 18px; /* Tamaño de fuente más pequeño para la barra superior */
+            color: white;
+            margin-right: 10px; /* Separación del título y el buscador/input */
+        }
+
+        #buscador-elementos {
+            width: 0; /* Inicialmente el buscador no ocupa espacio */
+            padding: 0;
+            margin-bottom: 0; /* Elimina el margen inferior */
+            border: none; /* Sin borde */
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+            transition: width 0.3s ease; /* Transición suave para el ancho */
+            background-color: transparent; /* Color de fondo transparente inicialmente */
+            padding-left: 30px; /* Espacio para el icono de búsqueda */
+            position: relative; /* Para posicionar el icono de búsqueda */
+            height: 30px; /* Altura del input */
+            align-self: center;
+            color: black;
+            margin-left: auto; /* Empuja el input a la derecha */
+            opacity: 0.8; /* Muestra el placeholder con cierta opacidad */
+        }
+
+        #buscador-elementos.expandir {
+            width: 200px; /* Ancho cuando se expande */
+            padding: 10px 30px 10px 30px;
+            background-color: rgba(255,255,255,0.8); /* Color de fondo del buscador cuando se expande */
+            opacity: 1; /* El texto del input se muestra completamente */
+            border: none;
+        }
+
+        #buscador-elementos:focus {
+            outline: none; /* Elimina el borde de enfoque por defecto */
+        }
+
+        .icono-buscar {
+            cursor: pointer;
+            opacity: 0.8; /* Icono un poco transparente */
+            height: 20px; /* Altura del icono */
+            width: 20px;
+            color: white;
+            font-size: 20px;
+            margin-left: 10px; /* Separación del input y el icono */
+        }
+
+        .content-below-header {
+            padding-top: 60px; /* Ajusta este valor según la altura de la barra superior (50px + algo de margen) */
+        }
+
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="header-fixed">
         <h1>Lista de Elementos</h1>
-        <ul id="lista-elementos"></ul>
-
-        <div class="modal fade" id="modal-elemento" tabindex="-1" role="dialog" aria-labelledby="modal-elemento-label" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modal-elemento-label">Detalles del Elemento</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p><strong>Elemento:</strong> <span id="elemento-nombre"></span></p>
-                        <p><strong>Categoría:</strong> <span id="elemento-categoria"></span></p>
-                        <p><strong>Descripción:</strong> <span id="elemento-descripcion"></span></p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    </div>
-                </div>
-            </div>
+        <input type="text" id="buscador-elementos" placeholder="Buscar elemento...">
+        <span id="icono-buscar" class="icono-buscar">&#x1F50D;</span>
+    </div>
+    <div class="content-below-header">
+        <div class="container">
+            <ul id="lista-elementos"></ul>
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div class="bottom-nav">
+        <button onclick="window.location.href='index.html'">Inicio</button>
+        <button onclick="window.location.href='random.html'">Aleatorio</button>
+    </div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const listaElementos = document.getElementById('lista-elementos');
-
+            const buscadorElementos = document.getElementById('buscador-elementos');
+            const iconoBuscar = document.getElementById('icono-buscar');
+            let elementosOrdenados = [];
             fetch('https://yosoywill.github.io/Esencia-Tica/datos.json')
                 .then(response => response.json())
                 .then(data => {
-                    const elementosOrdenados = data.sort((a, b) => a.elemento.localeCompare(b.elemento));
-
-                    elementosOrdenados.forEach(item => {
-                        const listItem = document.createElement('li');
-                        listItem.textContent = item.elemento;
-                        listItem.addEventListener('click', () => mostrarModal(item));
-                        listaElementos.appendChild(listItem);
+                    elementosOrdenados = data.sort((a, b) => a.Elemento.localeCompare(b.Elemento));
+                    mostrarElementos();
+                    iconoBuscar.addEventListener('click', () => {
+                        buscadorElementos.classList.toggle('expandir');
+                        if (buscadorElementos.classList.contains('expandir')) {
+                            buscadorElementos.focus();
+                        }
+                    });
+                    buscadorElementos.addEventListener('input', () => {
+                        const filtro = buscadorElementos.value.toLowerCase();
+                        mostrarElementos(filtro);
                     });
                 })
                 .catch(error => console.error('Error al cargar los datos:', error));
-
+            function mostrarElementos(filtro = '') {
+                listaElementos.innerHTML = '';
+                const elementosFiltrados = elementosOrdenados.filter(item =>
+                    item.Elemento.toLowerCase().includes(filtro)
+                );
+                elementosFiltrados.forEach(item => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = item.Elemento;
+                    listItem.addEventListener('click', () => mostrarDetalles(item));
+                    listaElementos.appendChild(listItem);
+                });
+            }
+            function mostrarDetalles(item) {
+                const elementoNombre = encodeURIComponent(item.Elemento);
+                const elementoCategoria = encodeURIComponent(item.Categoría);
+                const elementoDescripcion = encodeURIComponent(item.Descripción);
+                window.location.href = `detalles.html?nombre=${elementoNombre}&categoria=${elementoCategoria}&descripcion=${elementoDescripcion}`;
+            }
         });
-
-        function mostrarModal(item) {
-            document.getElementById('elemento-nombre').textContent = item.elemento;
-            document.getElementById('elemento-categoria').textContent = item.categoria;
-            document.getElementById('elemento-descripcion').textContent = item.descripcion;
-            $('#modal-elemento').modal('show');
-        }
     </script>
 </body>
 </html>

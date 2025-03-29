@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Elemento</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #003893;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            font-weight: 500;
+        }
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        #elemento-nombre {
+            font-size: 2rem;
+            color: #d22320;
+            font-weight: 700;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #d22320;
+            padding-bottom: 5px;
+        }
+        #elemento-categoria {
+            font-size: 1.3rem;
+            color: #002089;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        #elemento-descripcion {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #555;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            #elemento-nombre {
+                font-size: 1.5rem;
+            }
+            #elemento-categoria {
+                font-size: 1.2rem;
+            }
+            #elemento-descripcion {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Detalles del Elemento</h1>
+        <h2 id="elemento-nombre"></h2>
+        <p id="elemento-categoria"></p>
+        <p id="elemento-descripcion"></p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Obtener los parámetros de la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const nombre = urlParams.get('nombre');
+            const categoria = urlParams.get('categoria');
+            const descripcion = urlParams.get('descripcion');
+
+            // Decodificar los valores obtenidos
+            const decodedNombre = nombre ? decodeURIComponent(nombre) : 'No disponible';
+            const decodedCategoria = categoria ? decodeURIComponent(categoria) : 'No disponible';
+            const decodedDescripcion = descripcion ? decodeURIComponent(descripcion) : 'No disponible';
+
+            // Mostrar los detalles del elemento en la página
+            document.getElementById('elemento-nombre').textContent = decodedNombre;
+            document.getElementById('elemento-categoria').textContent = `Categoría: ${decodedCategoria}`;
+            document.getElementById('elemento-descripcion').textContent = decodedDescripcion;
+        });
+    </script>
+</body>
+</html>
