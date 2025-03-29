@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Elementos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        #lista-elementos {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        #lista-elementos li {
+            cursor: pointer;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            transition: background-color 0.3s;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 5px;
+        }
+        #lista-elementos li:hover {
+            background-color: #e9ecef;
+        }
+        #lista-elementos li:last-child {
+            border-bottom: none;
+        }
+        .modal-header {
+            background-color: #007bff;
+            color: white;
+            border-bottom: 1px solid #007bff;
+        }
+        .modal-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .modal-body {
+            padding: 20px;
+            font-size: 16px;
+        }
+        .modal-footer {
+            border-top: 1px solid #ddd;
+            padding: 15px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        #modal-elemento .modal-content {
+             border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Elementos</h1>
+        <ul id="lista-elementos"></ul>
+
+        <div class="modal fade" id="modal-elemento" tabindex="-1" role="dialog" aria-labelledby="modal-elemento-label" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-elemento-label">Detalles del Elemento</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Elemento:</strong> <span id="elemento-nombre"></span></p>
+                        <p><strong>Categoría:</strong> <span id="elemento-categoria"></span></p>
+                        <p><strong>Descripción:</strong> <span id="elemento-descripcion"></span></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const listaElementos = document.getElementById('lista-elementos');
+
+            fetch('datos.json')
+                .then(response => response.json())
+                .then(data => {
+                    const elementosOrdenados = data.sort((a, b) => a.elemento.localeCompare(b.elemento));
+
+                    elementosOrdenados.forEach(item => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = item.elemento;
+                        listItem.addEventListener('click', () => mostrarModal(item));
+                        listaElementos.appendChild(listItem);
+                    });
+                })
+                .catch(error => console.error('Error al cargar los datos:', error));
+
+        });
+
+        function mostrarModal(item) {
+            document.getElementById('elemento-nombre').textContent = item.elemento;
+            document.getElementById('elemento-categoria').textContent = item.categoria;
+            document.getElementById('elemento-descripcion').textContent = item.descripcion;
+            $('#modal-elemento').modal('show');
+        }
+    </script>
+</body>
+</html>
