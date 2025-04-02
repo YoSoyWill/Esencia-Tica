@@ -1,242 +1,1142 @@
 [
-    {
-      "Elemento": "Olla de carne",
-      "Categoría": "Alimentos",
-      "Descripción": "Es un caldo sustancioso y tradicional que contiene carne de res, papas, zanahorias, chayote, yuca, tiquisque, plátano y otros vegetales. Es un plato reconfortante y nutritivo, ideal para días frescos o lluviosos."
-    },
-    {
-      "Elemento": "Gallo pinto",
-      "Categoría": "Alimentos",
-      "Descripción": "Es el plato nacional de Costa Rica. Consiste en arroz y frijoles negros o rojos, cocinados juntos con cebolla, chile dulce (pimiento) y culantro. Se suele servir en el desayuno, acompañado de huevos, queso o plátano maduro frito."
-    },
-    {
-      "Elemento": "Arroz guacho",
-      "Categoría": "Alimentos",
-      "Descripción": "Un tipo de arroz caldoso, similar a un risotto, que se prepara con carne de cerdo, pollo o mariscos, vegetales y especias. Es un plato abundante y sabroso."
-    },
-    {
-      "Elemento": "Ajiaco",
-      "Categoría": "Alimentos",
-      "Descripción": "Una sopa espesa y tradicional, que puede variar según la región. Generalmente contiene carne, papas, yuca, maíz y otros vegetales."
-    },
-    {
-      "Elemento": "Chilasquilas",
-      "Categoría": "Alimentos",
-      "Descripción": "Tortillas de maíz cortadas en trozos, fritas y luego cocinadas en una salsa de tomate y chile. Se sirven con queso, crema y otros acompañamientos."
-    },
-    {
-      "Elemento": "Empanadas de maíz",
-      "Categoría": "Alimentos",
-      "Descripción": "Masa de maíz rellena de carne, queso, frijoles o otros ingredientes, que se hornea o se fríe."
-    },
-    {
-      "Elemento": "Guisos",
-      "Categoría": "Alimentos",
-      "Descripción": "Preparaciones de carne, pollo o pescado cocinados a fuego lento en una salsa, con vegetales y especias."
-    },
-    {
-      "Elemento": "Picadillos",
-      "Categoría": "Alimentos",
-      "Descripción": "Vegetales picados finamente, como papas, chayote o vainicas, cocinados con carne molida o solos."
-    },
-    {
-      "Elemento": "Casado",
-      "Categoría": "Alimentos",
-      "Descripción": "Plato típico que incluye arroz, frijoles, carne (res, pollo, cerdo o pescado), ensalada, plátano maduro frito y a veces otros acompañamientos."
-    },
-    {
-      "Elemento": "Tamal asado",
-      "Categoría": "Alimentos",
-      "Descripción": "Masa de maíz rellena de carne, vegetales y especias, envuelta en hojas de plátano y cocinada al horno."
-    },
-    {
-      "Elemento": "Bizcochos",
-      "Categoría": "Alimentos",
-      "Descripción": "Panecillos dulces o salados, hechos con harina de trigo o maíz."
-    },
-    {
-      "Elemento": "Pasteles",
-      "Categoría": "Alimentos",
-      "Descripción": "Masa rellena de carne, pollo, queso o vegetales, horneada o frita."
-    },
-    {
-      "Elemento": "Lomos rellenos",
-      "Categoría": "Alimentos",
-      "Descripción": "Lomo de res o cerdo relleno de jamón, queso, vegetales u otros ingredientes."
-    },
-    {
-      "Elemento": "Tortas de maíz",
-      "Categoría": "Alimentos",
-      "Descripción": "Tortillas gruesas de maíz, que pueden ser dulces o saladas."
-    },
-    {
-      "Elemento": "Empanadas",
-      "Categoría": "Alimentos",
-      "Descripción": "Masa rellena, similares a las empanadas de maíz pero hechas con harina de trigo."
-    },
-    {
-      "Elemento": "Arepas",
-      "Categoría": "Alimentos",
-      "Descripción": "Tortillas gruesas de maíz, típicas de la región caribeña."
-    },
-    {
-      "Elemento": "Cajeta de coco",
-      "Categoría": "Alimentos",
-      "Descripción": "Dulce hecho con leche de coco, azúcar y coco rallado."
-    },
-    {
-      "Elemento": "Pan batido",
-      "Categoría": "Alimentos",
-      "Descripción": "Pan dulce, suave y esponjoso."
-    },
-    {
-      "Elemento": "Pan de rosa",
-      "Categoría": "Alimentos",
-      "Descripción": "Pan dulce, con un sabor característico y un color rosado."
-    },
-    {
-      "Elemento": "Quesadillas de queso",
-      "Categoría": "Alimentos",
-      "Descripción": "Masa rellena de queso, horneada o frita."
-    },
-    {
-      "Elemento": "Alfajores",
-      "Categoría": "Alimentos",
-      "Descripción": "Galletas rellenas de dulce de leche, cubiertas de azúcar glas."
-    },
-    {
-      "Elemento": "Piñonate",
-      "Categoría": "Alimentos",
-      "Descripción": "Dulce hecho con piña, azúcar y especias."
-    },
-    {
-      "Elemento": "Alborotos",
-      "Categoría": "Alimentos",
-      "Descripción": "Dulces hechos con azúcar y otros ingredientes, como maní o coco."
-    },
-    {
-      "Elemento": "Suspiros",
-      "Categoría": "Alimentos",
-      "Descripción": "Merengues pequeños y crujientes."
-    },
-    {
-      "Elemento": "Pasados",
-      "Categoría": "Alimentos",
-      "Descripción": "Frutas en almíbar, como higos o duraznos."
-    },
-    {
-      "Elemento": "Turrones",
-      "Categoría": "Alimentos",
-      "Descripción": "Dulces hechos con almendras, miel y azúcar."
-    },
-    {
-      "Elemento": "Rabanitos dulces",
-      "Categoría": "Alimentos",
-      "Descripción": "Rábanos cocinados en almíbar, un postre inusual."
-    },
-    {
-      "Elemento": "Ceviche",
-      "Categoría": "Alimentos",
-      "Descripción": "Pescado o mariscos crudos, marinados en jugo de limón, cebolla y cilantro."
-    },
-    {
-      "Elemento": "Vigorón",
-      "Categoría": "Alimentos",
-      "Descripción": "Plato que combina yuca, chicharrón (piel de cerdo frita) y repollo encurtido."
-    },
-    {
-      "Elemento": "Arroz con leche",
-      "Categoría": "Alimentos",
-      "Descripción": "Postre cremoso hecho con arroz, leche, azúcar y canela."
-    },
-    {
-      "Elemento": "Tamal pisque",
-      "Categoría": "Alimentos",
-      "Descripción": "Tamal hecho solo de masa de maíz, sin relleno."
-    },
-    {
-      "Elemento": "Rice and beans",
-      "Categoría": "Alimentos",
-      "Descripción": "Plato caribeño de arroz y frijoles cocinados con leche de coco y especias."
-    },
-    {
-      "Elemento": "Patí",
-      "Categoría": "Alimentos",
-      "Descripción": "Empanada rellena de carne sazonada, típica de la costa caribeña."
-    },
-    {
-      "Elemento": "Johnny cake",
-      "Categoría": "Alimentos",
-      "Descripción": "Pan plano frito, hecho con harina de maíz, típico de la costa caribeña."
-    },
-    {
-      "Elemento": "Pan bon",
-      "Categoría": "Alimentos",
-      "Descripción": "Pan dulce especiado, con frutas confitadas, típico de la costa caribeña."
-    },
-    {
-      "Elemento": "Aguadulce",
-      "Categoría": "Bebidas",
-      "Descripción": "Bebida caliente hecha con agua y dulce de tapa (azúcar de caña sin refinar)."
-    },
-    {
-      "Elemento": "Tibio",
-      "Categoría": "Bebidas",
-      "Descripción": "Bebida caliente hecha con leche, agua y dulce de tapa."
-    },
-    {
-      "Elemento": "Chocolate",
-      "Categoría": "Bebidas",
-      "Descripción": "Bebida caliente hecha con cacao, leche o agua y azúcar."
-    },
-    {
-      "Elemento": "Mistela",
-      "Categoría": "Bebidas",
-      "Descripción": "Bebida alcohólica dulce, hecha con jugo de frutas y aguardiente."
-    },
-    {
-      "Elemento": "Chicheme",
-      "Categoría": "Bebidas",
-      "Descripción": "Bebida fermentada hecha con maíz, agua y especias."
-    },
-    {
-      "Elemento": "Horchata",
-      "Categoría": "Bebidas",
-      "Descripción": "Bebida refrescante hecha con arroz, leche, azúcar y canela."
-    },
-    {
-      "Elemento": "Resbaladera",
-      "Categoría": "Bebidas",
-      "Descripción": "Bebida refrescante hecha con arroz, cebada, leche y especias."
-    },
-    {
-      "Elemento": "Pozol",
-      "Categoría": "Bebidas",
-      "Descripción": "Bebida espesa hecha con maíz, cacao y agua."
-    },
-    {
-      "Elemento": "Pinolillo",
-      "Categoría": "Bebidas",
-      "Descripción": "Bebida hecha con harina de maíz tostado, cacao y especias."
-    },
-    {
-      "Elemento": "Guarupo",
-      "Categoría": "Bebidas",
-      "Descripción": "Bebida fermentada hecha con frutas."
-    },
-    {
-      "Elemento": "Vinos de flores",
-      "Categoría": "Bebidas",
-      "Descripción": "Bebidas alcohólicas hechas con flores, como el vino de coyol."
-    },
-    {
-      "Elemento": "Agua de sapo",
-      "Categoría": "Bebidas",
-      "Descripción": "Bebida refrescante hecha con dulce de tapa, jengibre y limón."
-    },
-    {
-      "Elemento": "Refrescos",
-      "Categoría": "Bebidas",
-      "Descripción": "Jugos de frutas naturales, como naranja, piña o mora."
-    }
-  ]
+  {
+    "Elemento": "Olla de carne",
+    "Categoría": "Alimentos",
+    "Descripción": "Es un caldo sustancioso y tradicional que contiene carne de res, papas, zanahorias, chayote, yuca, tiquisque, plátano y otros vegetales. Es un plato reconfortante y nutritivo, ideal para días frescos o lluviosos."
+  },
+  {
+    "Elemento": "Gallo pinto",
+    "Categoría": "Alimentos",
+    "Descripción": "Es el plato nacional de Costa Rica. Consiste en arroz y frijoles negros o rojos, cocinados juntos con cebolla, chile dulce (pimiento) y culantro. Se suele servir en el desayuno, acompañado de huevos, queso o plátano maduro frito."
+  },
+  {
+    "Elemento": "Arroz guacho",
+    "Categoría": "Alimentos",
+    "Descripción": "Un tipo de arroz caldoso, similar a un risotto, que se prepara con carne de cerdo, pollo o mariscos, vegetales y especias. Es un plato abundante y sabroso."
+  },
+  {
+    "Elemento": "Ajiaco",
+    "Categoría": "Alimentos",
+    "Descripción": "Una sopa espesa y tradicional, que puede variar según la región. Generalmente contiene carne, papas, yuca, maíz y otros vegetales."
+  },
+  {
+    "Elemento": "Chilasquilas",
+    "Categoría": "Alimentos",
+    "Descripción": "Tortillas de maíz cortadas en trozos, fritas y luego cocinadas en una salsa de tomate y chile. Se sirven con queso, crema y otros acompañamientos."
+  },
+  {
+    "Elemento": "Empanadas de maíz",
+    "Categoría": "Alimentos",
+    "Descripción": "Masa de maíz rellena de carne, queso, frijoles o otros ingredientes, que se hornea o se fríe."
+  },
+  {
+    "Elemento": "Guisos",
+    "Categoría": "Alimentos",
+    "Descripción": "Preparaciones de carne, pollo o pescado cocinados a fuego lento en una salsa, con vegetales y especias."
+  },
+  {
+    "Elemento": "Picadillos",
+    "Categoría": "Alimentos",
+    "Descripción": "Vegetales picados finamente, como papas, chayote o vainicas, cocinados con carne molida o solos."
+  },
+  {
+    "Elemento": "Casado",
+    "Categoría": "Alimentos",
+    "Descripción": "Plato típico que incluye arroz, frijoles, carne (res, pollo, cerdo o pescado), ensalada, plátano maduro frito y a veces otros acompañamientos."
+  },
+  {
+    "Elemento": "Tamal asado",
+    "Categoría": "Alimentos",
+    "Descripción": "Masa de maíz rellena de carne, vegetales y especias, envuelta en hojas de plátano y cocinada al horno."
+  },
+  {
+    "Elemento": "Bizcochos",
+    "Categoría": "Alimentos",
+    "Descripción": "Panecillos dulces o salados, hechos con harina de trigo o maíz."
+  },
+  {
+    "Elemento": "Pasteles",
+    "Categoría": "Alimentos",
+    "Descripción": "Masa rellena de carne, pollo, queso o vegetales, horneada o frita."
+  },
+  {
+    "Elemento": "Lomos rellenos",
+    "Categoría": "Alimentos",
+    "Descripción": "Lomo de res o cerdo relleno de jamón, queso, vegetales u otros ingredientes."
+  },
+  {
+    "Elemento": "Tortas de maíz",
+    "Categoría": "Alimentos",
+    "Descripción": "Tortillas gruesas de maíz, que pueden ser dulces o saladas."
+  },
+  {
+    "Elemento": "Empanadas",
+    "Categoría": "Alimentos",
+    "Descripción": "Masa rellena, similares a las empanadas de maíz pero hechas con harina de trigo."
+  },
+  {
+    "Elemento": "Arepas",
+    "Categoría": "Alimentos",
+    "Descripción": "Tortillas gruesas de maíz, típicas de la región caribeña."
+  },
+  {
+    "Elemento": "Cajeta de coco",
+    "Categoría": "Alimentos",
+    "Descripción": "Dulce hecho con leche de coco, azúcar y coco rallado."
+  },
+  {
+    "Elemento": "Pan batido",
+    "Categoría": "Alimentos",
+    "Descripción": "Pan dulce, suave y esponjoso."
+  },
+  {
+    "Elemento": "Pan de rosa",
+    "Categoría": "Alimentos",
+    "Descripción": "Pan dulce, con un sabor característico y un color rosado."
+  },
+  {
+    "Elemento": "Quesadillas de queso",
+    "Categoría": "Alimentos",
+    "Descripción": "Masa rellena de queso, horneada o frita."
+  },
+  {
+    "Elemento": "Alfajores",
+    "Categoría": "Alimentos",
+    "Descripción": "Galletas rellenas de dulce de leche, cubiertas de azúcar glas."
+  },
+  {
+    "Elemento": "Piñonate",
+    "Categoría": "Alimentos",
+    "Descripción": "Dulce hecho con piña, azúcar y especias."
+  },
+  {
+    "Elemento": "Alborotos",
+    "Categoría": "Alimentos",
+    "Descripción": "Dulces hechos con azúcar y otros ingredientes, como maní o coco."
+  },
+  {
+    "Elemento": "Suspiros",
+    "Categoría": "Alimentos",
+    "Descripción": "Merengues pequeños y crujientes."
+  },
+  {
+    "Elemento": "Pasados",
+    "Categoría": "Alimentos",
+    "Descripción": "Frutas en almíbar, como higos o duraznos."
+  },
+  {
+    "Elemento": "Turrones",
+    "Categoría": "Alimentos",
+    "Descripción": "Dulces hechos con almendras, miel y azúcar."
+  },
+  {
+    "Elemento": "Rabanitos dulces",
+    "Categoría": "Alimentos",
+    "Descripción": "Rábanos cocinados en almíbar, un postre inusual."
+  },
+  {
+    "Elemento": "Ceviche",
+    "Categoría": "Alimentos",
+    "Descripción": "Pescado o mariscos crudos, marinados en jugo de limón, cebolla y cilantro."
+  },
+  {
+    "Elemento": "Vigorón",
+    "Categoría": "Alimentos",
+    "Descripción": "Plato que combina yuca, chicharrón (piel de cerdo frita) y repollo encurtido."
+  },
+  {
+    "Elemento": "Arroz con leche",
+    "Categoría": "Alimentos",
+    "Descripción": "Postre cremoso hecho con arroz, leche, azúcar y canela."
+  },
+  {
+    "Elemento": "Tamal pisque",
+    "Categoría": "Alimentos",
+    "Descripción": "Tamal hecho solo de masa de maíz, sin relleno."
+  },
+  {
+    "Elemento": "Rice and beans",
+    "Categoría": "Alimentos",
+    "Descripción": "Plato caribeño de arroz y frijoles cocinados con leche de coco y especias."
+  },
+  {
+    "Elemento": "Patí",
+    "Categoría": "Alimentos",
+    "Descripción": "Empanada rellena de carne sazonada, típica de la costa caribeña."
+  },
+  {
+    "Elemento": "Johnny cake",
+    "Categoría": "Alimentos",
+    "Descripción": "Pan plano frito, hecho con harina de maíz, típico de la costa caribeña."
+  },
+  {
+    "Elemento": "Pan bon",
+    "Categoría": "Alimentos",
+    "Descripción": "Pan dulce especiado, con frutas confitadas, típico de la costa caribeña."
+  },
+  {
+    "Elemento": "Aguadulce",
+    "Categoría": "Bebidas",
+    "Descripción": "Bebida caliente hecha con agua y dulce de tapa (azúcar de caña sin refinar)."
+  },
+  {
+    "Elemento": "Tibio",
+    "Categoría": "Bebidas",
+    "Descripción": "Bebida caliente hecha con leche, agua y dulce de tapa."
+  },
+  {
+    "Elemento": "Chocolate",
+    "Categoría": "Bebidas",
+    "Descripción": "Bebida caliente hecha con cacao, leche o agua y azúcar."
+  },
+  {
+    "Elemento": "Mistela",
+    "Categoría": "Bebidas",
+    "Descripción": "Bebida alcohólica dulce, hecha con jugo de frutas y aguardiente."
+  },
+  {
+    "Elemento": "Chicheme",
+    "Categoría": "Bebidas",
+    "Descripción": "Bebida fermentada hecha con maíz, agua y especias."
+  },
+  {
+    "Elemento": "Horchata",
+    "Categoría": "Bebidas",
+    "Descripción": "Bebida refrescante hecha con arroz, leche, azúcar y canela."
+  },
+  {
+    "Elemento": "Resbaladera",
+    "Categoría": "Bebidas",
+    "Descripción": "Bebida refrescante hecha con arroz, cebada, leche y especias."
+  },
+  {
+    "Elemento": "Pozol",
+    "Categoría": "Bebidas",
+    "Descripción": "Bebida espesa hecha con maíz, cacao y agua."
+  },
+  {
+    "Elemento": "Pinolillo",
+    "Categoría": "Bebidas",
+    "Descripción": "Bebida hecha con harina de maíz tostado, cacao y especias."
+  },
+  {
+    "Elemento": "Guarupo",
+    "Categoría": "Bebidas",
+    "Descripción": "Bebida fermentada hecha con frutas."
+  },
+  {
+    "Elemento": "Vinos de flores",
+    "Categoría": "Bebidas",
+    "Descripción": "Bebidas alcohólicas hechas con flores, como el vino de coyol."
+  },
+  {
+    "Elemento": "Agua de sapo",
+    "Categoría": "Bebidas",
+    "Descripción": "Bebida refrescante hecha con dulce de tapa, jengibre y limón."
+  },
+  {
+    "Elemento": "Refrescos",
+    "Categoría": "Bebidas",
+    "Descripción": "Jugos de frutas naturales, como naranja, piña o mora."
+  },
+  {
+    "Elemento": "Abel Pacheco de la Espriella",
+    "Categoría": "Personalidades",
+    "Descripción": "(Presidente 2002-2006). Médico psiquiatra, escritor y figura televisiva muy popular. Su presidencia se caracterizó por un estilo personalista y un enfoque en la austeridad fiscal y temas sociales puntuales, aunque con críticas sobre la ejecución de grandes proyectos."
+  },
+  {
+    "Elemento": "Alberto Brenes Mora",
+    "Categoría": "Personalidades",
+    "Descripción": "(1858-1948). Botánico autodidacta, considerado el \"Padre de la Botánica Nacional\". Dedicó su vida a recolectar, clasificar e identificar miles de especímenes de la flora costarricense, especialmente orquídeas y helechos. Su trabajo en el Herbario Nacional fue fundamental para el conocimiento de la biodiversidad del país."
+  },
+  {
+    "Elemento": "Alberto Martén Chavarría",
+    "Categoría": "Personalidades",
+    "Descripción": "(Economista / Académico / Constructor de Nación - Modelo Económico Social)  Creador del Movimiento Solidarista (1947), un modelo de relaciones laborales basado en la cooperación obrero-patronal, el ahorro de los trabajadores y la creación de asociaciones solidaristas. Buscaba ser una alternativa tanto al capitalismo liberal como al comunismo. Ha tenido una amplia difusión en el sector privado costarricense."
+  },
+  {
+    "Elemento": "Aldo Castañeda",
+    "Categoría": "Personalidades",
+    "Descripción": "(1930-2021). Cirujano cardíaco pediátrico de renombre mundial. Aunque no era costarricense de nacimiento ni residió permanentemente aquí, su trabajo pionero en Guatemala y EE.UU. benefició a muchos niños costarricenses con cardiopatías congénitas, y su colaboración con el Hospital Nacional de Niños fue muy influyente para el desarrollo de la cirugía cardíaca pediátrica en el país."
+  },
+  {
+    "Elemento": "Alfredo González Flores",
+    "Categoría": "Personalidades",
+    "Descripción": "(Presidente / Constructor de Nación - Reforma Fiscal y Banca)  Presidente (1914-17) derrocado por intentar una reforma fiscal pionera basada en impuestos directos sobre la renta y la tierra, buscando mayor justicia tributaria y modernizar las finanzas del Estado. Aunque fracasó por la oposición de sectores poderosos, sentó un precedente. Creó el Banco Internacional de Costa Rica (hoy Banco Nacional) y la Escuela Normal de Heredia para formar maestros."
+  },
+  {
+    "Elemento": "Anastasio Alfaro",
+    "Categoría": "Personalidades",
+    "Descripción": "(Académico / Científico / Constructor de Nación - Patrimonio Natural y Cultural)  Naturalista, geólogo y escritor. Como primer director del Museo Nacional, impulsó la investigación científica, la recolección y clasificación de especímenes de la rica biodiversidad costarricense y de piezas arqueológicas e históricas. Su trabajo fue esencial para el conocimiento y valoración del patrimonio nacional."
+  },
+  {
+    "Elemento": "Ángela Acuña Braun",
+    "Categoría": "Personalidades",
+    "Descripción": "(Académica / Activista / Constructora de Nación - Derechos de la Mujer)  Primera abogada de Centroamérica. Fundadora de la Liga Feminista Costarricense. Dedicó su vida a luchar por los derechos civiles y políticos de las mujeres, siendo una figura clave en la obtención del sufragio femenino (consolidado en la Constitución de 1949). Su activismo fue fundamental para la igualdad de género."
+  },
+  {
+    "Elemento": "Antonio Peña Chavarría",
+    "Categoría": "Personalidades",
+    "Descripción": "(1898-1977). Médico pediatra, salubrista e investigador. Pionero en el estudio de enfermedades tropicales, parasitosis y nutrición infantil en Costa Rica. Director del Hospital San Juan de Dios y luego del Hospital Nacional de Niños. Impulsó campañas de salud pública y mejoró la atención pediátrica."
+  },
+  {
+    "Elemento": "Aquileo J. Echeverría",
+    "Categoría": "Personalidades",
+    "Descripción": "(Escritor / Constructor de Nación - Identidad Cultural)  \"Poeta Nacional\". Su obra cumbre \"Concherías\" (1905) utiliza el lenguaje popular y retrata escenas y personajes del campo costarricense, contribuyendo enormemente a la creación de una identidad literaria y cultural propia, basada en lo autóctono y lo popular."
+  },
+  {
+    "Elemento": "Ascensión Esquivel Ibarra",
+    "Categoría": "Personalidades",
+    "Descripción": "(Presidente 1902-1906). Abogado. Gobernó en un periodo de relativa estabilidad política y económica, dando continuidad a las obras públicas iniciadas por Yglesias."
+  },
+  {
+    "Elemento": "Bernardo Soto Alfaro",
+    "Categoría": "Personalidades",
+    "Descripción": "(Presidente / Constructor de Nación - Institucionalidad Cultural y Educativa)  Presidente (1885-1889) que respaldó políticamente la reforma educativa de Mauro Fernández. Durante su gestión se cerró la Universidad de Santo Tomás (considerada elitista y clerical) para concentrar recursos en la educación primaria y secundaria. Fundó la Biblioteca Nacional y el Museo Nacional (1887), instituciones clave para la cultura y la memoria histórica."
+  },
+  {
+    "Elemento": "Braulio Carrillo Colina",
+    "Categoría": "Personalidades",
+    "Descripción": "(Jefe de Estado / Constructor de Nación - Modernización)  Gobernó en dos periodos (1835-37 y 1838-42). Aunque autoritario (se declaró Jefe vitalicio e inamovible), fue un modernizador clave. Separó definitivamente a Costa Rica de la República Federal de Centroamérica (1838), impulsó códigos legales (Código General de 1841), reorganizó la hacienda pública, promovió caminos para la exportación cafetalera y trasladó brevemente la capital a San José (consolidado posteriormente). Su figura es ambivalente  dictatorial pero fundamental para la consolidación del Estado-nación."
+  },
+  {
+    "Elemento": "Cacique Garabito",
+    "Categoría": "Personalidades",
+    "Descripción": "(Líder Indígena / Constructor de Nación - Resistencia)  Jefe del Reino Huetar de Occidente en el Valle Central a la llegada de los españoles. Lideró una prolongada y hábil resistencia contra la conquista (aprox. 1561-1574), utilizando tácticas de guerrilla y alianzas temporales. Aunque finalmente derrotado, se convirtió en un símbolo duradero de la defensa de la autonomía indígena frente al poder colonial. Su figura representa la base indígena sobre la cual se construiría la nueva sociedad."
+  },
+  {
+    "Elemento": "Carlos Alvarado Quesada",
+    "Categoría": "Personalidades",
+    "Descripción": "(Nacido en 1980) Escritor y político. Presidente de la República (2018-2022). Durante su mandato se aprobó el matrimonio igualitario y se impulsó el Plan Nacional de Descarbonización."
+  },
+  {
+    "Elemento": "Carlos Luis Fallas Sibaja (\"Calufa\")",
+    "Categoría": "Personalidades",
+    "Descripción": "(1909-1966) Escritor y activista político comunista. Su novela \"Mamita Yunai\" es una denuncia cruda de las condiciones de los trabajadores en las plantaciones bananeras y se considera una obra cumbre de la literatura social centroamericana. También escribió \"Marcos Ramírez\" y \"Gentes y Gentecillas\"."
+  },
+  {
+    "Elemento": "Carlos Monge Alfaro",
+    "Categoría": "Personalidades",
+    "Descripción": "(1909-1979). Historiador y educador. Rector de la Universidad de Costa Rica (1961-1970). Durante su gestión se impulsó la regionalización de la UCR con la creación de las Sedes Regionales (Occidente, Atlántico, Guanacaste), democratizando el acceso a la educación superior. Fortaleció la investigación y la extensión cultural. Su \"Historia de Costa Rica\" fue un texto de referencia por décadas. Benemérito de la Patria."
+  },
+  {
+    "Elemento": "Carlos Sáenz Herrera",
+    "Categoría": "Personalidades",
+    "Descripción": "(1910-1980). Médico pediatra. Considerado el padre de la pediatría moderna en Costa Rica. Fue el gestor, fundador y primer director del Hospital Nacional de Niños (1964), que hoy lleva su nombre. Su visión y liderazgo transformaron la atención médica infantil en el país. Fue también Ministro de Salubridad. Benemérito de la Patria."
+  },
+  {
+    "Elemento": "Carmen Lyra",
+    "Categoría": "Personalidades",
+    "Descripción": "(María Isabel Carvajal) (Escritora / Académica / Constructora de Nación - Educación y Cultura Popular)  Escritora (\"Cuentos de mi Tía Panchita\"), pedagoga (fundó la primera escuela Montessori) y activista política (Partido Comunista). Su obra literaria rescató el folclore y el lenguaje popular, siendo fundamental en la literatura infantil. Su labor educativa y política buscó la transformación social."
+  },
+  {
+    "Elemento": "Christiana Figueres Olsen",
+    "Categoría": "Personalidades",
+    "Descripción": "(Diplomática / Académica / Constructora de Nación - Liderazgo Climático Global)  Secretaria Ejecutiva de la Convención Marco de Naciones Unidas sobre el Cambio Climático (CMNUCC) entre 2010 y 2016. Lideró las negociaciones internacionales que culminaron en el histórico Acuerdo de París sobre cambio climático (2015). Su trabajo posicionó a Costa Rica (y a ella misma) como líder global en la lucha contra el cambio climático."
+  },
+  {
+    "Elemento": "Cleto González Víquez",
+    "Categoría": "Personalidades",
+    "Descripción": "(Presidente / Académico / Constructor de Nación - Obras Públicas y Municipalismo)  Presidente en dos periodos (1906-10 y 1928-32). Historiador de renombre. Se enfocó en la construcción de infraestructura básica, especialmente cañerías, escuelas y edificios públicos, lo que le valió el apodo de \"Presidente de las cañerías\". Fortaleció las municipalidades y promovió la higiene pública. Su legado es el de un administrador probo y enfocado en mejorar la vida cotidiana."
+  },
+  {
+    "Elemento": "Clodomiro Picado Twight",
+    "Categoría": "Personalidades",
+    "Descripción": "(Académico / Científico / Constructor de Nación - Ciencia Aplicada)  Biólogo eminente. Reconocido mundialmente por sus investigaciones pioneras sobre venenos de serpientes y el desarrollo de sueros antiofídicos, salvando incontables vidas en Costa Rica y otros países. Investigó también sobre hongos y sus propiedades antibióticas (penicilina) de forma independiente y previa a Fleming. Su trabajo elevó el nivel de la ciencia costarricense y tuvo un impacto directo en la salud pública."
+  },
+  {
+    "Elemento": "Constantino Láscaris Comneno",
+    "Categoría": "Personalidades",
+    "Descripción": "(1923-1979) Filósofo español que se radicó en Costa Rica. Tuvo una enorme influencia en el desarrollo del pensamiento filosófico y humanístico en el país a través de su labor en la Universidad de Costa Rica."
+  },
+  {
+    "Elemento": "Daniel Oduber Quirós",
+    "Categoría": "Personalidades",
+    "Descripción": "(Presidente / Constructor de Nación - Medio Ambiente y Desarrollo)  Presidente (1974-78). Figura clave del PLN. Durante su gobierno se dio un fuerte impulso a la creación y consolidación de Parques Nacionales (Corcovado, Chirripó, Santa Rosa se ampliaron o crearon), sentando bases para el futuro ecoturismo. Promovió la diversificación agrícola, programas de planificación familiar y la Ley de Protección al Consumidor."
+  },
+  {
+    "Elemento": "Elizabeth Odio Benito",
+    "Categoría": "Personalidades",
+    "Descripción": "(Académica / Jurista / Constructora de Nación - Justicia Internacional y Derechos Humanos)  Ex Vicepresidenta de Costa Rica. Ha sido Jueza y Vicepresidenta de la Corte Penal Internacional (CPI), jueza del Tribunal Penal Internacional para la ex Yugoslavia (TPIY) y jueza y presidenta de la Corte Interamericana de Derechos Humanos (Corte IDH). Su carrera es un referente mundial en derecho internacional, derechos humanos y justicia penal internacional, elevando el prestigio del país en estos ámbitos."
+  },
+  {
+    "Elemento": "Emma Gamboa Alvarado",
+    "Categoría": "Personalidades",
+    "Descripción": "(1901-1976). Educadora insigne, pedagoga y escritora. Decana fundadora de la Facultad de Educación de la UCR (1941). Autora de influyentes libros de texto para la lectoescritura (\"Paco y Lola\", \"La casita del caracol\", \"Mi hogar y mi pueblo\") que marcaron a generaciones. Luchó por la dignificación y profesionalización del magisterio. Benemérita de la Patria."
+  },
+  {
+    "Elemento": "Eunice Odio",
+    "Categoría": "Personalidades",
+    "Descripción": "(1919-1974) Una de las poetas más importantes y originales de Costa Rica y de la lengua española en el siglo XX. Su obra, como \"Tránsito de Fuego\", es fundamental."
+  },
+  {
+    "Elemento": "Fernando Baudrit Solera",
+    "Categoría": "Personalidades",
+    "Descripción": "(1907-1975) Jurista, Rector de la Universidad de Costa Rica. Figura clave en la consolidación de la autonomía universitaria y en la reforma académica."
+  },
+  {
+    "Elemento": "Fernando Centeno Güell",
+    "Categoría": "Personalidades",
+    "Descripción": "(1907-1993). Médico psiquiatra de origen español. Pionero absoluto de la educación especial en Costa Rica. Fundó en 1939 la primera Escuela de Enseñanza Especial para niños con discapacidad intelectual (que hoy lleva su nombre). Dedicó su vida a promover los derechos, la educación y la inclusión de las personas con discapacidad. Benemérito de la Patria."
+  },
+  {
+    "Elemento": "Florencio del Castillo Villagra",
+    "Categoría": "Personalidades",
+    "Descripción": "(Académico / Político / Constructor de Nación - Representación)  Sacerdote y doctor en Cánones. Fue elegido diputado por Costa Rica ante las Cortes de Cádiz (1810-1813), el parlamento extraordinario español durante la invasión napoleónica. Tuvo una actuación brillante, defendiendo la igualdad de derechos entre españoles peninsulares y americanos, abogando por la educación, la mejora de condiciones para indígenas y mestizos, y la creación de un obispado separado para Costa Rica. Se le considera \"Padre de la Patria\" por su defensa de los intereses de la provincia en un foro crucial para el futuro hispanoamericano."
+  },
+  {
+    "Elemento": "Francisco Amighetti",
+    "Categoría": "Personalidades",
+    "Descripción": "(1907-1998) Pintor, grabador, dibujante y escritor. Uno de los artistas más importantes del siglo XX en Costa Rica, conocido por su estilo expresionista y su exploración de la identidad y el paisaje costarricense."
+  },
+  {
+    "Elemento": "Francisco Orlich Bolmarcich",
+    "Categoría": "Personalidades",
+    "Descripción": "(Presidente 1962-1966). Empresario y político del PLN. Le correspondió enfrentar la emergencia nacional causada por la prolongada erupción del Volcán Irazú (1963-1965). Creó el Instituto Nacional de Aprendizaje (INA) para la formación técnica de trabajadores."
+  },
+  {
+    "Elemento": "Franklin Chang Díaz",
+    "Categoría": "Personalidades",
+    "Descripción": "(Científico / Académico / Constructor de Nación - Ciencia y Tecnología)  Primer astronauta costarricense y latinoamericano en la NASA, con 7 misiones espaciales. Doctor en física aplicada por el MIT. Fundador de Ad Astra Rocket Company, que desarrolla el motor de plasma VASIMR. Es un símbolo del potencial costarricense en ciencia y tecnología de punta, inspirando a nuevas generaciones."
+  },
+  {
+    "Elemento": "Gil Chaverri Rodríguez",
+    "Categoría": "Personalidades",
+    "Descripción": "(1921-2005). Químico y docente universitario (UCR). Es conocido internacionalmente por haber creado un arreglo original y didáctico de la Tabla Periódica de los Elementos basado en la estructura electrónica (la \"Tabla Periódica de Chaverri\"), publicada por primera vez en 1952 y utilizada en textos y aulas de muchos países."
+  },
+  {
+    "Elemento": "Isaac Felipe Azofeifa",
+    "Categoría": "Personalidades",
+    "Descripción": "(1909-1997) Poeta, ensayista y educador. Una figura central de la cultura y la intelectualidad costarricense del siglo XX."
+  },
+  {
+    "Elemento": "Joaquín García Monge",
+    "Categoría": "Personalidades",
+    "Descripción": "(Académico / Editor / Constructor de Nación - Integración Intelectual)  Fundador y director de la influyente revista \"Repertorio Americano\" (1919-1958). Esta publicación fue un faro del pensamiento progresista latinoamericano, conectando a Costa Rica con las corrientes intelectuales y políticas del continente y sirviendo de plataforma para innumerables escritores, ensayistas y políticos de toda la región. Contribuyó a posicionar a Costa Rica como un centro de pensamiento."
+  },
+  {
+    "Elemento": "Jorge Debravo",
+    "Categoría": "Personalidades",
+    "Descripción": "(1938-1967) Poeta de origen humilde cuya obra, marcada por la sensibilidad social y el humanismo, lo convirtió en una de las voces poéticas más importantes y queridas de Costa Rica, a pesar de su temprana muerte."
+  },
+  {
+    "Elemento": "Jorge Manuel Dengo Obregón",
+    "Categoría": "Personalidades",
+    "Descripción": "(1918-2012). Ingeniero civil. Visionario y ejecutor. Como primer Gerente General del ICE (Instituto Costarricense de Electricidad) entre 1949 y 1960, fue la figura central en la planificación y construcción de las grandes represas hidroeléctricas (La Garita, Cachí, Río Macho) que dotaron al país de energía limpia y barata, pilar fundamental para su desarrollo industrial y social. \"Padre del ICE\". Benemérito de la Patria."
+  },
+  {
+    "Elemento": "José Figueres Ferrer",
+    "Categoría": "Personalidades",
+    "Descripción": "(Presidente / Líder Político / Constructor de Nación - Segunda República)  Caudillo de la revolución de 1948. Presidente de la Junta Fundadora de la Segunda República (1948-49) y luego dos veces presidente electo (1953-58 y 1970-74). Abolió el ejército (1948), nacionalizó la banca, consolidó el sufragio femenino, fortaleció el ICE, creó el Instituto Costarricense de Turismo (ICT) y otras instituciones clave del Estado de Bienestar. Fundador del Partido Liberación Nacional (PLN). Figura dominante y controversial que definió la Costa Rica moderna."
+  },
+  {
+    "Elemento": "José Joaquín Rodríguez Zeledón",
+    "Categoría": "Personalidades",
+    "Descripción": "(Presidente 1890-1894). Abogado. Su elección estuvo marcada por la jornada cívica del 7 de noviembre de 1889, considerada un hito en la defensa del voto popular y el nacimiento de la democracia costarricense moderna. Durante su mandato se cerró nuevamente la Universidad de Santo Tomás."
+  },
+  {
+    "Elemento": "José Joaquín Trejos Fernández",
+    "Categoría": "Personalidades",
+    "Descripción": "(Presidente 1966-1970). Economista y catedrático universitario. Ganó la presidencia con una coalición opositora al PLN (Unificación Nacional). Creó el Banco Popular y de Desarrollo Communal, destinado al ahorro y crédito de los trabajadores. Modernizó el sistema tributario."
+  },
+  {
+    "Elemento": "José María Castro Madriz",
+    "Categoría": "Personalidades",
+    "Descripción": "(Último Jefe de Estado / Primer Presidente de la República / Académico / Constructor de Nación - Fundación Republicana)  Gobernante en dos ocasiones (1847-49 y 1866-68). Decretó la fundación de la República de Costa Rica en 1848, separándola formalmente de cualquier lazo federal remanente y estableciendo el cargo de Presidente. Promovió la educación (fundó el Liceo de Niñas), la cultura y los derechos de la mujer. Estableció los símbolos nacionales (bandera y escudo actuales). Fue Rector de la Universidad de Santo Tomás. Se le conoce como \"Fundador de la República\"."
+  },
+  {
+    "Elemento": "José María Figueres Olsen",
+    "Categoría": "Personalidades",
+    "Descripción": "(Nacido en 1954) Hijo de José Figueres Ferrer. Ingeniero industrial, político. Presidente de la República (1994-1998). Promotor de la inversión tecnológica (Intel) y del desarrollo sostenible. Ha sido también CEO del Foro Económico Mundial."
+  },
+  {
+    "Elemento": "Juan Mora Fernández",
+    "Categoría": "Personalidades",
+    "Descripción": "(Primer Jefe de Estado / Presidente / Constructor de Nación - Institucional)  Figura central tras la independencia. Primer Jefe de Estado electo (1825-1833). Se le considera el arquitecto del Estado costarricense. Impulsó la primera imprenta, el primer periódico, la Casa de Moneda, organizó la administración pública y judicial. Fomentó la educación (Ley de Bases y Garantías que destinaba tierras al financiamiento escolar) y consolidó el cultivo del café como motor económico. Su liderazgo sentó las bases de la institucionalidad republicana."
+  },
+  {
+    "Elemento": "Juan Rafael Mora Porras",
+    "Categoría": "Personalidades",
+    "Descripción": "(Presidente / Constructor de Nación - Defensa Soberanía)  Presidente durante una década (1849-1859). Lideró al país en su momento más crítico,  la Campaña Nacional contra los filibusteros de William Walker (1856-1857), quienes pretendían anexar Centroamérica a los estados esclavistas del sur de EE.UU. Su liderazgo fue crucial para organizar el ejército, obtener victorias clave (Santa Rosa, Rivas, Sardinal) y expulsar a los invasores, consolidando la independencia y la identidad nacional. Fomentó también la economía cafetalera y la banca. Es Héroe Nacional."
+  },
+  {
+    "Elemento": "Juan Santamaría",
+    "Categoría": "Personalidades",
+    "Descripción": "(Soldado / Constructor de Nación - Símbolo Heroico)  Tambor del ejército costarricense durante la Campaña Nacional. Su acto de quemar el Mesón de Guerra en la Batalla de Rivas (11 de abril de 1856), donde estaban atrincherados los filibusteros, fue decisivo para la victoria costarricense en esa batalla crucial. Murió en la acción. Se convirtió en el máximo símbolo del heroísmo popular, el sacrificio por la patria y la unidad nacional frente a la amenaza externa."
+  },
+  {
+    "Elemento": "Juan Vázquez de Coronado",
+    "Categoría": "Personalidades",
+    "Descripción": "(Gobernador / Constructor de Nación - Fundación)  Considerado el \"conquistador pacífico\" y organizador de la provincia (Gobernador 1562-1565). Fundó Cartago en 1563 en el Valle del Guarco, estableciendo la primera capital colonial duradera. Utilizó métodos de negociación más que de exterminio (aunque hubo violencia) para asentar el dominio español. Sus exploraciones ayudaron a definir el territorio y a establecer las bases de la administración colonial."
+  },
+  {
+    "Elemento": "Laura Chinchilla Miranda",
+    "Categoría": "Personalidades",
+    "Descripción": "(Presidenta / Académica / Constructora de Nación - Liderazgo Femenino)  Politóloga. Primera mujer elegida Presidenta de Costa Rica (2010-2014). Su elección marcó un hito histórico. Durante su gestión se enfocó en temas de seguridad ciudadana, infraestructura y promoción internacional del país."
+  },
+  {
+    "Elemento": "León Cortés Castro",
+    "Categoría": "Personalidades",
+    "Descripción": "(Presidente 1936-1940). Político de gran carisma popular. Realizó una vasta obra de infraestructura, especialmente carreteras (inicio de la Interamericana) y edificios públicos (Aeropuerto La Sabana). Sin embargo, su gobierno tuvo rasgos autoritarios y mostró simpatías por los regímenes fascistas europeos, lo que genera controversia histórica."
+  },
+  {
+    "Elemento": "Luis Alberto Monge Álvarez",
+    "Categoría": "Personalidades",
+    "Descripción": "(Presidente / Constructor de Nación - Neutralidad y Estabilidad)  Presidente (1982-86). Lideró el país durante la turbulenta década de los 80 en Centroamérica. Proclamó la Neutralidad Perpetua, Activa y No Armada (1983), buscando aislar a Costa Rica de los conflictos regionales y reafirmar su vocación pacifista, aunque enfrentó presiones externas. Logró mantener la estabilidad democrática en medio de la crisis económica y regional."
+  },
+  {
+    "Elemento": "Luis Felipe González Flores",
+    "Categoría": "Personalidades",
+    "Descripción": "(1888-1973). Educador e historiador fundamental de la educación costarricense. Hermano del presidente Alfredo González Flores. Escribió la \"Historia de la influencia extranjera en el desenvolvimiento educacional y científico de Costa Rica\". Defensor acérrimo de la educación pública, laica y científica. Director de la Escuela Normal. Benemérito de la Patria."
+  },
+  {
+    "Elemento": "Manuel González Zeledón",
+    "Categoría": "Personalidades",
+    "Descripción": "(Magón)  (1864-1936) Escritor costumbrista, considerado uno de los fundadores de la narrativa costarricense moderna. Su obra \"La Propia\" es un clásico."
+  },
+  {
+    "Elemento": "Manuel Mora Valverde",
+    "Categoría": "Personalidades",
+    "Descripción": "(Político / Constructor de Nación - Movimiento Obrero y Social)  Fundador y líder histórico del Partido Comunista Costarricense (luego Vanguardia Popular). Jugó un papel crucial en la alianza que viabilizó las Reformas Sociales de los años 40, aportando la base organizada del movimiento obrero y campesino. Defensor de los derechos de los trabajadores."
+  },
+  {
+    "Elemento": "Mario Echandi Jiménez",
+    "Categoría": "Personalidades",
+    "Descripción": "(Presidente 1958-1962). Abogado y diplomático. Rompió la continuidad del PLN en el poder. Creó instituciones clave para el desarrollo rural y los servicios públicos como el Instituto de Tierras y Colonización (ITCO, hoy INDER) y el Servicio Nacional de Acueductos y Alcantarillados (AyA). Promulgó la Ley del Aguinaldo."
+  },
+  {
+    "Elemento": "Mauro Fernández Acuña",
+    "Categoría": "Personalidades",
+    "Descripción": "(Académico / Ministro / Constructor de Nación - Educación)  Ministro de Instrucción Pública bajo el presidente Bernardo Soto. Fue el artífice de la Reforma Educativa de 1886 (Ley General de Educación Común), que estableció las bases de la educación primaria gratuita, obligatoria, laica y financiada por el Estado. Esta reforma fue fundamental para elevar los niveles de alfabetización, formar ciudadanos y forjar una identidad nacional basada en la educación."
+  },
+  {
+    "Elemento": "Miguel Ángel Rodríguez Echeverría",
+    "Categoría": "Personalidades",
+    "Descripción": "(Presidente 1998-2002). Economista y empresario. Su gobierno se enfocó en la modernización económica, la atracción de inversión extranjera y reformas del Estado. Posteriormente enfrentó acusaciones legales por hechos de corrupción (caso ICE-Alcatel), resultando finalmente absuelto."
+  },
+  {
+    "Elemento": "Monseñor Víctor Manuel Sanabria Martínez",
+    "Categoría": "Personalidades",
+    "Descripción": "(Religioso / Académico / Constructor de Nación - Doctrina Social)  Arzobispo de San José. Intelectual y líder religioso que dio el respaldo crucial de la Iglesia Católica a las Garantías Sociales, basándose en la Doctrina Social de la Iglesia. Su apoyo fue fundamental para la legitimidad y aprobación de estas reformas. También fue un importante historiador eclesiástico."
+  },
+  {
+    "Elemento": "Óscar Arias Sánchez",
+    "Categoría": "Personalidades",
+    "Descripción": "(Presidente / Académico / Constructor de Nación - Paz Internacional)  Presidente (1986-90 y 2006-10). Arquitecto del Plan de Paz para Centroamérica (Acuerdos de Esquipulas II), que le valió el Premio Nobel de la Paz en 1987. Su liderazgo fue crucial para iniciar la pacificación de la región tras años de guerra civil. En su segundo mandato impulsó la aprobación del Tratado de Libre Comercio con EE.UU. (CAFTA). Proyectó a Costa Rica internacionalmente."
+  },
+  {
+    "Elemento": "Otilio Ulate Blanco",
+    "Categoría": "Personalidades",
+    "Descripción": "(Presidente 1949-1953). Periodista. Su elección en 1948 fue el detonante de la Guerra Civil al ser desconocida por el gobierno. Asumió la presidencia tras el periodo de la Junta Fundadora. Durante su mandato se creó el Banco Central de Costa Rica (BCCR), el Consejo Superior de Educación y se promulgó la Ley de Servicio Civil, consolidando la institucionalidad de la Segunda República."
+  },
+  {
+    "Elemento": "Pablo Presbere",
+    "Categoría": "Personalidades",
+    "Descripción": "(Líder Indígena / Constructor de Nación - Resistencia)  Cacique de Suinse, en la región de Talamanca. Fue el líder principal de la gran rebelión indígena de 1709 que unió a diversas comunidades (cabécares, terbis, bribris) contra el dominio español, destruyendo ermitas y fuertes. Fue capturado y ejecutado en Cartago en 1710. Su levantamiento es el más significativo del periodo colonial y lo consagra como un héroe de la resistencia indígena, fundamental en la memoria histórica de Talamanca y del país."
+  },
+  {
+    "Elemento": "Rafael Ángel Calderón Guardia",
+    "Categoría": "Personalidades",
+    "Descripción": "(Presidente / Médico / Constructor de Nación - Reforma Social)  Presidente (1940-44). Impulsó, en una alianza histórica con la Iglesia Católica (Mons. Sanabria) y el Partido Comunista (Manuel Mora), las Garantías Sociales, el Código de Trabajo, la creación de la Caja Costarricense de Seguro Social (CCSS) y la reapertura/refundación de la Universidad de Costa Rica (UCR). Estas reformas transformaron la estructura social del país, sentando las bases del Estado de Bienestar, aunque también generaron polarización política."
+  },
+  {
+    "Elemento": "Rafael Yglesias Castro",
+    "Categoría": "Personalidades",
+    "Descripción": "(Presidente 1894-1902). Empresario y político. Impulsó la construcción y finalización del Teatro Nacional (inaugurado en 1897), símbolo de la cultura y el progreso \"europeizante\" de la época. Inició la construcción del ferrocarril al Pacífico y adoptó el patrón oro para la moneda nacional (el Colón)."
+  },
+  {
+    "Elemento": "Ricardo Jiménez Oreamuno",
+    "Categoría": "Personalidades",
+    "Descripción": "(Presidente / Académico / Constructor de Nación - Pragmatismo y Obras)  Tres veces presidente (1910-14, 1924-28, 1932-36). Abogado y figura respetada por su inteligencia y pragmatismo (\"Nunca hay que meterse con la culebra si se le ven los ojos\"). Completó el Ferrocarril al Pacífico, construyó numerosas escuelas, impulsó obras de saneamiento, creó el Banco Nacional de Seguros (hoy INS) y la Fábrica Nacional de Licores (FANAL). Representa la consolidación del Estado liberal y la gestión pública eficiente en la primera mitad del siglo XX."
+  },
+  {
+    "Elemento": "Ricardo Moreno Cañas",
+    "Categoría": "Personalidades",
+    "Descripción": "(1890-1938). Cirujano de excepcional habilidad y fama, considerado un pionero de la cirugía moderna en Costa Rica. Jefe de Cirugía del Hospital San Juan de Dios. Realizó intervenciones quirúrgicas innovadoras para la época. Su trágico asesinato en 1938 conmocionó profundamente a la sociedad costarricense. Benemérito de la Patria."
+  },
+  {
+    "Elemento": "Roberto Brenes Mesén",
+    "Categoría": "Personalidades",
+    "Descripción": "(1874-1947). Poeta, filólogo, educador y diplomático. Figura intelectual prominente. Director del Liceo de Costa Rica y de la Escuela Normal de Heredia. Influyó en generaciones de estudiantes y docentes con sus ideas pedagógicas y su visión humanista y teosófica. Renovador de la enseñanza del castellano."
+  },
+  {
+    "Elemento": "Rodrigo Carazo Odio",
+    "Categoría": "Personalidades",
+    "Descripción": "(Presidente / Constructor de Nación - Educación para la Paz y Soberanía)  Presidente (1978-82). Fundó la Universidad para la Paz (UPEACE) de las Naciones Unidas, con sede en Costa Rica. Enfrentó una grave crisis económica y adoptó posturas de defensa de la soberanía nacional frente a organismos financieros internacionales. Impulsó políticas de derechos humanos en la región."
+  },
+  {
+    "Elemento": "Rodrigo Facio Brenes",
+    "Categoría": "Personalidades",
+    "Descripción": "(Académico / Constructor de Nación - Pensamiento Universitario y de Estado)  Abogado, economista y Rector de la UCR (1952-1961). Principal ideólogo de la reforma universitaria que consagró la autonomía y el papel de la UCR como conciencia crítica y motor de desarrollo nacional. Miembro del Centro para el Estudio de los Problemas Nacionales y figura intelectual clave del PLN en sus inicios. Su pensamiento influyó profundamente en la visión del Estado y la educación superior."
+  },
+  {
+    "Elemento": "Teodoro Picado Michalski",
+    "Categoría": "Personalidades",
+    "Descripción": "(Presidente / Académico / Constructor de Nación - Pre-Crisis)  Presidente (1944-48), sucesor de Calderón. Creó el Instituto Costarricense de Electricidad (ICE) en 1949 (aunque se materializó post-guerra). Su gobierno enfrentó una creciente crisis política y económica. La anulación de las elecciones de 1948 por el Congreso (acusando fraude a favor de Calderón Guardia y en contra de Otilio Ulate) fue el detonante directo de la Guerra Civil de 1948."
+  },
+  {
+    "Elemento": "Tomás Guardia Gutiérrez",
+    "Categoría": "Personalidades",
+    "Descripción": "(Presidente / Dictador / Constructor de Nación - Consolidación Autoritaria)  Dominó la política entre 1870 y 1882. Impulsó la Constitución liberal de 1871 (que rigió, con interrupciones, hasta 1949), abolió la pena de muerte (1877), y emprendió el proyecto (controvertido por sus costos humanos y financieros) de construcción del Ferrocarril al Atlántico, contratado con Minor C. Keith, lo que también introdujo el cultivo masivo del banano y la presencia de la United Fruit Company. Consolidó el poder central y el ejército."
+  },
+  {
+    "Elemento": "Uladislao Gámez Solano",
+    "Categoría": "Personalidades",
+    "Descripción": "(1909-2005). Maestro, supervisor y Ministro de Educación Pública en varias administraciones (Figueres, Orlich, Oduber). Fue un gran impulsor de la expansión de la educación secundaria en todo el país, la creación de colegios técnicos (vocacionales) y la reforma educativa (\"Plan Nacional de Desarrollo Educativo\" de los 70). Benemérito de la Patria."
+  },
+  {
+    "Elemento": "Batalla de Coto",
+    "Categoría": "Efemérides",
+    "Descripción": "Conmemoración de los caídos en la Batalla de Coto de 1921. Este evento recuerda un conflicto fronterizo significativo en la historia costarricense. (Decreto N°9613)"
+  },
+  {
+    "Elemento": "Batalla de la Trinidad",
+    "Categoría": "Efemérides",
+    "Descripción": "Conmemoración de la batalla ocurrida en el río San Juan y reconocimiento de Nicolás Aguilar como Héroe Nacional por su participación en este evento. (Ley N°9178)"
+  },
+  {
+    "Elemento": "Batalla de Rivas y Acto Heroico de Juan Santamaría",
+    "Categoría": "Efemérides",
+    "Descripción": "Esta conmemoración recuerda la Batalla de Rivas, un enfrentamiento clave en la lucha contra los filibusteros en 1856. Bajo las órdenes de los generales José María Cañas y José Joaquín Mora, las tropas costarricenses se internaron en Nicaragua con el objetivo de expulsar a los filibusteros de Centroamérica. Este día también honra el acto heroico de Juan Santamaría, un soldado costarricense que desempeñó un papel fundamental en la batalla. (Decreto Nº 32609)"
+  },
+  {
+    "Elemento": "Batalla de Santa Rosa",
+    "Categoría": "Efemérides",
+    "Descripción": "Este enfrentamiento bélico tuvo lugar en 1856 en la Hacienda Santa Rosa, ubicada en Guanacaste. La victoria costarricense en esta batalla fue crucial para la expulsión del filibustero William Walker del territorio nacional. (Decreto N°32609)"
+  },
+  {
+    "Elemento": "Conmemoración de la Independencia de Costa Rica",
+    "Categoría": "Efemérides",
+    "Descripción": "Celebración del fervor cívico en torno a la Independencia de Costa Rica. (Decreto Ejecutivo N° 32609-MEP)"
+  },
+  {
+    "Elemento": "Declaratoria del Cacique Pablo Presbere como Héroe Nacional y Defensor de los Pueblos Originarios",
+    "Categoría": "Efemérides",
+    "Descripción": "Esta declaratoria rinde homenaje a Pablo Presbere, reconocido por su liderazgo en la defensa de los pueblos indígenas contra la colonización. La Ley N° 7669 de 1997 establece este día nacional conmemorativo de su lucha libertaria. Pablo Presbere lideró la resistencia indígena, enfrentándose a españoles y religiosos, lo que finalmente llevó a su captura y ejecución el 4 de julio de 1710. (Decreto N°32609)"
+  },
+  {
+    "Elemento": "Día de Fundación de la República de Costa Rica",
+    "Categoría": "Efemérides",
+    "Descripción": "El 1 de setiembre se conmemora la fecha en que José María Castro Madriz, en 1848, firmó el decreto que elevó el estatus de Costa Rica de Estado a República, marcando su separación definitiva de la Federación Centroamericana. Esta fecha se celebra en los centros educativos. (Decreto N.°32609)"
+  },
+  {
+    "Elemento": "Día de la Abolición del Ejército",
+    "Categoría": "Efemérides",
+    "Descripción": "El 1° de diciembre se conmemora la histórica decisión de Costa Rica de abolir su ejército en 1948, tras la Guerra Civil de ese año. (Decreto N°41444-MCJ-MEP)"
+  },
+  {
+    "Elemento": "Día de la Democracia Costarricense y de la Constitución Política",
+    "Categoría": "Efemérides",
+    "Descripción": "Celebrado cada 7 de noviembre, este día conmemora la instauración del Día de la \"Democracia Costarricense\" en 1942, en honor a quienes defendieron el proceso electoral de 1889. (Decreto N°32609)"
+  },
+  {
+    "Elemento": "Día de la Guanacastequidad",
+    "Categoría": "Efemérides",
+    "Descripción": "Esta celebración tiene como objetivo valorar y fortalecer la identidad cultural de las personas originarias de la provincia de Guanacaste. (Decreto N°33000-MEP)"
+  },
+  {
+    "Elemento": "Día de la Identidad Sarapiqueña y Batalla de Sardinal",
+    "Categoría": "Efemérides",
+    "Descripción": "Esta fecha conmemora tanto la identidad cultural de la región de Sarapiquí como la Batalla de Sardinal. Este conflicto armado se libró el 10 de abril de 1856 en el pueblo de Sardinal, Sarapiquí, y constituyó la segunda batalla de la Campaña Nacional de 1856-1857 contra los filibusteros de William Walker. La primera fue la Batalla de Santa Rosa el 20 de marzo de 1856 en Guanacaste. (Decreto Ejecutivo N° 38322-MEP)"
+  },
+  {
+    "Elemento": "Día de la Madre",
+    "Categoría": "Efemérides",
+    "Descripción": "Festividad anual en Costa Rica dedicada a honrar a las madres."
+  },
+  {
+    "Elemento": "Día de la Persona Indígena Costarricense",
+    "Categoría": "Efemérides",
+    "Descripción": "Esta fecha se dedica a la conmemoración y reconocimiento de la importancia de los pueblos indígenas de Costa Rica. Los Ministerios de Educación Pública y de Cultura y Juventud son responsables de desarrollar acciones y proyectos anuales para homenajear a la persona indígena costarricense, en colaboración con la Comisión Nacional de Asuntos Indígenas (CONAI). (Decreto Ejecutivo N.º 43991-C-MEP)"
+  },
+  {
+    "Elemento": "Día de la Persona Negra y la Cultura Afrocostarricense",
+    "Categoría": "Efemérides",
+    "Descripción": "Celebrado el 30 de agosto en los centros educativos, este día conmemora los importantes aportes de la población negra y afrocostarricense a la economía, la sociedad y la cultura del país. (Ley N° 8938)"
+  },
+  {
+    "Elemento": "Día de la Virgen de los Ángeles",
+    "Categoría": "Efemérides",
+    "Descripción": "Celebración en honor a la Virgen de los Ángeles, Patrona de Costa Rica. (Ley N°2)"
+  },
+  {
+    "Elemento": "Día de las Culturas",
+    "Categoría": "Efemérides",
+    "Descripción": "Esta conmemoración, que se lleva a cabo el 10 de octubre en los centros educativos, tiene como objetivo enaltecer el carácter pluricultural y multiétnico de la sociedad costarricense. (Ley N°7426)"
+  },
+  {
+    "Elemento": "Día del Árbol en Costa Rica",
+    "Categoría": "Efemérides",
+    "Descripción": "Esta fecha, que se celebra en los centros educativos el 13 de junio, busca concientizar sobre la vital importancia de los árboles para el medio ambiente, especialmente por su papel en la producción de oxígeno, esencial para la vida en el planeta. (Decreto N°32609)"
+  },
+  {
+    "Elemento": "Día del Padre",
+    "Categoría": "Efemérides",
+    "Descripción": "Festividad anual en Costa Rica dedicada a honrar a los padres."
+  },
+  {
+    "Elemento": "Día Internacional de los Pueblos Indígenas",
+    "Categoría": "Efemérides",
+    "Descripción": "Esta conmemoración, que se celebra en todos los centros educativos y comunidades indígenas del país, busca generar reflexión y compromiso con los derechos, la identidad, las tradiciones, la cultura y los territorios de los pueblos indígenas, tanto en Costa Rica como a nivel global. Esta fecha se incorpora al calendario escolar del Ministerio de Educación Pública (MEP). (Ley N°10449)"
+  },
+  {
+    "Elemento": "Día Nacional de la Marimba Costarricense",
+    "Categoría": "Efemérides",
+    "Descripción": "El 2 de marzo se celebra este día, establecido por la Ley N°9419 de 2017, que declara la marimba como símbolo nacional de la cultura y el folclore costarricense. El Ministerio de Educación Pública y el Ministerio de Cultura y Juventud, en coordinación con otras instituciones, promueven actividades para celebrar esta fecha."
+  },
+  {
+    "Elemento": "Día Nacional de la Mascarada Tradicional Costarricense",
+    "Categoría": "Efemérides",
+    "Descripción": "Esta fecha busca promover el conocimiento y la valoración de las diversas manifestaciones culturales presentes en el país, especialmente la tradición de la mascarada. (Decreto N°25724)"
+  },
+  {
+    "Elemento": "Día Nacional del Calipso Costarricense",
+    "Categoría": "Efemérides",
+    "Descripción": "Celebrado el 7 de mayo de cada año, este día reconoce el calipso limonense como patrimonio cultural inmaterial de Costa Rica. La comunidad tribal de Cahuita es considerada la cuna de este género musical en el país. La Ley N° 9612 del 20 de setiembre de 2018 establece que el Ministerio de Educación Pública (MEP) y el Ministerio de Cultura y Juventud, junto con las municipalidades y otras instituciones públicas, deben promover y organizar actividades para celebrar esta efeméride a nivel local y regional."
+  },
+  {
+    "Elemento": "Incorporación del Partido de Nicoya a Costa Rica",
+    "Categoría": "Efemérides",
+    "Descripción": "El 25 de julio de 1824 se formalizó el acuerdo mediante el cual los habitantes de la Villa de Nicoya, reunidos en cabildo abierto, declararon su anexión al estado de Costa Rica. Este evento es fundamental en la configuración territorial del país. (Decreto N°32609)"
+  },
+  {
+    "Elemento": "Mes de la Afrodescendencia en Costa Rica",
+    "Categoría": "Efemérides",
+    "Descripción": "Durante este mes, se conmemoran los valiosos aportes económicos, sociales y culturales de la población afrocostarricense al desarrollo del país. (Ley N°9526)"
+  },
+  {
+    "Elemento": "Café de Costa Rica",
+    "Categoría": "Símbolos nacionales",
+    "Descripción": "En julio de 2020 fue rubricada la Ley N°9815 que declara el café de Costa Rica como decimoquinto símbolo patrio en el desarrollo económico, social y cultural costarricense. El grano de oro costarricense a lo largo de la historia ha sido parte fundamental en la economía nacional y local."
+  },
+  {
+    "Elemento": "El Árbol de Guanacaste",
+    "Categoría": "Símbolos nacionales",
+    "Descripción": "Es símbolo nacional desde 1959. Se le brindó tal estatus en un contexto donde el Estado había venido promovimiento campañas en defensa de los recursos naturales."
+  },
+  {
+    "Elemento": "El Escudo Nacional",
+    "Categoría": "Símbolos nacionales",
+    "Descripción": "Declarado como símbolo nacional en 1948, con el fin de fortalecer la organización de los tres Poderes de la República y dotar de simbología al país ante sus relaciones internacionales."
+  },
+  {
+    "Elemento": "El Himno Nacional de Costa Rica",
+    "Categoría": "Símbolos nacionales",
+    "Descripción": "Es declarado símbolo nacional desde 1949, por lo que su enseñanza sería obligatoria en las actividades patrióticas de mayor envergadura."
+  },
+  {
+    "Elemento": "El Manatí",
+    "Categoría": "Símbolos nacionales",
+    "Descripción": "Fue declarado símbolo nacional de la fauna marina de Costa Rica en 2014, a partir de la iniciativa de dos niños estudiantes de primer grado interesados en la protección de los recursos naturales en el territorio nacional."
+  },
+  {
+    "Elemento": "El Teatro Nacional",
+    "Categoría": "Símbolos nacionales",
+    "Descripción": "La construcción del Teatro Nacional empezó en 1891 declarada como “obra nacional” y fue terminada en 1987. En 2018 se declara símbolo nacional por ser uno de los inmuebles más importantes de la historia nacional y nuestra principal joya arquitectónica."
+  },
+  {
+    "Elemento": "El Venado Cola Blanca",
+    "Categoría": "Símbolos nacionales",
+    "Descripción": "Fue declarado símbolo de la fauna de Costa Rica en 1995."
+  },
+  {
+    "Elemento": "El Yigüirro",
+    "Categoría": "Símbolos nacionales",
+    "Descripción": "En 1977 se decreta el Yigüirro como Ave Nacional debido a su armonioso canto."
+  },
+  {
+    "Elemento": "La Antorcha",
+    "Categoría": "Símbolos nacionales",
+    "Descripción": "Fue declarada símbolo nacional en 2005, a partir de un proyecto que pretendía celebrar, en conjunto con los países de la región, la trascendencia del acontecimiento histórico de la Independencia."
+  },
+  {
+    "Elemento": "La Bandera de Costa Rica",
+    "Categoría": "Símbolos nacionales",
+    "Descripción": "Declarado como símbolo nacional en 1948. La representación de los tres colores es la siguiente;  el azul representa el cielo que cubre y protege a Costa Rica; el blanco simboliza la paz que se vive en el país y la pureza de sus ideales; el rojo evoca la energía, valentía y el desprendimiento de las personas costarricenses cuando defienden su sistema democrático."
+  },
+  {
+    "Elemento": "La Carreta",
+    "Categoría": "Símbolos nacionales",
+    "Descripción": "La Carreta es declarada como símbolo en 1988. Se le reconoce su papel histórico en el desarrollo económico, social y como expresión de arte popular. La carreta decorada ha sido un sello a nivel mundial y ha propiciado la creación y producción artesanal. Fue declarada por la UNESCO como Patrimonio Intangible de la Humanidad."
+  },
+  {
+    "Elemento": "La Guaria Morada",
+    "Categoría": "Símbolos nacionales",
+    "Descripción": "Es la flor nacional desde 1939, luego de la solicitud de varias figuras destacadas de la época."
+  },
+  {
+    "Elemento": "La Marimba",
+    "Categoría": "Símbolos nacionales",
+    "Descripción": "Fue declarada como instrumento musical nacional desde 1996. Entre otras razones, se consideró que se encuentra ligada a las festividades populares más diversas de Costa Rica. Además, de que su fabricación y ejecución se ha transmitido por generaciones por medio de la tradición oral."
+  },
+  {
+    "Elemento": "Las Esferas Indígenas Precolombinas",
+    "Categoría": "Símbolos nacionales",
+    "Descripción": "En 2014, la UNESCO eligió el conjunto de asentamientos cacicales precolombinos con esferas de piedra de Diquís como Patrimonio de la Humanidad. En ese mismo año fue declarado símbolo nacional de Costa Rica."
+  },
+  {
+    "Elemento": "Los Crestones del Parque Nacional Chirripó",
+    "Categoría": "Símbolos nacionales",
+    "Descripción": "Fueron declarados símbolo nacional en 2011 con el fin de promover la atracción turística a dicho parque."
+  },
+  {
+    "Elemento": "El perezoso",
+    "Categoría": "Símbolos nacionales",
+    "Descripción": "Los perezosos de dos dedos (Choloepus hoffmanni) y de tres dedos (Bradypus variegatus) fueron declarados símbolos nacionales de la fauna silvestre de Costa Rica mediante el Decreto Legislativo N° 10007 publicado en el Diario Oficial La Gaceta N° 176 del 14 de setiembre del 2021."
+  },
+  {
+    "Elemento": "El boyeo",
+    "Categoría": "Símbolos nacionales",
+    "Descripción": "La Asamblea Legislativa le da rango de ley a la declaratoria de símbolo patrio de la carreta, pero también a la actividad del boyeo, mediante la Ley No. 10204, publicada en el Diario Oficial La Gaceta No. 100 del 31 de mayo del 2022, que los declara símbolo nacional de la cultura, la paz y el trabajo del costarricense. Además, se establece el segundo domingo de marzo de cada año “El Día Nacional de la Carreta Costarricense y el Boyeo”."
+  },
+  {
+    "Elemento": "La mariposa Morpho",
+    "Categoría": "Símbolos nacionales",
+    "Descripción": "Las mariposas han tenido una presencia significativa en el imaginario costarricense desde el tiempo precolombino. La figura de la mariposa en artefactos arqueológicos encontrados en el Valle Central de nuestro país puede estar relacionados con el ritual de la muerte y del trabajador del sepulturero. Esta especie fue declarada símbolo nacional dentro de la fauna lepidóptera de Costa Rica, mediante la Ley No. 10261, publicada en el Diario Oficial La Gaceta No. 100 del 31 de mayo del 2022."
+  },
+  {
+    "Elemento": "Las mascaradas",
+    "Categoría": "Símbolos nacionales",
+    "Descripción": "Las mascaradas se adoptan en el Valle Central, aproximadamente a mediados del siglo XX, como una fiesta para celebrar la libertad y unir al pueblo. Como arte popular históricamente se contrapuso al arte elitista, buscando que todos los vecinos se reunieran, independientemente de su clase social. Las mascaradas fueron declaradas Símbolo Nacional por la Asamblea Legislativa mediante la Ley No. 10239 publicada en el Diario Oficial La Gaceta No. 156 del 18 de agosto del 2022."
+  },
+  {
+    "Elemento": "San José",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrada en honor a San José, esposo de la Virgen María. Fue elegido como patrono de la ciudad y posteriormente de la provincia."
+  },
+  {
+    "Elemento": "Alajuela",
+    "Categoría": "Tiponimia",
+    "Descripción": "Existen varias teorías. Una la relaciona con el río que tenía piedras de laja. Otra, más aceptada, la vincula al apellido de alguna familia influyente o un paraje llamado La Lajuela o Alajuela. El nombre se oficializó más tarde."
+  },
+  {
+    "Elemento": "Cartago",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrada por el conquistador español Juan Vázquez de Coronado en referencia a la antigua e influyente ciudad de Cartago en el norte de África."
+  },
+  {
+    "Elemento": "Heredia",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrada en honor a Alonso Fernández de Heredia, quien era una figura importante (Presidente de la Real Audiencia de Guatemala) cuando se le otorgó el título de villa. Antes era conocida por el nombre indígena Cubujuquí."
+  },
+  {
+    "Elemento": "Guanacaste",
+    "Categoría": "Tiponimia",
+    "Descripción": "Proviene de la lengua náhuatl cuauh-nacaztli, que significa \"árbol de oreja\" (cuahuitl = árbol, nacaztli = oreja). Se refiere al árbol de Guanacaste (Enterolobium cyclocarpum), muy característico de la zona y árbol nacional de Costa Rica, cuya fruta tiene forma de oreja."
+  },
+  {
+    "Elemento": "Puntarenas",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombre descriptivo que significa literalmente \"Punta de Arena\", refiriéndose a la formación geográfica (una lengua de arena) donde se estableció el puerto principal."
+  },
+  {
+    "Elemento": "Escazú",
+    "Categoría": "Tiponimia",
+    "Descripción": "De origen indígena Huetar, probablemente Itzkatzú, que podría significar \"piedra de descanso\" o lugar de parada."
+  },
+  {
+    "Elemento": "Puriscal",
+    "Categoría": "Tiponimia",
+    "Descripción": "Posiblemente deriva de purisco, un tipo de frijol o planta silvestre, con el sufijo -al que indica abundancia (\"lugar donde abundan los puriscos\")."
+  },
+  {
+    "Elemento": "Tarrazú",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombre de origen indígena, probablemente relacionado con el río Tarrazú o un cacique local. La zona es famosa por su café."
+  },
+  {
+    "Elemento": "Aserrí",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombre de origen indígena, tomado del cacique Aczarri (o Aserri) que gobernaba la zona a la llegada de los españoles."
+  },
+  {
+    "Elemento": "Mora (Ciudad Colón)",
+    "Categoría": "Tiponimia",
+    "Descripción": "El cantón lleva el nombre en honor al expresidente y héroe nacional Juan Rafael Mora Porras. Su cabecera es Ciudad Colón."
+  },
+  {
+    "Elemento": "Goicoechea (Guadalupe)",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado en honor al sacerdote y figura importante Fray José Antonio de Liendo y Goicoechea. Su cabecera es Guadalupe."
+  },
+  {
+    "Elemento": "Santa Ana",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado en honor a Santa Ana, madre de la Virgen María."
+  },
+  {
+    "Elemento": "Alajuelita",
+    "Categoría": "Tiponimia",
+    "Descripción": "Diminutivo de Alajuela. Se cree que los primeros pobladores provenían de Alajuela."
+  },
+  {
+    "Elemento": "Vázquez de Coronado (San Isidro)",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado en honor al conquistador español Juan Vázquez de Coronado, segundo Adelantado de Costa Rica. Su cabecera es San Isidro."
+  },
+  {
+    "Elemento": "Tibás",
+    "Categoría": "Tiponimia",
+    "Descripción": "De origen indígena Huetar, Tivás o Tebas, que podría significar \"río caliente\" o \"aguas termales\"."
+  },
+  {
+    "Elemento": "Moravia (San Vicente)",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado también en honor al presidente Juan Rafael Mora Porras (Mora + vía, \"camino o territorio de Mora\"). Su cabecera es San Vicente."
+  },
+  {
+    "Elemento": "Montes de Oca (San Pedro)",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado en honor a Faustino Montes de Oca, un antiguo residente que donó terrenos. Su cabecera, San Pedro, alberga la Universidad de Costa Rica."
+  },
+  {
+    "Elemento": "Pérez Zeledón (San Isidro de El General)",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado en honor a Pedro Pérez Zeledón, político y diplomático que impulsó el desarrollo de la región sur. Anteriormente la zona era conocida como Ureña."
+  },
+  {
+    "Elemento": "San Ramón",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado en honor a San Ramón Nonato. Se dice que sus fundadores principales se llamaban Ramón Salas y Ramón Rodríguez."
+  },
+  {
+    "Elemento": "Naranjo",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado por la abundancia de árboles de naranjo en la zona cuando fue colonizada."
+  },
+  {
+    "Elemento": "Palmares",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado por la abundancia de palmas reales encontradas por los primeros pobladores."
+  },
+  {
+    "Elemento": "Poás (San Pedro)",
+    "Categoría": "Tiponimia",
+    "Descripción": "Toma su nombre del Volcán Poás. El origen del nombre del volcán es indígena y debatido, podría relacionarse con la palabra poasi (de significado incierto) o con un grupo indígena llamado Púas."
+  },
+  {
+    "Elemento": "Orotina",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado en honor al cacique indígena Gurutina u Orotina, que habitaba la región."
+  },
+  {
+    "Elemento": "San Carlos (Ciudad Quesada)",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado en honor a San Carlos Borromeo. Su cabecera, Ciudad Quesada, es una de las ciudades más grandes del país."
+  },
+  {
+    "Elemento": "Zarcero",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado por la abundancia de plantas de zarza en el área. El sufijo -ero indica abundancia. Famoso por su parque con esculturas en ciprés."
+  },
+  {
+    "Elemento": "Sarchí",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombre de origen indígena Huetar, posiblemente significa \"campo abierto\" o se relaciona con alguna planta local. Famoso por sus carretas típicas pintadas."
+  },
+  {
+    "Elemento": "Upala",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombre de origen indígena Maleku, que significa \"casa\" o \"poblado\"."
+  },
+  {
+    "Elemento": "Los Chiles",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado por la abundancia de plantas de chile silvestre encontradas en la zona."
+  },
+  {
+    "Elemento": "Guatuso (San Rafael)",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado por el pueblo indígena Guatuso (Maleku) que habita la región."
+  },
+  {
+    "Elemento": "La Unión (Tres Ríos)",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado para significar la \"unión\" de varios distritos o poblados al momento de crearse el cantón. Su cabecera es Tres Ríos."
+  },
+  {
+    "Elemento": "Jiménez (Juan Viñas)",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado en honor a Jesús Jiménez Zamora, dos veces presidente de Costa Rica."
+  },
+  {
+    "Elemento": "Alvarado (Pacayas)",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado en honor a Ireneo Alvarado, un personaje relevante de la zona."
+  },
+  {
+    "Elemento": "Oreamuno (San Rafael)",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado en honor a Francisco María Oreamuno Bonilla, Jefe de Estado de Costa Rica."
+  },
+  {
+    "Elemento": "El Guarco (Tejar)",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado en honor al Cacique Guarco, un importante líder indígena Huetar del Valle Central Oriental a la llegada de los españoles."
+  },
+  {
+    "Elemento": "Barva",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombre de origen indígena, asociado al Cacique Barva que dominaba la región. También da nombre al volcán Barva."
+  },
+  {
+    "Elemento": "Santo Domingo",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado en honor a Santo Domingo de Guzmán."
+  },
+  {
+    "Elemento": "Santa Bárbara",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado en honor a Santa Bárbara."
+  },
+  {
+    "Elemento": "San Rafael",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado en honor al Arcángel Rafael."
+  },
+  {
+    "Elemento": "San Isidro",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado en honor a San Isidro Labrador, patrono de los agricultores."
+  },
+  {
+    "Elemento": "Belén",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado en referencia a Belén, lugar de nacimiento de Jesús."
+  },
+  {
+    "Elemento": "Flores (San Joaquín)",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado en honor al político y médico Dr. Juan José Flores Umaña. Su cabecera es San Joaquín."
+  },
+  {
+    "Elemento": "San Pablo",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado en honor a San Pablo Apóstol."
+  },
+  {
+    "Elemento": "Sarapiquí (Puerto Viejo)",
+    "Categoría": "Tiponimia",
+    "Descripción": "Toma el nombre del río Sarapiquí. El origen del nombre del río es indígena, posiblemente relacionado con un jefe o tribu local."
+  },
+  {
+    "Elemento": "Liberia",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado así en honor a la \"liberación\" o los movimientos de independencia de Centroamérica. Conocida como la \"Ciudad Blanca\"."
+  },
+  {
+    "Elemento": "Nicoya",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado en honor al cacique chorotega Nicoya (o Nicoa), quien gobernaba la península a la llegada de los españoles. Es una de las ciudades más antiguas del país con asentamiento continuo."
+  },
+  {
+    "Elemento": "Santa Cruz",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado en honor a la Santa Cruz. Famoso por su folclore y tradiciones."
+  },
+  {
+    "Elemento": "Bagaces",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado por el cacique indígena Bagatzí que habitaba la zona."
+  },
+  {
+    "Elemento": "Carrillo (Filadelfia)",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado en honor a Braulio Carrillo Colina, Jefe de Estado y arquitecto del estado costarricense. Su cabecera es Filadelfia."
+  },
+  {
+    "Elemento": "Cañas",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado en honor al General José María Cañas Escamilla, héroe de la Campaña Nacional de 1856-1857."
+  },
+  {
+    "Elemento": "Abangares (Las Juntas)",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado por el grupo indígena Abangares o su cacique. Famoso por su historia de minería de oro."
+  },
+  {
+    "Elemento": "Tilarán",
+    "Categoría": "Tiponimia",
+    "Descripción": "Origen indígena, posiblemente significa \"lugar de muchas aguas\" o \"lugar de vientos y lluvia\". Conocido por sus vientos y energía eólica."
+  },
+  {
+    "Elemento": "Nandayure (Carmona)",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado en honor a la princesa chorotega Nandayure, protagonista de una leyenda local de amor trágico."
+  },
+  {
+    "Elemento": "La Cruz",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado por una cruz que marcaba un punto importante en el camino. Ubicado en la frontera con Nicaragua."
+  },
+  {
+    "Elemento": "Esparza",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado por el gobernador Diego de Artieda Chirino y Uclés en honor a su pueblo natal, Esparza de Salazar, en Navarra, España."
+  },
+  {
+    "Elemento": "Montes de Oro (Miramar)",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado por la actividad minera de oro en la zona. Su cabecera es Miramar."
+  },
+  {
+    "Elemento": "Golfito",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombre descriptivo, \"pequeño golfo\", por su ubicación en una pequeña bahía dentro del Golfo Dulce."
+  },
+  {
+    "Elemento": "Corredores (Ciudad Neilly)",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado por los \"corredores\" o caminos que cruzaban la zona, posiblemente relacionados con el tránsito fronterizo. Su cabecera es Ciudad Neilly."
+  },
+  {
+    "Elemento": "Garabito (Jacó)",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado en honor al Cacique Garabito, líder indígena Huetar que resistió ferozmente la conquista española. Su cabecera es la turística Jacó."
+  },
+  {
+    "Elemento": "Pococí (Guápiles)",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado por el territorio indígena de Pococí, encontrado por los españoles. Su cabecera es Guápiles."
+  },
+  {
+    "Elemento": "Siquirres",
+    "Categoría": "Tiponimia",
+    "Descripción": "Toma el nombre del río Siquirres. El origen es probablemente indígena, quizás relacionado con el pueblo Suerre o con un término que significa \"río rojizo\"."
+  },
+  {
+    "Elemento": "Talamanca (Bribri)",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado por la Cordillera de Talamanca y la región habitada ancestralmente por los pueblos Bribri y Cabécar. El origen de \"Talamanca\" es debatido, puede ser indígena o una adaptación española. Su cabecera es Bribri."
+  },
+  {
+    "Elemento": "Matina",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado por el río Matina. El origen puede ser indígena o derivado de matorral. Históricamente importante por sus plantaciones de cacao."
+  },
+  {
+    "Elemento": "Guácimo",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombrado por la abundancia del árbol de guácimo (Guazuma ulmifolia) en la zona."
+  },
+  {
+    "Elemento": "Irazú",
+    "Categoría": "Tiponimia",
+    "Descripción": "Derivado de la palabra indígena Istarú o Iztarú, que podría significar \"montaña del trueno\" o \"punto del temblor\"."
+  },
+  {
+    "Elemento": "Monteverde",
+    "Categoría": "Tiponimia",
+    "Descripción": "Nombre descriptivo, \"Montaña Verde\", por la exuberancia del bosque nuboso. Fundado en parte por cuáqueros de Estados Unidos."
+  },
+  {
+    "Elemento": "Cerro Chirripó",
+    "Categoría": "Tiponimia",
+    "Descripción": "El punto más alto de Costa Rica. \"Chirripó\" es de origen indígena (posiblemente Cabécar) y significa \"lugar de aguas eternas\" o \"aguas alegres\", por la abundancia de lagos y arroyos cerca de la cima."
+  },
+  {
+    "Elemento": "Río Tárcoles",
+    "Categoría": "Tiponimia",
+    "Descripción": "Famoso por sus cocodrilos. El nombre Tárcoles es de origen indígena Huetar."
+  }
+]
