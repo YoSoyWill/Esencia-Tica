@@ -801,342 +801,717 @@
   },
   {
     "Elemento": "San José",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrada en honor a San José, esposo de la Virgen María. Fue elegido como patrono de la ciudad y posteriormente de la provincia."
   },
   {
     "Elemento": "Alajuela",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Existen varias teorías. Una la relaciona con el río que tenía piedras de laja. Otra, más aceptada, la vincula al apellido de alguna familia influyente o un paraje llamado La Lajuela o Alajuela. El nombre se oficializó más tarde."
   },
   {
     "Elemento": "Cartago",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrada por el conquistador español Juan Vázquez de Coronado en referencia a la antigua e influyente ciudad de Cartago en el norte de África."
   },
   {
     "Elemento": "Heredia",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrada en honor a Alonso Fernández de Heredia, quien era una figura importante (Presidente de la Real Audiencia de Guatemala) cuando se le otorgó el título de villa. Antes era conocida por el nombre indígena Cubujuquí."
   },
   {
     "Elemento": "Guanacaste",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Proviene de la lengua náhuatl cuauh-nacaztli, que significa \"árbol de oreja\" (cuahuitl = árbol, nacaztli = oreja). Se refiere al árbol de Guanacaste (Enterolobium cyclocarpum), muy característico de la zona y árbol nacional de Costa Rica, cuya fruta tiene forma de oreja."
   },
   {
     "Elemento": "Puntarenas",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombre descriptivo que significa literalmente \"Punta de Arena\", refiriéndose a la formación geográfica (una lengua de arena) donde se estableció el puerto principal."
   },
   {
     "Elemento": "Escazú",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "De origen indígena Huetar, probablemente Itzkatzú, que podría significar \"piedra de descanso\" o lugar de parada."
   },
   {
     "Elemento": "Puriscal",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Posiblemente deriva de purisco, un tipo de frijol o planta silvestre, con el sufijo -al que indica abundancia (\"lugar donde abundan los puriscos\")."
   },
   {
     "Elemento": "Tarrazú",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombre de origen indígena, probablemente relacionado con el río Tarrazú o un cacique local. La zona es famosa por su café."
   },
   {
     "Elemento": "Aserrí",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombre de origen indígena, tomado del cacique Aczarri (o Aserri) que gobernaba la zona a la llegada de los españoles."
   },
   {
     "Elemento": "Mora (Ciudad Colón)",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "El cantón lleva el nombre en honor al expresidente y héroe nacional Juan Rafael Mora Porras. Su cabecera es Ciudad Colón."
   },
   {
     "Elemento": "Goicoechea (Guadalupe)",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado en honor al sacerdote y figura importante Fray José Antonio de Liendo y Goicoechea. Su cabecera es Guadalupe."
   },
   {
     "Elemento": "Santa Ana",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado en honor a Santa Ana, madre de la Virgen María."
   },
   {
     "Elemento": "Alajuelita",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Diminutivo de Alajuela. Se cree que los primeros pobladores provenían de Alajuela."
   },
   {
     "Elemento": "Vázquez de Coronado (San Isidro)",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado en honor al conquistador español Juan Vázquez de Coronado, segundo Adelantado de Costa Rica. Su cabecera es San Isidro."
   },
   {
     "Elemento": "Tibás",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "De origen indígena Huetar, Tivás o Tebas, que podría significar \"río caliente\" o \"aguas termales\"."
   },
   {
     "Elemento": "Moravia (San Vicente)",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado también en honor al presidente Juan Rafael Mora Porras (Mora + vía, \"camino o territorio de Mora\"). Su cabecera es San Vicente."
   },
   {
     "Elemento": "Montes de Oca (San Pedro)",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado en honor a Faustino Montes de Oca, un antiguo residente que donó terrenos. Su cabecera, San Pedro, alberga la Universidad de Costa Rica."
   },
   {
     "Elemento": "Pérez Zeledón (San Isidro de El General)",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado en honor a Pedro Pérez Zeledón, político y diplomático que impulsó el desarrollo de la región sur. Anteriormente la zona era conocida como Ureña."
   },
   {
     "Elemento": "San Ramón",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado en honor a San Ramón Nonato. Se dice que sus fundadores principales se llamaban Ramón Salas y Ramón Rodríguez."
   },
   {
     "Elemento": "Naranjo",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado por la abundancia de árboles de naranjo en la zona cuando fue colonizada."
   },
   {
     "Elemento": "Palmares",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado por la abundancia de palmas reales encontradas por los primeros pobladores."
   },
   {
     "Elemento": "Poás (San Pedro)",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Toma su nombre del Volcán Poás. El origen del nombre del volcán es indígena y debatido, podría relacionarse con la palabra poasi (de significado incierto) o con un grupo indígena llamado Púas."
   },
   {
     "Elemento": "Orotina",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado en honor al cacique indígena Gurutina u Orotina, que habitaba la región."
   },
   {
     "Elemento": "San Carlos (Ciudad Quesada)",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado en honor a San Carlos Borromeo. Su cabecera, Ciudad Quesada, es una de las ciudades más grandes del país."
   },
   {
     "Elemento": "Zarcero",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado por la abundancia de plantas de zarza en el área. El sufijo -ero indica abundancia. Famoso por su parque con esculturas en ciprés."
   },
   {
     "Elemento": "Sarchí",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombre de origen indígena Huetar, posiblemente significa \"campo abierto\" o se relaciona con alguna planta local. Famoso por sus carretas típicas pintadas."
   },
   {
     "Elemento": "Upala",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombre de origen indígena Maleku, que significa \"casa\" o \"poblado\"."
   },
   {
     "Elemento": "Los Chiles",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado por la abundancia de plantas de chile silvestre encontradas en la zona."
   },
   {
     "Elemento": "Guatuso (San Rafael)",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado por el pueblo indígena Guatuso (Maleku) que habita la región."
   },
   {
     "Elemento": "La Unión (Tres Ríos)",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado para significar la \"unión\" de varios distritos o poblados al momento de crearse el cantón. Su cabecera es Tres Ríos."
   },
   {
     "Elemento": "Jiménez (Juan Viñas)",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado en honor a Jesús Jiménez Zamora, dos veces presidente de Costa Rica."
   },
   {
     "Elemento": "Alvarado (Pacayas)",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado en honor a Ireneo Alvarado, un personaje relevante de la zona."
   },
   {
     "Elemento": "Oreamuno (San Rafael)",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado en honor a Francisco María Oreamuno Bonilla, Jefe de Estado de Costa Rica."
   },
   {
     "Elemento": "El Guarco (Tejar)",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado en honor al Cacique Guarco, un importante líder indígena Huetar del Valle Central Oriental a la llegada de los españoles."
   },
   {
     "Elemento": "Barva",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombre de origen indígena, asociado al Cacique Barva que dominaba la región. También da nombre al volcán Barva."
   },
   {
     "Elemento": "Santo Domingo",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado en honor a Santo Domingo de Guzmán."
   },
   {
     "Elemento": "Santa Bárbara",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado en honor a Santa Bárbara."
   },
   {
     "Elemento": "San Rafael",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado en honor al Arcángel Rafael."
   },
   {
     "Elemento": "San Isidro",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado en honor a San Isidro Labrador, patrono de los agricultores."
   },
   {
     "Elemento": "Belén",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado en referencia a Belén, lugar de nacimiento de Jesús."
   },
   {
     "Elemento": "Flores (San Joaquín)",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado en honor al político y médico Dr. Juan José Flores Umaña. Su cabecera es San Joaquín."
   },
   {
     "Elemento": "San Pablo",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado en honor a San Pablo Apóstol."
   },
   {
     "Elemento": "Sarapiquí (Puerto Viejo)",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Toma el nombre del río Sarapiquí. El origen del nombre del río es indígena, posiblemente relacionado con un jefe o tribu local."
   },
   {
     "Elemento": "Liberia",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado así en honor a la \"liberación\" o los movimientos de independencia de Centroamérica. Conocida como la \"Ciudad Blanca\"."
   },
   {
     "Elemento": "Nicoya",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado en honor al cacique chorotega Nicoya (o Nicoa), quien gobernaba la península a la llegada de los españoles. Es una de las ciudades más antiguas del país con asentamiento continuo."
   },
   {
     "Elemento": "Santa Cruz",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado en honor a la Santa Cruz. Famoso por su folclore y tradiciones."
   },
   {
     "Elemento": "Bagaces",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado por el cacique indígena Bagatzí que habitaba la zona."
   },
   {
     "Elemento": "Carrillo (Filadelfia)",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado en honor a Braulio Carrillo Colina, Jefe de Estado y arquitecto del estado costarricense. Su cabecera es Filadelfia."
   },
   {
     "Elemento": "Cañas",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado en honor al General José María Cañas Escamilla, héroe de la Campaña Nacional de 1856-1857."
   },
   {
     "Elemento": "Abangares (Las Juntas)",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado por el grupo indígena Abangares o su cacique. Famoso por su historia de minería de oro."
   },
   {
     "Elemento": "Tilarán",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Origen indígena, posiblemente significa \"lugar de muchas aguas\" o \"lugar de vientos y lluvia\". Conocido por sus vientos y energía eólica."
   },
   {
     "Elemento": "Nandayure (Carmona)",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado en honor a la princesa chorotega Nandayure, protagonista de una leyenda local de amor trágico."
   },
   {
     "Elemento": "La Cruz",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado por una cruz que marcaba un punto importante en el camino. Ubicado en la frontera con Nicaragua."
   },
   {
     "Elemento": "Esparza",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado por el gobernador Diego de Artieda Chirino y Uclés en honor a su pueblo natal, Esparza de Salazar, en Navarra, España."
   },
   {
     "Elemento": "Montes de Oro (Miramar)",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado por la actividad minera de oro en la zona. Su cabecera es Miramar."
   },
   {
     "Elemento": "Golfito",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombre descriptivo, \"pequeño golfo\", por su ubicación en una pequeña bahía dentro del Golfo Dulce."
   },
   {
     "Elemento": "Corredores (Ciudad Neilly)",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado por los \"corredores\" o caminos que cruzaban la zona, posiblemente relacionados con el tránsito fronterizo. Su cabecera es Ciudad Neilly."
   },
   {
     "Elemento": "Garabito (Jacó)",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado en honor al Cacique Garabito, líder indígena Huetar que resistió ferozmente la conquista española. Su cabecera es la turística Jacó."
   },
   {
     "Elemento": "Pococí (Guápiles)",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado por el territorio indígena de Pococí, encontrado por los españoles. Su cabecera es Guápiles."
   },
   {
     "Elemento": "Siquirres",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Toma el nombre del río Siquirres. El origen es probablemente indígena, quizás relacionado con el pueblo Suerre o con un término que significa \"río rojizo\"."
   },
   {
     "Elemento": "Talamanca (Bribri)",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado por la Cordillera de Talamanca y la región habitada ancestralmente por los pueblos Bribri y Cabécar. El origen de \"Talamanca\" es debatido, puede ser indígena o una adaptación española. Su cabecera es Bribri."
   },
   {
     "Elemento": "Matina",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado por el río Matina. El origen puede ser indígena o derivado de matorral. Históricamente importante por sus plantaciones de cacao."
   },
   {
     "Elemento": "Guácimo",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombrado por la abundancia del árbol de guácimo (Guazuma ulmifolia) en la zona."
   },
   {
     "Elemento": "Irazú",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Derivado de la palabra indígena Istarú o Iztarú, que podría significar \"montaña del trueno\" o \"punto del temblor\"."
   },
   {
     "Elemento": "Monteverde",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Nombre descriptivo, \"Montaña Verde\", por la exuberancia del bosque nuboso. Fundado en parte por cuáqueros de Estados Unidos."
   },
   {
     "Elemento": "Cerro Chirripó",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "El punto más alto de Costa Rica. \"Chirripó\" es de origen indígena (posiblemente Cabécar) y significa \"lugar de aguas eternas\" o \"aguas alegres\", por la abundancia de lagos y arroyos cerca de la cima."
   },
   {
     "Elemento": "Río Tárcoles",
-    "Categoría": "Tiponimia",
+    "Categoría": "Toponimia",
     "Descripción": "Famoso por sus cocodrilos. El nombre Tárcoles es de origen indígena Huetar."
+  },
+  {
+    "Elemento": "Pura Vida",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Popularizado en Costa Rica a partir de los años 70, se cree que inspirado por la película mexicana \"¡Pura vida!\" de 1956, protagonizada por Clavillazo. La frase encapsuló y reforzó el optimismo y estilo de vida relajado costarricense."
+  },
+  {
+    "Elemento": "Tuanis",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Dos teorías principales y debatidas. 1. Del inglés \"too nice\", adaptado fonéticamente. 2. Del código \"Malespín\", un juego de palabras cambiando letras usado por liberales centroamericanos en el siglo XIX, donde \"tuanis\" sería el equivalente de \"buenos\". Esta última es a menudo preferida por lingüistas."
+  },
+  {
+    "Elemento": "Mae",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Podría derivar de \"maje\", usado en otros países centroamericanos con connotación de \"tonto\" o \"menso\", pero que en CR perdió casi totalmente ese sentido negativo para convertirse en una muletilla y vocativo extremadamente común, similar a \"tipo\" o \"che\". Otros sugieren orígenes distintos no relacionados con \"maje\". Su uso masivo y neutro es muy costarricense."
+  },
+  {
+    "Elemento": "Tico / Tica",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Proviene de la tendencia histórica de los costarricenses a usar el sufijo diminutivo \"-ico\" / \"-ica\". Se dice que otros centroamericanos notaron esta particularidad durante la Campaña Nacional de 1856-1857, al escuchar a los soldados ticos referirse a sus compatriotas como \"hermaniticos\"."
+  },
+  {
+    "Elemento": "Guila / Güila",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Podría ser una variación local o tener raíces en términos similares en otras regiones. Es un término muy coloquial."
+  },
+  {
+    "Elemento": "Carajillo / Carajilla",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Diminutivo de \"carajo\", interjección fuerte en español, pero que en diminutivo se suaviza para referirse a niños de forma coloquial, común en varios países."
+  },
+  {
+    "Elemento": "Chamaco / Chamaca",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Posiblemente del náhuatl, usado en México y Centroamérica para referirse a niños o jóvenes."
+  },
+  {
+    "Elemento": "Tata",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Término afectivo e infantil para \"padre\", común en muchas variantes del español."
+  },
+  {
+    "Elemento": "Macha / Machita",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Del español \"macho\" masculino, pero usado curiosamente en CR para referirse a mujeres rubias. El motivo exacto no está claro."
+  },
+  {
+    "Elemento": "Wachiman / Guachiman",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Adaptación fonética del inglés \"watchman\" vigilante."
+  },
+  {
+    "Elemento": "Bombeta",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Probablemente relacionado con \"bomba\" explosivo, o también estrofa improvisada en Guanacaste, sugiriendo alguien que \"explota\" en llamar la atención o es \"ruidoso\"."
+  },
+  {
+    "Elemento": "Cabra",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Era un término más antiguo para novia/chica."
+  },
+  {
+    "Elemento": "Chunche",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Podría ser una voz expresiva o de origen indígena. Su característica principal es ser una palabra comodín omnipresente en CR para cualquier objeto."
+  },
+  {
+    "Elemento": "Chante",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Posiblemente del náhuatl \"chantli\" hogar que llegó vía México, o del francés \"chantier\" lugar de trabajo/construcción, adaptado a vivienda humilde. También se usa en otros países."
+  },
+  {
+    "Elemento": "Brete",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Probablemente del francés \"brette\" espada antigua, asociado a la idea de lucha o esfuerzo \"batallar\" en el trabajo. Usado en varios países de LatAm."
+  },
+  {
+    "Elemento": "Nave",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Metáfora común en español para un vehículo grande o impresionante, extendido en CR a cualquier coche."
+  },
+  {
+    "Elemento": "Harina",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Metáfora, el dinero como algo necesario y básico como la harina para hacer pan."
+  },
+  {
+    "Elemento": "Rojo / Teja / Tucán",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Referencias al color o imagen distintiva de los billetes de 1000, 100 -aunque ya no sea billete-, y 5000 colones respectivamente."
+  },
+  {
+    "Elemento": "Plata",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Metonimia histórica en español, por el valor de la plata como metal precioso usado en monedas."
+  },
+  {
+    "Elemento": "Birra",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Del italiano \"birra\" cerveza, adoptado en muchos países."
+  },
+  {
+    "Elemento": "Guaro",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Acortamiento de \"aguardiente\". Muy asociado en CR al licor de caña nacional \"Cacique\"."
+  },
+  {
+    "Elemento": "Choza",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Español estándar para cabaña o vivienda humilde, usado coloquialmente como sinónimo de casa en varios países."
+  },
+  {
+    "Elemento": "Pulpería",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Tienda de abarrotes de barrio. El nombre podría venir de que antiguamente vendían \"pulpo\" u otros productos variados \"como pulpo con muchos brazos\", o de tiendas generales en América del Sur. Es una institución muy tica."
+  },
+  {
+    "Elemento": "Jalar",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Del español \"halar\" tirar de algo. El sentido de \"irse\" es como \"tirar\" o \"arrancar\" camino. El de \"noviazgo\" es más figurado, como \"atraer\" o \"llevar consigo\"."
+  },
+  {
+    "Elemento": "Rulear",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Podría ser una creación local onomatopéyica o figurada para el acto de dormir/descansar."
+  },
+  {
+    "Elemento": "Estar de goma",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Referencia a la sensación pegajosa, pesada o de embotamiento de la resaca. Usado en varios países."
+  },
+  {
+    "Elemento": "Hacerse el/la loco/a o el mae",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Expresión común en español para fingir demencia o ignorancia."
+  },
+  {
+    "Elemento": "Dar pelota",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Metáfora posiblemente del fútbol u otro deporte, \"dar juego\", prestar atención."
+  },
+  {
+    "Elemento": "Echar el cuento",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Metáfora, \"contar una historia\" elaborada para seducir."
+  },
+  {
+    "Elemento": "Jugársela",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Español general, arriesgarse como en un juego."
+  },
+  {
+    "Elemento": "Topar",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Español estándar \"topar con\" chocar, encontrar."
+  },
+  {
+    "Elemento": "Varas",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Vara\" es una vara de medir. En plural y sentido figurado, se usa para \"asuntos\", \"cosas\" o \"exageraciones/mentiras\". Muy tico en su frecuencia y flexibilidad de uso."
+  },
+  {
+    "Elemento": "Hablar paja",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Paja\" como algo sin valor o sustancia. Común en varios países."
+  },
+  {
+    "Elemento": "Batear / Bateador",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Del béisbol, \"batear\" sin saber si se acertará, aplicado a adivinar o inventar respuestas."
+  },
+  {
+    "Elemento": "Chinear",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Relacionado con \"chique\" o trato afectuoso a niños \"chiquillos\", mimar."
+  },
+  {
+    "Elemento": "Estripar",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Verbo español, pero con uso muy frecuente en CR para aplastar o apretar fuertemente."
+  },
+  {
+    "Elemento": "Presa",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Del español \"presa\" dique, retención. Aplicado al tráfico detenido como un bloqueo."
+  },
+  {
+    "Elemento": "Agüevado / Agüevada Ahuevado/a",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Relacionado con \"huevo\", en sentido figurado de pesadez o falta de ánimo. Usado en varios países."
+  },
+  {
+    "Elemento": "Salado / Salada",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Creencia antigua que asociaba la sal con la mala suerte en ciertos contextos. Común en español."
+  },
+  {
+    "Elemento": "Tapis / Estar tapis",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Jerga local para \"borracho\"."
+  },
+  {
+    "Elemento": "Filo tener filo",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Metáfora de sentir algo \"afilado\" o vacío en el estómago por hambre."
+  },
+  {
+    "Elemento": "Chiva",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Jerga para “genial\". Podría venir de algún modismo antiguo o ser una creación expresiva."
+  },
+  {
+    "Elemento": "Carga",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Metáfora de \"llevar una gran carga\" de habilidad o conocimiento."
+  },
+  {
+    "Elemento": "Mala nota",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Calificación negativa, como en la escuela."
+  },
+  {
+    "Elemento": "Rajado / Rajada",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "De \"rajar\" presumir, exagerar, o también \"partir\". Indica algo extremo, fuera de lo común, o alguien que presume mucho."
+  },
+  {
+    "Elemento": "Chispa tener chispa",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "De \"chispa\" spark, alguien con ideas brillantes o ingenio rápido."
+  },
+  {
+    "Elemento": "Polo",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Posiblemente de \"polo\" extremo, popular o relacionado con \"polada\" acto vulgar, indica falta de gusto o refinamiento."
+  },
+  {
+    "Elemento": "¡Upe!",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Posiblemente deformación de interjecciones antiguas para llamar o anunciar presencia, o de origen onomatopéyico."
+  },
+  {
+    "Elemento": "¡Diay! / ¡Idiay!",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Contracción o evolución de expresiones como \"Y de ahí\" o \"¿Y diga ahí?\". Es una interjección/muletilla muy característica y multifuncional de CR."
+  },
+  {
+    "Elemento": "¡Qué jeta!",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "De \"jeta\" cara, hocico, usado peyorativamente. \"Tener jeta\" es tener descaro. La exclamación denota sorpresa ante el descaro o la exageración."
+  },
+  {
+    "Elemento": "¡Guácala!",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Onomatopeya de asco, común en varios países."
+  },
+  {
+    "Elemento": "Achará",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Expresión de lástima o resignación. \"¡Achará mi tamal!\". Posible origen vasco \"atxar\" - pesar o una creación local."
+  },
+  {
+    "Elemento": "Soda",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Adoptado de las \"soda fountains\" estadounidenses, pero redefinido en CR como pequeño restaurante típico y económico."
+  },
+  {
+    "Elemento": "Boca",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Pequeña porción para \"tapar\" el hambre o acompañar la bebida, similar a la \"tapa\" española, algo que se lleva a la \"boca\"."
+  },
+  {
+    "Elemento": "Gallito",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Diminutivo de \"gallo\", quizás por ser una porción pequeña o por la forma de comerlo rápidamente."
+  },
+  {
+    "Elemento": "Yodo / Yodito",
+    "Categoría": "Costarriqueñismo",
+    "Descripción": "Jerga para café, probablemente por el color oscuro similar al yodo medicinal, usado humorísticamente."
+  },
+  {
+    "Elemento": "Cabécares",
+    "Categoría": "Pueblo indígena",
+    "Descripción": "Los Cabécares son uno de los grupos indígenas más grandes de Costa Rica. Habitan principalmente en la extensa Cordillera de Talamanca, en territorios como Chirripó Arriba, Chirripó Abajo, Nairi Awari, Tayni, Telire, Ujarrás, China Kichá y Talamanca Cabécar. Su idioma, el cabécar, se conserva en gran medida dentro de sus comunidades."
+  },
+  {
+    "Elemento": "Bribris",
+    "Categoría": "Pueblo indígena",
+    "Descripción": "Los Bribris también se encuentran en la región de la Cordillera de Talamanca y en zonas aledañas. Sus territorios incluyen Talamanca Bribri, Keköldi, Salitre y Cabagra. Son conocidos por su rica tradición oral, su profunda conexión espiritual con la naturaleza y su estructura social clánica. Su idioma, el bribri, se mantiene vivo y presenta dos variedades dialectales."
+  },
+  {
+    "Elemento": "Ngäbe",
+    "Categoría": "Pueblo indígena",
+    "Descripción": "El pueblo Ngäbe, también conocido como Guaymí, se localiza principalmente en la zona sur de Costa Rica, cerca de la frontera con Panamá. Sus territorios en Costa Rica son Abrojos Montezuma, Conte Burica, Coto Brus, Altos de San Antonio y Alto Laguna de Osa. Su idioma se mantiene vivo en Costa Rica y Panamá."
+  },
+  {
+    "Elemento": "Térrabas",
+    "Categoría": "Pueblo indígena",
+    "Descripción": "Los Térrabas, o Teribes, son un grupo indígena más pequeño que reside en el territorio de Térraba, ubicado en la zona sur del país. Mantienen relaciones culturales e históricas cercanas con el pueblo Naso de Panamá."
+  },
+  {
+    "Elemento": "Borucas",
+    "Categoría": "Pueblo indígena",
+    "Descripción": "Los Borucas habitan en el territorio de Boruca y Rey Curré, situado en el Pacífico sur de Costa Rica, específicamente en el cantón de Buenos Aires de Puntarenas. Son famosos por la celebración del \"Juego de los Diablitos\", una representación tradicional que forma parte importante de su identidad cultural."
+  },
+  {
+    "Elemento": "Huetares",
+    "Categoría": "Pueblo indígena",
+    "Descripción": "Aunque en el pasado ocuparon una región más amplia, los Huetares actualmente se encuentran principalmente en las reservas de Quitirrisí y Zapatón. A pesar de que su idioma ancestral se considera extinto, las comunidades Huetares están activamente trabajando en la revitalización de su cultura y tradiciones."
+  },
+  {
+    "Elemento": "Malekus",
+    "Categoría": "Pueblo indígena",
+    "Descripción": "Los Malekus, también conocidos como Guatusos, viven en la zona norte de Costa Rica en el territorio Guatuso. Su idioma, el maleku, aún es hablado por una parte importante de la población, aunque existen esfuerzos para fortalecer su uso y transmisión a las nuevas generaciones."
+  },
+  {
+    "Elemento": "Chorotegas",
+    "Categoría": "Pueblo indígena",
+    "Descripción": "El pueblo Chorotega se localiza principalmente en la región de Guanacaste en el territorio Matambú. Aunque su idioma ancestral también se considera extinto, la comunidad Chorotega mantiene viva su identidad cultural a través de sus tradiciones, artesanías y la memoria de sus antepasados."
+  },
+  {
+    "Elemento": "Romería a la Virgen de los Ángeles (2 de Agosto)",
+    "Categoría": "Tradiciones",
+    "Descripción": "Celebración de la patrona de Costa Rica. Miles de personas realizan la \"Romería\", una peregrinación a pie desde diversos puntos del país hasta la Basílica de Nuestra Señora de los Ángeles en Cartago."
+  },
+  {
+    "Elemento": "Elaboración y consumo de Tamales",
+    "Categoría": "Tradiciones",
+    "Descripción": "Una tradición culinaria fundamental. Las familias se reúnen para hacer tamales."
+  },
+  {
+    "Elemento": "El Portal",
+    "Categoría": "Tradiciones",
+    "Descripción": "Montaje del nacimiento o pesebre en los hogares."
+  },
+  {
+    "Elemento": "Fiestas de Zapote (San José)",
+    "Categoría": "Tradiciones",
+    "Descripción": "Famosas fiestas populares que inician después de Navidad y se extienden hasta los primeros días de enero. Incluyen corridas de toros \"a la tica\", juegos mecánicos (\"ciudad mágica\"), conciertos, bares y puestos de comida."
+  },
+  {
+    "Elemento": "El Tope Nacional (26 de Diciembre)",
+    "Categoría": "Tradiciones",
+    "Descripción": "Un gran desfile de caballistas por las principales avenidas de San José."
+  },
+  {
+    "Elemento": "Carnaval Nacional (Tradicionalmente el 27 de Diciembre, aunque ha variado)",
+    "Categoría": "Tradiciones",
+    "Descripción": "Desfile con comparsas, música y carrozas en San José."
+  },
+  {
+    "Elemento": "Carnavales de Limón (Octubre)",
+    "Categoría": "Tradiciones",
+    "Descripción": "Celebran la cultura afrocaribeña de la provincia de Limón con desfiles llenos de color, música calipso y reggae, y comidas típicas de la zona (como el rice and beans y el patí). Originalmente se celebraban el 12 de octubre (Día de las Culturas)."
+  },
+  {
+    "Elemento": "Fiestas Cívicas de Palmares (Enero)",
+    "Categoría": "Tradiciones",
+    "Descripción": "Una de las fiestas populares más grandes del país, con conciertos, corridas de toros, desfiles, y un gran \"tope\" (desfile de caballos)."
+  },
+  {
+    "Elemento": "Juego de los Diablitos de Boruca (Diciembre/Enero)",
+    "Categoría": "Tradiciones",
+    "Descripción": "Una tradición indígena del pueblo Boruca que representa la lucha contra los conquistadores españoles a través de danzas y máscaras talladas en madera."
+  },
+  {
+    "Elemento": "Fiestas Patronales",
+    "Categoría": "Tradiciones",
+    "Descripción": "Cada pueblo y ciudad celebra fiestas en honor a su santo patrón, usualmente con Fiestas de Santa Cruz (Guanacaste)"
+  },
+  {
+    "Elemento": "Festival de la Luz (San José)",
+    "Categoría": "Tradiciones",
+    "Descripción": "Aunque es en la capital, tiene un carácter muy josefino. Se celebra un sábado a mediados de diciembre, marcando el inicio de las festividades navideñas en San José con un gran desfile nocturno de carrozas iluminadas, bandas y mascaradas por el Paseo Colón y la Avenida Segunda."
   }
 ]
