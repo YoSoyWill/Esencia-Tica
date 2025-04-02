@@ -4,138 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elemento Aleatorio</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 30px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #003893;
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2.5rem;
-            font-weight: 500;
-        }
-        p {
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-        }
-        #elemento-nombre {
-            font-size: 2rem;
-            color: #d22320;
-            font-weight: 700;
-            margin-bottom: 10px;
-            border-bottom: 2px solid #d22320;
-            padding-bottom: 5px;
-        }
-        #elemento-categoria {
-            font-size: 1.3rem;
-            color: #002089;
-            font-weight: 500;
-            margin-bottom: 10px;
-        }
-        #elemento-descripcion {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: #555;
-        }
-        @media (max-width: 600px) {
-            .container {
-                padding: 20px;
-            }
-            h1 {
-                font-size: 2rem;
-            }
-            #elemento-nombre {
-                font-size: 1.5rem;
-            }
-            #elemento-categoria {
-                font-size: 1.2rem;
-            }
-            #elemento-descripcion {
-                font-size: 1rem;
-            }
-        }
-        .bottom-nav {
-        position: fixed; /* Posición fija en la parte inferior de la pantalla */
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: #003893; /* Azul Costa Rica */
-        color: white;
-        display: flex;
-        justify-content: space-around; /* Espacio igual entre los botones */
-        padding: 10px 0;
-        box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Sombra superior para destacar el menú */
-        z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
-        border-top-left-radius: 8px; /* Bordes redondeados superiores */
-        border-top-right-radius: 8px;
-      }
-
-      .bottom-nav button {
-        background-color: transparent; /* Fondo transparente para los botones */
-        border: none;
-        color: white;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s ease; /* Transición suave para el hover */
-        border-radius: 4px; /* Añade un pequeño borde redondeado a los botones */
-      }
-
-      .bottom-nav button:hover {
-        background-color: rgba(255, 255, 255, 0.1); /* Ligeramente más claro al pasar el mouse */
-      }
-
-      .bottom-nav button:active {
-        background-color: rgba(255, 255, 255, 0.2); /* Más claro al hacer clic */
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="header-fixed">
+        <div class="header-content">
+            <h1>Esencia Tica</h1>
+        </div>
+    </div>
+    <div class="content-below-header">
+        <h1>Aleatorio</h1>
+        </div>
     <div class="container">
-        <h1>Elemento Aleatorio</h1>
         <div id="elemento-detalle">
             <h2 id="elemento-nombre"></h2>
             <p id="elemento-categoria"></p>
             <p id="elemento-descripcion"></p>
         </div>
     </div>
-
     <div class="bottom-nav">
-        <button onclick="window.location.href='index.html'">Inicio</button>
-        <button onclick="window.location.href='random.html'">Aleatorio</button>
+            <button onclick="window.location.href='index.html'">📑</button>
+            <button onclick="window.location.href='random.html'">🎲</button>
+            <button onclick="window.location.href='visitados.html'">📊</button>
     </div>
-
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const elementoNombreSpan = document.getElementById('elemento-nombre');
             const elementoCategoriaSpan = document.getElementById('elemento-categoria');
             const elementoDescripcionSpan = document.getElementById('elemento-descripcion');
 
-            fetch('datos.json')
+            fetch('https://yosoywill.github.io/Esencia-Tica/datos.json')
                 .then(response => response.json())
                 .then(data => {
-                    const elementoAleatorio = data[Math.floor(Math.random() * data.length)];
+                    let elementosVisitados = localStorage.getItem('elementosVisitados');
+                    if (elementosVisitados) {
+                        elementosVisitados = new Set(JSON.parse(elementosVisitados));
+                    } else {
+                        elementosVisitados = new Set();
+                    }
+
+                    let elementoAleatorio;
+                    let intentos = 0;
+                    const maxIntentos = data.length * 2;
+
+                    do {
+                        elementoAleatorio = data[Math.floor(Math.random() * data.length)];
+                        intentos++;
+                        if (intentos >= maxIntentos) {
+                            console.warn("No se pudo encontrar un elemento no visitado después de varios intentos.");
+                            break;
+                        }
+                    } while (elementosVisitados.has(elementoAleatorio.Elemento));
+
+
                     elementoNombreSpan.textContent = elementoAleatorio.Elemento;
                     elementoCategoriaSpan.textContent = `Categoría: ${elementoAleatorio.Categoría}`;
                     elementoDescripcionSpan.textContent = elementoAleatorio.Descripción;
+
+                    elementosVisitados.add(elementoAleatorio.Elemento);
+                    localStorage.setItem('elementosVisitados', JSON.stringify(Array.from(elementosVisitados)));
                 })
                 .catch(error => console.error('Error al cargar los datos:', error));
         });

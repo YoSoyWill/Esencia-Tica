@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico de Elementos Visitados</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+       
+</head>
+<body>
+    <div class="header-fixed">
+        <h1>Esencia Tica</h1>
+    </div>
+    <div class="content-below-header">
+        <h1>Estadísticas</h1>
+        </div>
+    <div class="container">
+
+        <div class="progress-bar">
+            <div class="progress-bar-fill" id="barra-progreso"></div>
+        </div>
+        <div id="porcentaje-visitados"></div>
+        <div class="bottom-nav">
+            <button onclick="window.location.href='index.html'">📑</button>
+            <button onclick="window.location.href='random.html'">🎲</button>
+            <button onclick="window.location.href='visitados.html'">📊</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const porcentajeVisitadosDiv = document.getElementById('porcentaje-visitados');
+            const barraProgreso = document.getElementById('barra-progreso');
+            let elementosVisitados = new Set();
+            if (localStorage.getItem('elementosVisitados')) {
+                elementosVisitados = new Set(JSON.parse(localStorage.getItem('elementosVisitados')));
+            }
+            fetch('https://yosoywill.github.io/Esencia-Tica/datos.json')
+                .then(response => response.json())
+                .then(data => {
+                    const totalElementos = data.length;
+                    const cantidadVisitados = elementosVisitados.size;
+                    const porcentajeVisitados = (cantidadVisitados / totalElementos) * 100;
+                    porcentajeVisitadosDiv.textContent = `Has visitado el ${porcentajeVisitados.toFixed(2)}% de los elementos.`;
+                    porcentajeVisitadosDiv.classList.add('resaltar');
+                    barraProgreso.style.width = `${porcentajeVisitados}%`;
+                })
+                .catch(error => {
+                    console.error('Error al cargar los datos:', error);
+                    porcentajeVisitadosDiv.textContent = "Error al cargar los datos.";
+                });
+        });
+    </script>
+</body>
+</html>

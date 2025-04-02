@@ -4,201 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Elementos</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            padding-bottom: 56px; /* Altura del menú inferior */
-            box-sizing: border-box;
-            position: relative; /* Para que el pie de página se posicione absolutamente dentro de este contenedor */
-            min-height: 100vh; /* Asegura que el body ocupe al menos la altura de la pantalla */
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #003893;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        #lista-elementos {
-            list-style-type: none;
-            padding: 0;
-            margin-top: 0;
-        }
-        #lista-elementos li {
-            cursor: pointer;
-            padding: 12px;
-            border-bottom: 1px solid #e0e0e0;
-            transition: background-color 0.3s ease;
-            border-radius: 4px;
-            background-color: #fff;
-            margin-bottom: 8px;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-        }
-        #lista-elementos li:hover {
-            background-color: #e0e0e0;
-        }
-        #lista-elementos li:last-child {
-            border-bottom: none;
-        }
-        .bottom-nav {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #003893;
-            color: white;
-            display: flex;
-            justify-content: space-around;
-            padding: 10px 0;
-            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
-            flex-wrap: wrap; /* Permite que los botones se envuelvan en pantallas pequeñas */
-        }
-        .bottom-nav button {
-            background-color: transparent;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            border-radius: 4px;
-            display: flex; /* Usamos flexbox para el layout interno del botón */
-            flex-direction: column; /* Apilamos el texto principal y la categoría verticalmente */
-            align-items: center; /* Centramos los elementos dentro del botón */
-        }
-        .bottom-nav button:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-        .bottom-nav button:active {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-        .bottom-nav button span {
-            font-size: 12px;
-            color: red;
-        }
-        @media (max-width: 600px) {
-            .bottom-nav {
-                flex-direction: column; /* Apilamos los botones verticalmente en pantallas pequeñas */
-            }
-            .bottom-nav button {
-                width: 100%; /* Los botones ocupan todo el ancho en pantallas pequeñas */
-                text-align: center; /* Centramos el texto en pantallas pequeñas */
-                padding: 12px 20px;
-            }
-        }
-
-        /* Estilos para la barra superior fija */
-        .header-fixed {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: red; /* Cambia el color de fondo a rojo */
-            z-index: 1000; /* Asegura que esté por encima de otros elementos */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            height: 50px; /* Altura de la barra superior */
-            display: flex;
-            align-items: center; /* Centra verticalmente el contenido */
-            padding: 0 10px; /* Añade padding horizontal */
-            box-sizing: border-box;
-            color: white;
-        }
-
-        .header-fixed h1 {
-            margin: 0; /* Elimina el margen del h1 para que no afecte al centrado */
-            font-size: 18px; /* Tamaño de fuente más pequeño para la barra superior */
-            color: white;
-            margin-right: 10px; /* Separación del título y el buscador/input */
-        }
-
-        #buscador-elementos {
-            width: 0; /* Inicialmente el buscador no ocupa espacio */
-            padding: 0;
-            margin-bottom: 0; /* Elimina el margen inferior */
-            border: none; /* Sin borde */
-            border-radius: 4px;
-            font-size: 14px;
-            box-sizing: border-box;
-            transition: width 0.3s ease; /* Transición suave para el ancho */
-            background-color: transparent; /* Color de fondo transparente inicialmente */
-            padding-left: 30px; /* Espacio para el icono de búsqueda */
-            position: relative; /* Para posicionar el icono de búsqueda */
-            height: 30px; /* Altura del input */
-            align-self: center;
-            color: black;
-            margin-left: auto; /* Empuja el input a la derecha */
-            opacity: 0.8; /* Muestra el placeholder con cierta opacidad */
-        }
-
-        #buscador-elementos.expandir {
-            width: 200px; /* Ancho cuando se expande */
-            padding: 10px 30px 10px 30px;
-            background-color: rgba(255,255,255,0.8); /* Color de fondo del buscador cuando se expande */
-            opacity: 1; /* El texto del input se muestra completamente */
-            border: none;
-        }
-
-        #buscador-elementos:focus {
-            outline: none; /* Elimina el borde de enfoque por defecto */
-        }
-
-        .icono-buscar {
-            cursor: pointer;
-            opacity: 0.8; /* Icono un poco transparente */
-            height: 20px; /* Altura del icono */
-            width: 20px;
-            color: white;
-            font-size: 20px;
-            margin-left: 10px; /* Separación del input y el icono */
-        }
-
-        .content-below-header {
-            padding-top: 60px; /* Ajusta este valor según la altura de la barra superior (50px + algo de margen) */
-        }
-
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="header-fixed">
-        <h1>Lista de Elementos</h1>
-        <input type="text" id="buscador-elementos" placeholder="Buscar elemento...">
+        <h1>Esencia Tica</h1>
+        <input type="text" id="buscador-elementos" placeholder="Buscar...">
         <span id="icono-buscar" class="icono-buscar">&#x1F50D;</span>
     </div>
     <div class="content-below-header">
+        <h1>Lista de elementos</h1>
+        <div id="filtro-categorias">
+            <select id="select-categoria">
+                <option value="">Todas las categorías</option>
+            </select>
+        </div>
         <div class="container">
             <ul id="lista-elementos"></ul>
         </div>
     </div>
-
     <div class="bottom-nav">
-        <button onclick="window.location.href='index.html'">Inicio</button>
-        <button onclick="window.location.href='random.html'">Aleatorio</button>
+        <button onclick="window.location.href='index.html'">📑</button>
+        <button onclick="window.location.href='random.html'">🎲</button>
+        <button onclick="window.location.href='visitados.html'">📊</button>
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const listaElementos = document.getElementById('lista-elementos');
             const buscadorElementos = document.getElementById('buscador-elementos');
             const iconoBuscar = document.getElementById('icono-buscar');
+            const selectCategoria = document.getElementById('select-categoria');
             let elementosOrdenados = [];
+            let elementosVisitados = new Set();
+            let categorias = new Set();
+
+            if (localStorage.getItem('elementosVisitados')) {
+                elementosVisitados = new Set(JSON.parse(localStorage.getItem('elementosVisitados')));
+            }
+
             fetch('https://yosoywill.github.io/Esencia-Tica/datos.json')
                 .then(response => response.json())
                 .then(data => {
                     elementosOrdenados = data.sort((a, b) => a.Elemento.localeCompare(b.Elemento));
+                    data.forEach(item => categorias.add(item.Categoría));
+                    categorias.forEach(categoria => {
+                        const option = document.createElement('option');
+                        option.value = categoria;
+                        option.textContent = categoria;
+                        selectCategoria.appendChild(option);
+                    });
                     mostrarElementos();
                     iconoBuscar.addEventListener('click', () => {
                         buscadorElementos.classList.toggle('expandir');
@@ -208,26 +65,47 @@
                     });
                     buscadorElementos.addEventListener('input', () => {
                         const filtro = buscadorElementos.value.toLowerCase();
-                        mostrarElementos(filtro);
+                        mostrarElementos(filtro, selectCategoria.value);
+                    });
+                    selectCategoria.addEventListener('change', () => {
+                        mostrarElementos(buscadorElementos.value.toLowerCase(), selectCategoria.value);
                     });
                 })
                 .catch(error => console.error('Error al cargar los datos:', error));
-            function mostrarElementos(filtro = '') {
+
+            function mostrarElementos(filtro = '', categoriaSeleccionada = '') {
                 listaElementos.innerHTML = '';
-                const elementosFiltrados = elementosOrdenados.filter(item =>
-                    item.Elemento.toLowerCase().includes(filtro)
-                );
-                elementosFiltrados.forEach(item => {
+                const elementosFiltrados = elementosOrdenados.filter(item => {
+                    const filtroNombre = item.Elemento.toLowerCase().includes(filtro);
+                    const filtroCategoria = categoriaSeleccionada ? item.Categoría === categoriaSeleccionada : true;
+                    return filtroNombre && filtroCategoria;
+                });
+                elementosFiltrados.forEach((item, index) => {
                     const listItem = document.createElement('li');
-                    listItem.textContent = item.Elemento;
-                    listItem.addEventListener('click', () => mostrarDetalles(item));
+                    let elementoTexto = item.Elemento;
+                    if (elementosVisitados.has(item.Elemento)) {
+                        elementoTexto = `👁️ ${elementoTexto}`;
+                    }
+                    listItem.textContent = elementoTexto;
+                    listItem.innerHTML += `<span class="lista-detalles">(${item.Categoría})</span>`;
+                    if (elementosVisitados.has(item.Elemento)) {
+                        listItem.classList.add('visitado');
+                    }
+                    listItem.addEventListener('click', () => {
+                        mostrarDetalles(item, index);
+                    });
                     listaElementos.appendChild(listItem);
                 });
             }
-            function mostrarDetalles(item) {
+
+            function mostrarDetalles(item, index) {
                 const elementoNombre = encodeURIComponent(item.Elemento);
                 const elementoCategoria = encodeURIComponent(item.Categoría);
                 const elementoDescripcion = encodeURIComponent(item.Descripción);
+                if (!elementosVisitados.has(item.Elemento)) {
+                    elementosVisitados.add(item.Elemento);
+                    localStorage.setItem('elementosVisitados', JSON.stringify(Array.from(elementosVisitados)));
+                }
                 window.location.href = `detalles.html?nombre=${elementoNombre}&categoria=${elementoCategoria}&descripcion=${elementoDescripcion}`;
             }
         });
