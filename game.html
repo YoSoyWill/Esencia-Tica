@@ -520,48 +520,139 @@ to { transform: rotate(360deg); }
 <script>
 // --- 1. ESTRUCTURA DE DATOS ---
 const PUZZLE_DATA = [
-{
-id: "naturaleza_01",
-nombre: "Bosque de Otoño",
-categoria: "Naturaleza",
-descripcion: "Un sereno bosque durante el pico de los colores de otoño.",
-url: "https://picsum.photos/id/1015/600/800"
-},
-{
-id: "naturaleza_02",
-nombre: "Playa Tropical",
-categoria: "Naturaleza",
-descripcion: "Aguas cristalinas y arena blanca en un paraíso tropical.",
-url: "https://picsum.photos/id/1018/600/800"
-},
-{
-id: "arquitectura_01",
-nombre: "Castillo Medieval",
-categoria: "Arquitectura",
-descripcion: "Una fortaleza histórica con siglos de antigüedad.",
-url: "https://picsum.photos/id/180/600/800"
-},
-{
-id: "arquitectura_02",
-nombre: "Ciudad Moderna",
-categoria: "Arquitectura",
-descripcion: "Rascacielos que tocan las nubes al atardecer.",
-url: "https://picsum.photos/id/13/600/800"
-},
-{
-id: "animales_01",
-nombre: "León Majestuoso",
-categoria: "Animales",
-descripcion: "La majestuosa mirada de un león en la sabana.",
-url: "https://picsum.photos/id/218/600/800"
-},
-{
-id: "animales_02",
-nombre: "Compañero Fiel",
-categoria: "Animales",
-descripcion: "Un perro disfrutando de la naturaleza.",
-url: "https://picsum.photos/id/237/600/800"
-}
+  {
+    "id": "guaria_morada",
+    "nombre": "La Guaria Morada",
+    "categoria": "Símbolos nacionales",
+    "descripcion": "Flor nacional desde 1939; una orquídea violeta símbolo de belleza y esperanza. imagen",
+    "url": "https://yosoywill.github.io/Esencia-Tica/images/guaria_morada.PNG"
+  },
+  {
+    "id": "yiguirro",
+    "nombre": "Yigüirro",
+    "categoria": "Símbolos nacionales",
+    "descripcion": "Ave nacional desde 1977; su canto anuncia la llegada de la estación lluviosa. imagen Por Greg Gilbert from Dahlonega Area, Georgia, USA",
+    "url": "https://yosoywill.github.io/Esencia-Tica/images/yiguirro.PNG"
+  },
+  {
+    "id": "venado_colablanca",
+    "nombre": "Venado Cola Blanca",
+    "categoria": "Símbolos nacionales",
+    "descripcion": "Declarado símbolo de la fauna costarricense en 1995. Representa la vida silvestre del país. imagen Por D. Gordon E. Robertson",
+    "url": "https://yosoywill.github.io/Esencia-Tica/images/venado_colablanca.PNG"
+  },
+  {
+    "id": "marimba",
+    "nombre": "La Marimba",
+    "categoria": "Símbolos nacionales",
+    "descripcion": "Instrumento musical nacional desde 1996; presente en celebraciones populares. imagen Por Cristina Valencia",
+    "url": "https://yosoywill.github.io/Esencia-Tica/images/marimba.PNG"
+  },
+  {
+    "id": "carreta_tica",
+    "nombre": "La Carreta",
+    "categoria": "Símbolos nacionales",
+    "descripcion": "Declarada símbolo nacional en 1988; representa el trabajo campesino y el arte popular. imagen Por The LEAF Project",
+    "url": "https://yosoywill.github.io/Esencia-Tica/images/carreta_tica.PNG"
+  },
+  {
+    "id": "arbol_guanacaste",
+    "nombre": "Árbol de Guanacaste",
+    "categoria": "Símbolos nacionales",
+    "descripcion": "Símbolo desde 1959; representa la protección y el valor de los recursos naturales. imagen Por Avancari",
+    "url": "https://yosoywill.github.io/Esencia-Tica/images/arbol_guanacaste.PNG"
+  },
+  {
+    "id": "bandera_cr",
+    "nombre": "Bandera de Costa Rica",
+    "categoria": "Símbolos nacionales",
+    "descripcion": "Desde 1948; el azul representa el cielo, el blanco la paz y el rojo la valentía. imagen Por Lex.mercurio",
+    "url": "https://yosoywill.github.io/Esencia-Tica/images/bandera_cr.PNG"
+  },
+  {
+    "id": "escudo_cr",
+    "nombre": "Escudo Nacional",
+    "categoria": "Símbolos nacionales",
+    "descripcion": "Declarado en 1948; representa los volcanes, mares y prosperidad del país. imagen",
+    "url": "https://yosoywill.github.io/Esencia-Tica/images/escudo_cr.PNG"
+  },
+  {
+    "id": "himno_cr",
+    "nombre": "Himno Nacional de Costa Rica",
+    "categoria": "Símbolos nacionales",
+    "descripcion": "Declarado en 1949; símbolo de identidad y patriotismo. imagen",
+    "url": "https://yosoywill.github.io/Esencia-Tica/images/himno_cr.PNG"
+  },
+  {
+    "id": "teatro_nacional",
+    "nombre": "Teatro Nacional",
+    "categoria": "Símbolos nacionales",
+    "descripcion": "Edificio histórico inaugurado en 1897; joya arquitectónica nacional. imagen Por MadriCR",
+    "url": "https://yosoywill.github.io/Esencia-Tica/images/teatro_nacional.PNG"
+  },
+  {
+    "id": "cafe_cr",
+    "nombre": "Café de Costa Rica",
+    "categoria": "Símbolos nacionales",
+    "descripcion": "Declarado símbolo nacional en 2020; producto icónico en la historia económica del país. imagen Por Rodtico21",
+    "url": "https://yosoywill.github.io/Esencia-Tica/images/cafe_cr.PNG"
+  },
+  {
+    "id": "perezoso_cr",
+    "nombre": "El Perezoso",
+    "categoria": "Símbolos nacionales",
+    "descripcion": "Declarado símbolo nacional de la fauna silvestre en 2021. imagen Por Jsfouche",
+    "url": "https://yosoywill.github.io/Esencia-Tica/images/perezoso_cr.PNG"
+  },
+  {
+    "id": "boyeo_cr",
+    "nombre": "El Boyeo",
+    "categoria": "Símbolos nacionales",
+    "descripcion": "Declarado símbolo nacional en 2022 junto con la carreta costarricense. imagen https://www.mcj.go.cr/",
+    "url": "https://yosoywill.github.io/Esencia-Tica/images/boyeo_cr.PNG"
+  },
+  {
+    "id": "mariposa_morpho",
+    "nombre": "Mariposa Morpho",
+    "categoria": "Símbolos nacionales",
+    "descripcion": "Declarada símbolo nacional en 2022; destaca por su color azul brillante. imagen Por Photo by David J. Stang",
+    "url": "httpsH://yosoywill.github.io/Esencia-Tica/images/mariposa_morpho.PNG"
+  },
+  {
+    "id": "esferas_diquis",
+    "nombre": "Esferas Indígenas Precolombinas",
+    "categoria": "Símbolos nacionales",
+    "descripcion": "Declaradas Patrimonio de la Humanidad y símbolo nacional en 2014. imagen Por Rodtico21",
+    "url": "https://yosoywill.github.io/Esencia-Tica/images/esferas_diquis.PNG"
+  },
+  {
+    "id": "los_crestones",
+    "nombre": "Los Crestones del Chirripó",
+    "categoria": "Símbolos nacionales",
+    "descripcion": "Declarados símbolo nacional en 2011; ícono natural y turístico. imagen https://www.presidencia.go.cr/",
+    "url": "https://yosoywill.github.io/Esencia-Tica/images/los_crestones.PNG"
+  },
+  {
+    "id": "manati",
+    "nombre": "El Manatí",
+    "categoria": "Símbolos nacionales",
+    "descripcion": "Símbolo nacional desde 2014; representa la fauna marina costarricense. imagen Por Galen Rathbun",
+    "url": "https://yosoywill.github.io/Esencia-Tica/images/manati.PNG"
+  },
+  {
+    "id": "antorcha_independencia",
+    "nombre": "La Antorcha de la Independencia",
+    "categoria": "Símbolos nacionales",
+    "descripcion": "Declarada símbolo nacional en 2005; símbolo de libertad e independencia. imagen Por Erick Chavarría",
+    "url": "https://yosoywill.github.io/Esencia-Tica/images/antorcha_independencia.PNG"
+  },
+  {
+    "id": "mascaradas_ticas",
+    "nombre": "Las Mascaradas",
+    "categoria": "Símbolos nacionales",
+    "descripcion": "Declaradas símbolo nacional en 2022; tradición festiva popular del Valle Central. imagen https://cnnespanol.cnn.com/",
+    "url": "https://yosoywill.github.io/Esencia-Tica/images/mascaradas_ticas.PNG"
+  }
 ];
 
 // --- 2. MANEJO de ESTADO (localStorage) ---
