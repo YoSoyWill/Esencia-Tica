@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Puzzle Gallery</title>
+<!-- ¡NUEVO! Importar Google Material Symbols -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<style>
+/* --- ESTILO APP NATIVA (Material Design con CSS Puro) --- */
+
+:root {
+/* Paleta de colores */
+--color-primario: #3F51B5; /* Indigo 500 */
+--color-primario-oscuro: #303F9F; /* Indigo 700 */
+--color-acento: #009688; /* Teal 500 */
+--color-fondo: #F5F5F5; /* Gris muy claro */
+--color-superficie: #FFFFFF; /* Blanco (para tarjetas) */
+--color-texto-primario: #212121; /* Casi negro */
+--color-texto-secundario: #757575; /* Gris */
+}
+
+/* --- Reseteo Básico --- */
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+/* --- ESTILOS GENERALES (App Shell) --- */
+body {
+background-color: var(--color-fondo);
+color: var(--color-texto-primario);
+font-family: 'Inter', sans-serif;
+padding-top: 4rem;
+padding-bottom: 5rem;
+}
+
+/* --- Barra de Título Superior --- */
+.app-header {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 20;
+display: flex;
+align-items: center;
+justify-content: space-between;
+height: 4rem;
+padding-left: 1rem;
+padding-right: 1rem;
+background-color: var(--color-superficie);
+box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.app-header h1 {
+font-size: 1.5rem;
+font-weight: 700;
+color: var(--color-primario);
+}
+
+/* Contenedor de Cañas */
+#cañas-container {
+display: flex;
+align-items: center;
+font-size: 1.25rem;
+font-weight: 700;
+color: var(--color-acento);
+}
+#cañas-container .material-symbols-outlined {
+font-size: 1.75rem; /* 28px */
+margin-right: 0.5rem;
+}
+
+/* --- Barra de Navegación Inferior --- */
+.app-footer {
+position: fixed;
+bottom: 0;
+left: 0;
+right: 0;
+z-index: 20;
+display: flex;
+align-items: stretch;
+justify-content: space-around;
+height: 5rem;
+background-color: var(--color-superficie);
+box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+.nav-btn {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 100%;
+height: 100%;
+font-size: 0.75rem;
+font-weight: 500;
+color: var(--color-texto-secundario);
+transition: color 0.2s ease-in-out;
+border: none;
+background: none;
+cursor: pointer;
+}
+/* ¡MODIFICADO! Estilo para el <span> del icono */
+.nav-btn .material-symbols-outlined {
+font-size: 1.5rem; /* 24px */
+margin-bottom: 0.25rem;
+transition: transform 0.2s ease-in-out;
+}
+.nav-btn.active {
+color: var(--color-primario);
+}
+.nav-btn.active .material-symbols-outlined {
+transform: scale(1.1);
+}
+
+/* --- Botones (Material Contained) --- */
+.btn {
+padding: 0.75rem 1.5rem;
+font-weight: 700;
+text-transform: uppercase;
+border-radius: 0.5rem;
+box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+transform: scale(1);
+transition: all 0.2s ease-in-out;
+border: none;
+cursor: pointer;
+}
+.btn:hover {
+box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.btn:focus {
+outline: none;
+box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.4);
+}
+.btn-primario {
+background-image: linear-gradient(to right, #3F51B5, #3949AB);
+color: white;
+}
+.btn-primario:hover {
+background-image: linear-gradient(to right, #3949AB, #303F9F);
+}
+.btn-acento {
+background-image: linear-gradient(to right, #009688, #00897B);
+color: white;
+}
+.btn-acento:hover {
+background-image: linear-gradient(to right, #00897B, #00796B);
+}
+.btn-icono {
+padding: 0.75rem;
+border-radius: 50%;
+color: var(--color-texto-secundario); /* ¡MODIFICADO! Usar color de tema */
+background: none;
+border: none;
+cursor: pointer;
+transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.btn-icono:hover {
+background-color: #E5E7EB;
+color: var(--color-primario); /* ¡MODIFICADO! */
+}
+.btn-icono:focus {
+outline: none;
+box-shadow: 0 0 0 3px rgba(156, 163, 175, 0.5);
+}
+/* ¡MODIFICADO! Estilo para el <span> del icono */
+.btn-icono .material-symbols-outlined {
+font-size: 1.5rem; /* 24px */
+display: block; /* Asegura que el span se comporte bien */
+}
+
+
+/* --- Tarjetas (Material Surface) --- */
+.tarjeta {
+background-color: var(--color-superficie);
+border-radius: 1rem;
+box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+overflow: hidden;
+width: 100%;
+transition: all 0.3s ease-in-out;
+}
+
+/* --- Barras de Progreso --- */
+.progress-bar {
+width: 100%;
+background-color: #E0E0E0;
+border-radius: 9999px;
+height: 1rem;
+box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+overflow: hidden;
+}
+.progress-bar-inner {
+height: 100%;
+border-radius: 9999px;
+transition: width 0.7s ease-out;
+background-color: var(--color-acento);
+}
+.progress-text {
+text-align: center;
+font-size: 0.875rem;
+margin-top: 0.5rem;
+font-weight: 500;
+color: var(--color-acento);
+}
+
+/* --- Contenido de las Vistas (dentro de <main>) --- */
+main {
+max-width: 42rem;
+margin-left: auto;
+margin-right: auto;
+}
+.vista-contenido {
+padding: 1.5rem;
+}
+.hidden {
+display: none !important;
+}
+
+/* --- Overlays (Juego, Carga, Modal) --- */
+.vista-overlay {
+position: fixed;
+inset: 0;
+z-index: 30;
+padding: 0;
+margin: 0;
+transition: opacity 0.3s ease-in-out;
+background-color: var(--color-fondo);
+}
+.vista-overlay.hidden {
+opacity: 0;
+pointer-events: none;
+}
+.modal-backdrop {
+position: fixed;
+inset: 0;
+z-index: 40;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 1rem;
+background-color: rgba(0, 0, 0, 0.7);
+backdrop-filter: blur(4px);
+transition: opacity 0.3s ease-in-out;
+}
+.modal-backdrop.hidden {
+opacity: 0;
+pointer-events: none;
+}
+
+/* --- Thumbnails de Categoría --- */
+.thumbnail {
+width: 7rem;
+height: 7rem;
+flex-shrink: 0;
+border-radius: 0.75rem;
+overflow: hidden;
+box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+cursor: pointer;
+transform: scale(1);
+transition: all 0.3s ease-in-out;
+border: 4px solid transparent;
+}
+.thumbnail:hover {
+transform: scale(1.05);
+box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.thumbnail.completed {
+border-color: var(--color-acento);
+}
+.thumbnail img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: filter 0.3s ease-in-out;
+}
+.thumbnail:not(.completed) img {
+filter: grayscale(100%);
+opacity: 0.8;
+}
+
+/* --- Piezas del Rompecabezas (Estilo limpio) --- */
+#puzzle-grid {
+border-radius: 0.75rem;
+overflow: hidden;
+box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+background-color: #E0E0E0;
+display: grid;
+}
+.puzzle-piece {
+transition: transform 0.2s ease-out, opacity 0.2s ease, border 0.2s linear, visibility 0s;
+cursor: grab;
+border: 1px solid #BDBDBD;
+border-radius: 2px;
+background-size: cover;
+background-position: center;
+}
+.puzzle-piece:active {
+cursor: grabbing;
+}
+.puzzle-piece.incorrect {
+border: 3px solid var(--color-primario);
+opacity: 0.8;
+}
+.puzzle-piece.correct {
+border: none;
+opacity: 1;
+cursor: default;
+}
+
+/* ¡MODIFICADO! La clase 'dragging' solo aplica opacidad para el ratón */
+.dragging {
+opacity: 0.2;
+}
+
+@keyframes pop {
+0% { transform: scale(1); }
+50% { transform: scale(1.08); }
+100% { transform: scale(1); }
+}
+.puzzle-piece.pop {
+animation: pop 0.3s ease-out;
+}
+
+/* --- ¡NUEVO! Estilo para el "fantasma" táctil --- */
+#touch-ghost {
+position: fixed;
+z-index: 9999;
+pointer-events: none; /* No debe interferir con el drop */
+opacity: 0.8;
+transform: translate(-50%, -50%) scale(1.1); /* Centrado en el dedo y más grande */
+box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+border-radius: 4px;
+transition: transform 0.1s linear;
+}
+
+/* Scrollbar */
+.horizontal-scroll {
+display: flex;
+overflow-x: auto;
+gap: 1rem;
+padding-bottom: 0.5rem;
+}
+.horizontal-scroll::-webkit-scrollbar { height: 8px; }
+.horizontal-scroll::-webkit-scrollbar-track { background: #E0E0E0; border-radius: 4px; }
+.horizontal-scroll::-webkit-scrollbar-thumb { background: var(--color-primario); border-radius: 4px; }
+.horizontal-scroll::-webkit-scrollbar-thumb:hover { background: var(--color-primario-oscuro); }
+
+/* Animación modal */
+@keyframes modal-in {
+from { transform: scale(0.9); opacity: 0; }
+to { transform: scale(1); opacity: 1; }
+}
+.animate-modal-in {
+animation: modal-in 0.3s ease-out;
+}
+
+/* --- Clases de utilidad --- */
+.w-full { width: 100%; }
+.max-w-md { max-width: 28rem; }
+.max-w-lg { max-width: 32rem; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.ml-2 { margin-left: 0.5rem; }
+.ml-4 { margin-left: 1rem; }
+.-ml-2 { margin-left: -0.5rem; }
+.mt-1 { margin-top: 0.25rem; }
+.mt-6 { margin-top: 1.5rem; }
+.mt-16 { margin-top: 4rem; }
+.p-2 { padding: 0.5rem; }
+.p-4 { padding: 1rem; }
+.p-6 { padding: 1.5rem; }
+.text-center { text-align: center; }
+.text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.text-base { font-size: 1rem; line-height: 1.5rem; }
+.text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+.font-bold { font-weight: 700; }
+.font-extrabold { font-weight: 800; }
+.font-medium { font-weight: 500; }
+.h-8 { height: 2rem; }
+.h-80 { height: 20rem; }
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.z-50 { z-index: 50; }
+.animate-spin {
+animation: spin 1s linear infinite;
+}
+@keyframes spin {
+from { transform: rotate(0deg); }
+to { transform: rotate(360deg); }
+}
+
+</style>
+</head>
+<body class="w-full min-h-screen overflow-x-hidden">
+
+<!-- --- App Shell: Header --- -->
+<header class="app-header">
+<h1>Puzzle Gallery</h1>
+<div id="cañas-container">
+<!-- ¡MODIFICADO! Icono de Google -->
+<span class="material-symbols-outlined">compost</span>
+<span id="cañas-display">0</span>
+</div>
+</header>
+
+<!-- --- App Shell: Contenido Principal --- -->
+<main>
+
+<!-- Vista 1: Contenido Principal -->
+<div id="vista-principal" class="vista-contenido">
+<h2 class="text-3xl font-bold mb-4">Bienvenido</h2>
+<div class="tarjeta mb-8">
+<img id="main-image" src="https://placehold.co/600x800/E0E0E0/757575?text=Cargando..." alt="Rompecabezas destacado" class="w-full h-80" style="object-fit: cover;">
+<div class="p-6">
+<h3 id="main-title" class="text-2xl font-bold mb-4"></h3>
+<p class="mb-4 text-sm" style="color: var(--color-texto-secundario);">Completa los puzzles para desbloquear nuevas dificultades.</p>
+</div>
+</div>
+<div class="w-full mb-8" style="padding-left: 0.5rem; padding-right: 0.5rem;">
+<p class="mb-2 text-sm font-medium" style="color: var(--color-texto-secundario);">Progreso Total</p>
+<div class="progress-bar">
+<div id="progress-bar-inner" class="progress-bar-inner" style="width: 0%;"></div>
+</div>
+<p id="progress-text" class="progress-text mt-1">0%</p>
+</div>
+<button id="btn-jugar" class="btn btn-primario w-full">Ir a la Galería</button>
+</div>
+
+<!-- Vista 2: Contenido de Categorías -->
+<div id="vista-categorias" class="vista-contenido hidden">
+<h2 class="text-3xl font-bold mb-6">Galería de Puzzles</h2>
+<div id="categorias-container">
+</div>
+</div>
+
+</main>
+
+<!-- --- App Shell: Footer (Navegación) --- -->
+<footer class="app-footer">
+<button id="nav-btn-inicio" class="nav-btn active">
+<!-- ¡MODIFICADO! Icono de Google -->
+<span class="material-symbols-outlined">home</span>
+<span>Inicio</span>
+</button>
+<button id="nav-btn-categorias" class="nav-btn">
+<!-- ¡MODIFICADO! Icono de Google -->
+<span class="material-symbols-outlined">grid_view</span>
+<span>Galería</span>
+</button>
+</footer>
+
+
+<!-- --- VISTAS OVERLAY --- -->
+
+<div id="pantalla-juego" class="vista-overlay hidden flex flex-col items-center">
+<header class="app-header w-full">
+<button id="btn-volver-desde-juego" class="btn-icono -ml-2">
+<!-- ¡MODIFICADO! Icono de Google -->
+<span class="material-symbols-outlined">close</span>
+</button>
+<h1 class="ml-4">Resolviendo Puzzle</h1>
+<button id="btn-preview-puzzle" class="btn-icono">
+<!-- ¡MODIFICADO! Icono de Google -->
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</header>
+<div class="w-full max-w-lg mx-auto p-4 mt-16">
+<div id="puzzle-container" class="tarjeta p-2">
+<div id="puzzle-grid">
+</div>
+</div>
+<div id="win-message" class="text-3xl font-extrabold mt-6 h-8 text-center" style="color: var(--color-acento);"></div>
+</div>
+</div>
+
+<div id="modal-info" class="modal-backdrop hidden">
+<div class="tarjeta max-w-md w-full animate-modal-in">
+<img id="modal-img" src="" alt="Imagen completada" class="w-full h-80" style="object-fit: cover;">
+<div class="p-6">
+<h2 id="modal-nombre" class="text-3xl font-bold mb-2"></h2>
+<p id="modal-desc" class="text-base mb-6" style="color: var(--color-texto-secundario);"></p>
+<button id="btn-cerrar-modal" class="btn btn-primario w-full">Cerrar</button>
+</div>
+</div>
+</div>
+
+<div id="modal-preview" class="modal-backdrop hidden" style="z-index: 45;">
+<div class="tarjeta max-w-md w-full animate-modal-in" style="position: relative;">
+<h3 class_="text-2xl font-bold p-4 text-center">Previsualización</h3>
+<img id="modal-preview-img" src="" alt="Previsualización" class="w-full h-80" style="object-fit: contain; padding: 1rem;">
+<button id="btn-cerrar-preview" class="btn btn-primario w-full" style="border-radius: 0 0 1rem 1rem;">Cerrar</button>
+</div>
+</div>
+
+<div id="modal-alerta" class="modal-backdrop hidden" style="z-index: 55;">
+<div class="tarjeta max-w-md w-full animate-modal-in">
+<div class="p-6">
+<h2 class="text-2xl font-bold mb-4">Aviso</h2>
+<p id="modal-alerta-texto" class="text-base mb-6" style="color: var(--color-texto-secundario);">No tienes suficientes cañas.</p>
+<button id="btn-cerrar-alerta" class="btn btn-primario w-full">Entendido</button>
+</div>
+</div>
+</div>
+
+<div id="pantalla-carga" class="modal-backdrop hidden z-50">
+<div class="text-center">
+<div class="animate-spin" style="border: 4px dashed var(--color-primario); width: 4rem; height: 4rem; border-radius: 50%; margin-bottom: 1rem; margin-left: auto; margin-right: auto;"></div>
+<p class="text-2xl font-bold" style="color: white;">Cargando...</p>
+</div>
+</div>
+
+
+<script>
+// --- 1. ESTRUCTURA DE DATOS ---
+const PUZZLE_DATA = [
+{
+id: "naturaleza_01",
+nombre: "Bosque de Otoño",
+categoria: "Naturaleza",
+descripcion: "Un sereno bosque durante el pico de los colores de otoño.",
+url: "https://picsum.photos/id/1015/600/800"
+},
+{
+id: "naturaleza_02",
+nombre: "Playa Tropical",
+categoria: "Naturaleza",
+descripcion: "Aguas cristalinas y arena blanca en un paraíso tropical.",
+url: "https://picsum.photos/id/1018/600/800"
+},
+{
+id: "arquitectura_01",
+nombre: "Castillo Medieval",
+categoria: "Arquitectura",
+descripcion: "Una fortaleza histórica con siglos de antigüedad.",
+url: "https://picsum.photos/id/180/600/800"
+},
+{
+id: "arquitectura_02",
+nombre: "Ciudad Moderna",
+categoria: "Arquitectura",
+descripcion: "Rascacielos que tocan las nubes al atardecer.",
+url: "https://picsum.photos/id/13/600/800"
+},
+{
+id: "animales_01",
+nombre: "León Majestuoso",
+categoria: "Animales",
+descripcion: "La majestuosa mirada de un león en la sabana.",
+url: "https://picsum.photos/id/218/600/800"
+},
+{
+id: "animales_02",
+nombre: "Compañero Fiel",
+categoria: "Animales",
+descripcion: "Un perro disfrutando de la naturaleza.",
+url: "https://picsum.photos/id/237/600/800"
+}
+];
+
+// --- 2. MANEJO de ESTADO (localStorage) ---
+const STORAGE_KEY = 'juego_puzzle_completados';
+const STORAGE_KEY_CAÑAS = 'juego_puzzle_cañas';
+
+function getCañas() {
+const cañas = localStorage.getItem(STORAGE_KEY_CAÑAS);
+return cañas ? parseInt(cañas, 10) : 0;
+}
+
+function setCañas(amount) {
+localStorage.setItem(STORAGE_KEY_CAÑAS, amount.toString());
+}
+
+function addCañas(amount) {
+let currentCañas = getCañas();
+currentCañas += amount;
+setCañas(currentCañas);
+renderCañasUI();
+}
+
+function getCompletados() {
+const data = localStorage.getItem(STORAGE_KEY);
+return data ? JSON.parse(data) : [];
+}
+
+function marcarComoCompletado(puzzleId) {
+let completados = getCompletados();
+if (!completados.includes(puzzleId)) {
+completados.push(puzzleId);
+localStorage.setItem(STORAGE_KEY, JSON.stringify(completados));
+addCañas(10);
+renderProgreso();
+}
+}
+
+function estaCompletado(puzzleId) {
+return getCompletados().includes(puzzleId);
+}
+
+// --- 3. LÓGICA CLAVE (Progreso y Dificultad) ---
+function getProgreso() {
+const totalPuzzles = PUZZLE_DATA.length;
+const completados = getCompletados().length;
+if (totalPuzzles === 0) return 0;
+const porcentaje = (completados / totalPuzzles) * 100;
+return Math.floor(porcentaje);
+}
+
+function getDificultad() {
+const porcentaje = getProgreso();
+const nivel = Math.floor(porcentaje / 10);
+
+switch (nivel) {
+case 0: return { rows: 4, cols: 3 };
+case 1: return { rows: 5, cols: 4 };
+case 2: return { rows: 6, cols: 5 };
+case 3: return { rows: 7, cols: 6 };
+default: return { rows: 8, cols: 7 };
+}
+}
+
+function vibrate(ms) {
+if (navigator.vibrate) {
+navigator.vibrate(ms);
+}
+}
+
+// --- 4. LÓGICA DEL JUEGO (Puzzle) ---
+let currentGame = {
+puzzleId: null,
+rows: 0,
+cols: 0,
+totalPieces: 0,
+draggedTile: null,
+imageUrl: '',
+touchGhost: null // ¡NUEVO! Para el fantasma táctil
+};
+
+const puzzleGrid = document.getElementById('puzzle-grid');
+const winMessageEl = document.getElementById('win-message');
+
+function iniciarJuego(puzzleId) {
+const puzzle = PUZZLE_DATA.find(p => p.id === puzzleId);
+if (!puzzle) return;
+
+const { rows, cols } = getDificultad();
+currentGame.puzzleId = puzzleId;
+currentGame.rows = rows;
+currentGame.cols = cols;
+currentGame.totalPieces = rows * cols;
+currentGame.draggedTile = null;
+currentGame.imageUrl = puzzle.url;
+
+let pieces = [];
+for (let i = 0; i < currentGame.totalPieces; i++) {
+pieces.push(i);
+}
+
+for (let i = pieces.length - 1; i > 0; i--) {
+const j = Math.floor(Math.random() * (i + 1));
+[pieces[i], pieces[j]] = [pieces[j], pieces[i]];
+}
+
+puzzleGrid.innerHTML = '';
+winMessageEl.textContent = '';
+puzzleGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+puzzleGrid.style.aspectRatio = `${cols} / ${rows}`;
+
+for (let i = 0; i < currentGame.totalPieces; i++) {
+const pieceNumber = pieces[i];
+const tile = document.createElement('div');
+tile.classList.add('puzzle-piece');
+tile.dataset.slot = i;
+tile.dataset.piece = pieceNumber;
+tile.draggable = true;
+
+tile.style.backgroundImage = `url('${currentGame.imageUrl}')`;
+tile.style.backgroundPosition = getBackgroundPosition(pieceNumber);
+tile.style.backgroundSize = `${cols * 100}% ${rows * 100}%`;
+
+tile.addEventListener('dragstart', handleDragStart);
+tile.addEventListener('dragover', handleDragOver);
+tile.addEventListener('drop', handleDrop);
+tile.addEventListener('dragend', handleDragEnd);
+
+tile.addEventListener('touchstart', handleTouchStart, { passive: false });
+tile.addEventListener('touchmove', handleTouchMove, { passive: false });
+tile.addEventListener('touchend', handleTouchEnd);
+
+puzzleGrid.appendChild(tile);
+}
+checkBoardState();
+}
+
+function getBackgroundPosition(pieceNumber) {
+const { rows, cols } = currentGame;
+const xPercent = (pieceNumber % cols) * 100 / (cols - 1);
+const yPercent = Math.floor(pieceNumber / cols) * 100 / (rows - 1);
+const x = isNaN(xPercent) ? '0%' : `${xPercent}%`;
+const y = isNaN(yPercent) ? '0%' : `${yPercent}%`;
+return `${x} ${y}`;
+}
+
+// --- MANEJADORES DE DRAG & DROP (Ratón) ---
+
+function handleDragStart(e) {
+const tile = e.currentTarget;
+if (winMessageEl.textContent || tile.classList.contains('correct')) {
+e.preventDefault();
+return;
+}
+currentGame.draggedTile = tile;
+e.dataTransfer.effectAllowed = 'move';
+setTimeout(() => {
+tile.classList.add('dragging'); // Solo opacidad para el ratón
+}, 0);
+}
+
+function handleDragOver(e) { e.preventDefault(); }
+
+function handleDrop(e) {
+e.preventDefault();
+const droppedOnTile = e.currentTarget;
+if (currentGame.draggedTile && currentGame.draggedTile !== droppedOnTile) {
+if (droppedOnTile.classList.contains('correct')) {
+return;
+}
+swapTiles(currentGame.draggedTile, droppedOnTile);
+checkBoardState();
+}
+}
+
+function handleDragEnd(e) {
+e.target.classList.remove('dragging');
+currentGame.draggedTile = null;
+}
+
+// --- MANEJADORES TÁCTILES (¡MODIFICADOS con Fantasma!) ---
+
+function handleTouchStart(e) {
+e.preventDefault();
+const tile = e.currentTarget;
+if (winMessageEl.textContent || tile.classList.contains('correct')) {
+return;
+}
+vibrate(50);
+currentGame.draggedTile = tile;
+
+// ¡NUEVO! Crear el fantasma
+const touch = e.touches[0];
+const ghost = document.createElement('div');
+ghost.id = 'touch-ghost';
+// Copiar estilos de la pieza
+ghost.style.width = `${tile.offsetWidth}px`;
+ghost.style.height = `${tile.offsetHeight}px`;
+ghost.style.backgroundImage = tile.style.backgroundImage;
+ghost.style.backgroundPosition = tile.style.backgroundPosition;
+ghost.style.backgroundSize = tile.style.backgroundSize;
+// Posicionar en el dedo
+ghost.style.left = `${touch.clientX}px`;
+ghost.style.top = `${touch.clientY}px`;
+
+document.body.appendChild(ghost);
+currentGame.touchGhost = ghost;
+
+// Ocultar la pieza original
+tile.style.visibility = 'hidden';
+}
+
+function handleTouchMove(e) {
+e.preventDefault();
+if (!currentGame.touchGhost) { return; }
+
+// Mover el fantasma
+const touch = e.touches[0];
+currentGame.touchGhost.style.left = `${touch.clientX}px`;
+currentGame.touchGhost.style.top = `${touch.clientY}px`;
+}
+
+function handleTouchEnd(e) {
+if (!currentGame.draggedTile) { return; }
+
+// ¡NUEVO! Eliminar fantasma
+currentGame.touchGhost.remove();
+currentGame.touchGhost = null;
+
+// Encontrar sobre qué se soltó
+const touch = e.changedTouches[0];
+const droppedOnElement = document.elementFromPoint(touch.clientX, touch.clientY);
+
+// Mostrar la pieza original de nuevo
+currentGame.draggedTile.style.visibility = '';
+
+if (droppedOnElement &&
+droppedOnElement.classList.contains('puzzle-piece') &&
+droppedOnElement !== currentGame.draggedTile) {
+if (droppedOnElement.classList.contains('correct')) {
+currentGame.draggedTile = null;
+return;
+}
+swapTiles(currentGame.draggedTile, droppedOnElement);
+checkBoardState();
+}
+
+currentGame.draggedTile = null;
+}
+
+
+function swapTiles(tile1, tile2) {
+const piece1 = tile1.dataset.piece;
+const piece2 = tile2.dataset.piece;
+
+tile1.dataset.piece = piece2;
+tile2.dataset.piece = piece1;
+
+tile1.style.backgroundPosition = getBackgroundPosition(piece2);
+tile2.style.backgroundPosition = getBackgroundPosition(piece1);
+}
+
+function checkBoardState() {
+const allTiles = puzzleGrid.querySelectorAll('.puzzle-piece');
+let isWin = true;
+
+for (const tile of allTiles) {
+const isCorrect = tile.dataset.slot === tile.dataset.piece;
+
+if (isCorrect) {
+if (!tile.classList.contains('correct')) {
+tile.classList.add('pop');
+vibrate(100);
+setTimeout(() => {
+tile.classList.remove('pop');
+}, 300);
+}
+tile.classList.add('correct');
+tile.classList.remove('incorrect');
+tile.draggable = false;
+tile.style.cursor = 'default';
+} else {
+isWin = false;
+tile.classList.add('incorrect');
+tile.classList.remove('correct');
+tile.draggable = true;
+tile.style.cursor = 'grab';
+}
+}
+
+if (isWin) {
+winMessageEl.textContent = '¡Completado!';
+marcarComoCompletado(currentGame.puzzleId);
+setTimeout(() => {
+renderModal(currentGame.puzzleId);
+}, 1000);
+}
+}
+
+// --- 5. LÓGICA DE NAVEGACIÓN Y RENDERIZADO ---
+
+const vistasContenido = {
+principal: document.getElementById('vista-principal'),
+categorias: document.getElementById('vista-categorias'),
+};
+const vistasOverlay = {
+juego: document.getElementById('pantalla-juego'),
+modal: document.getElementById('modal-info'),
+carga: document.getElementById('pantalla-carga'),
+preview: document.getElementById('modal-preview'),
+alerta: document.getElementById('modal-alerta')
+};
+const navBtnInicio = document.getElementById('nav-btn-inicio');
+const navBtnCategorias = document.getElementById('nav-btn-categorias');
+const mainImage = document.getElementById('main-image');
+const mainTitle = document.getElementById('main-title');
+const progressBarInner = document.getElementById('progress-bar-inner');
+const progressText = document.getElementById('progress-text');
+const categoriasContainer = document.getElementById('categorias-container');
+const btnJugar = document.getElementById('btn-jugar');
+const btnVolverDesdeJuego = document.getElementById('btn-volver-desde-juego');
+const btnCerrarModal = document.getElementById('btn-cerrar-modal');
+const modalImg = document.getElementById('modal-img');
+const modalNombre = document.getElementById('modal-nombre');
+const modalDesc = document.getElementById('modal-desc');
+
+const cañasDisplay = document.getElementById('cañas-display');
+const btnPreviewPuzzle = document.getElementById('btn-preview-puzzle');
+const modalPreviewImg = document.getElementById('modal-preview-img');
+const btnCerrarPreview = document.getElementById('btn-cerrar-preview');
+const modalAlertaTexto = document.getElementById('modal-alerta-texto');
+const btnCerrarAlerta = document.getElementById('btn-cerrar-alerta');
+
+
+function showView(viewId) {
+Object.values(vistasOverlay).forEach(vista => vista.classList.add('hidden'));
+
+if (viewId === 'principal') {
+vistasContenido.principal.classList.remove('hidden');
+vistasContenido.categorias.classList.add('hidden');
+navBtnInicio.classList.add('active');
+navBtnCategorias.classList.remove('active');
+window.scrollTo(0, 0);
+} else if (viewId === 'categorias') {
+vistasContenido.principal.classList.add('hidden');
+vistasContenido.categorias.classList.remove('hidden');
+navBtnInicio.classList.remove('active');
+navBtnCategorias.classList.add('active');
+window.scrollTo(0, 0);
+} else if (viewId === 'juego') {
+vistasOverlay.juego.classList.remove('hidden');
+navBtnInicio.classList.remove('active');
+navBtnCategorias.classList.remove('active');
+window.scrollTo(0, 0);
+}
+}
+
+function showLoader(show) {
+if (show) {
+vistasOverlay.carga.classList.remove('hidden');
+} else {
+vistasOverlay.carga.classList.add('hidden');
+}
+}
+
+function preloadImage(url) {
+return new Promise((resolve, reject) => {
+const img = new Image();
+img.src = url;
+img.onload = () => resolve(img);
+img.onerror = () => reject(new Error(`Failed to load image: ${url}`));
+});
+}
+
+function renderCañasUI() {
+cañasDisplay.textContent = getCañas();
+}
+
+function renderPrincipal() {
+const randomPuzzle = PUZZLE_DATA[Math.floor(Math.random() * PUZZLE_DATA.length)];
+mainImage.src = randomPuzzle.url;
+mainTitle.textContent = randomPuzzle.nombre;
+renderProgreso();
+}
+
+function renderProgreso() {
+const porcentaje = getProgreso();
+progressBarInner.style.width = `${porcentaje}%`;
+progressText.textContent = `${porcentaje}%`;
+}
+
+function renderCategorias() {
+categoriasContainer.innerHTML = '';
+const grupos = PUZZLE_DATA.reduce((acc, puzzle) => {
+if (!acc[puzzle.categoria]) {
+acc[puzzle.categoria] = [];
+}
+acc[puzzle.categoria].push(puzzle);
+return acc;
+}, {});
+
+for (const categoria in grupos) {
+const section = document.createElement('section');
+section.className = 'tarjeta p-4 mb-8';
+section.innerHTML = `<h3 class="text-2xl font-bold mb-4 ml-2">${categoria}</h3>`;
+const grid = document.createElement('div');
+grid.className = 'horizontal-scroll';
+
+grupos[categoria].forEach(puzzle => {
+const completado = estaCompletado(puzzle.id);
+const thumbnail = document.createElement('div');
+thumbnail.className = 'thumbnail';
+thumbnail.dataset.id = puzzle.id;
+thumbnail.innerHTML = `<img src="${puzzle.url}" alt="${puzzle.nombre}">`;
+
+if (completado) {
+thumbnail.classList.add('completed');
+}
+
+thumbnail.addEventListener('click', handleThumbnailClick);
+grid.appendChild(thumbnail);
+});
+section.appendChild(grid);
+categoriasContainer.appendChild(section);
+}
+}
+
+function renderModal(puzzleId) {
+const puzzle = PUZZLE_DATA.find(p => p.id === puzzleId);
+if (!puzzle) return;
+
+modalImg.src = puzzle.url;
+modalNombre.textContent = puzzle.nombre;
+modalDesc.textContent = puzzle.descripcion;
+vistasOverlay.modal.classList.remove('hidden');
+}
+
+// --- 6. MANEJADORES DE EVENTOS ---
+async function handleThumbnailClick(event) {
+const puzzleId = event.currentTarget.dataset.id;
+if (!puzzleId) return;
+
+const puzzle = PUZZLE_DATA.find(p => p.id === puzzleId);
+if (!puzzle) return;
+
+if (estaCompletado(puzzleId)) {
+renderModal(puzzleId);
+} else {
+showLoader(true);
+try {
+await preloadImage(puzzle.url);
+iniciarJuego(puzzleId);
+showView('juego');
+} catch (error) {
+console.error("No se pudo cargar la imagen del puzzle:", error);
+} finally {
+showLoader(false);
+}
+}
+}
+
+navBtnInicio.addEventListener('click', () => {
+renderPrincipal();
+showView('principal');
+});
+
+navBtnCategorias.addEventListener('click', () => {
+renderCategorias();
+showView('categorias');
+});
+
+btnJugar.addEventListener('click', () => {
+renderCategorias();
+showView('categorias');
+});
+
+btnVolverDesdeJuego.addEventListener('click', () => {
+renderCategorias();
+showView('categorias');
+});
+
+btnCerrarModal.addEventListener('click', () => {
+vistasOverlay.modal.classList.add('hidden');
+if (winMessageEl.textContent) {
+renderCategorias();
+showView('categorias');
+}
+});
+
+btnPreviewPuzzle.addEventListener('click', () => {
+const currentCañas = getCañas();
+if (currentCañas >= 5) {
+addCañas(-5);
+modalPreviewImg.src = currentGame.imageUrl;
+vistasOverlay.preview.classList.remove('hidden');
+} else {
+modalAlertaTexto.textContent = `¡No tienes suficientes cañas! Necesitas 5 y solo tienes ${currentCañas}.`;
+vistasOverlay.alerta.classList.remove('hidden');
+}
+});
+
+btnCerrarPreview.addEventListener('click', () => {
+vistasOverlay.preview.classList.add('hidden');
+});
+
+btnCerrarAlerta.addEventListener('click', () => {
+vistasOverlay.alerta.classList.add('hidden');
+});
+
+
+// --- 7. INICIALIZACIÓN ---
+document.addEventListener('DOMContentLoaded', () => {
+renderPrincipal();
+showView('principal');
+renderCañasUI();
+});
+
+</script>
+</body>
+</html>
