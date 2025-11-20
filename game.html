@@ -1,1174 +1,371 @@
-<!DOCTYPE html>
-<html lang="es">
+<!-- saved from url=(0050)https://yosoywill.github.io/Esencia-Tica/game.html -->
+<html>
 <head>
-<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="color-scheme" content="light dark">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>Puzzle Gallery</title>
-<!-- ¡NUEVO! Importar Google Material Symbols -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<title>Esencia Tica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Titan+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
 <style>
-/* --- ESTILO APP NATIVA (Material Design con CSS Puro) --- */
-
 :root {
-/* Paleta de colores */
---color-primario: #3F51B5; /* Indigo 500 */
---color-primario-oscuro: #303F9F; /* Indigo 700 */
---color-acento: #009688; /* Teal 500 */
---color-fondo: #F5F5F5; /* Gris muy claro */
---color-superficie: #FFFFFF; /* Blanco (para tarjetas) */
---color-texto-primario: #212121; /* Casi negro */
---color-texto-secundario: #757575; /* Gris */
+  --color-bg: #E0F7FA;
+  --color-primary: #FF6F00;
+  --color-primary-dark: #E65100;
+  --color-secondary: #2E7D32;
+  --color-secondary-dark: #1B5E20;
+  --color-accent: #00BFA5;
+  --color-text: #263238;
+  --color-card-bg: #FFFFFF;
+  --shadow-soft: 0 8px 24px rgba(0,0,0,0.12);
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-btn: 12px;
 }
 
-/* --- Reseteo Básico --- */
-* {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 
-/* --- ESTILOS GENERALES (App Shell) --- */
 body {
-background-color: var(--color-fondo);
-color: var(--color-texto-primario);
-font-family: 'Inter', sans-serif;
-padding-top: 4rem;
-padding-bottom: 5rem;
+  background-color: var(--color-bg);
+  background-image: radial-gradient(#009688 1px, transparent 1px);
+  background-size: 20px 20px;
+  color: var(--color-text);
+  font-family: 'Nunito', sans-serif;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  user-select: none;
+  height: 100vh;
+  overscroll-behavior: none;
 }
 
-/* --- Barra de Título Superior --- */
+h1, h2, h3 { font-family: 'Titan One', cursive; letter-spacing: 1px; color: var(--color-secondary); }
+
+/* --- HEADER --- */
 .app-header {
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-z-index: 20;
-display: flex;
-align-items: center;
-justify-content: space-between;
-height: 4rem;
-padding-left: 1rem;
-padding-right: 1rem;
-background-color: var(--color-superficie);
-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  position: fixed; top: 1rem; left: 1rem; right: 1rem; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 3.5rem; padding: 0 1rem;
+  background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px);
+  border-radius: 50px; box-shadow: var(--shadow-soft); border: 2px solid white;
 }
-.app-header h1 {
-font-size: 1.5rem;
-font-weight: 700;
-color: var(--color-primario);
-}
+.app-header h1 { font-size: 1.2rem; margin: 0; background: linear-gradient(to right, #2E7D32, #00BFA5); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-/* Contenedor de Cañas */
 #cañas-container {
-display: flex;
-align-items: center;
-font-size: 1.25rem;
-font-weight: 700;
-color: var(--color-acento);
+  display: flex; align-items: center;
+  background-color: #FFF8E1; padding: 0.25rem 0.75rem 0.25rem 0.5rem;
+  border-radius: 20px; border: 2px solid #FFECB3;
+  font-family: 'Titan One', cursive; color: #FF6F00; font-size: 1rem;
 }
-#cañas-container .material-symbols-outlined {
-font-size: 1.75rem; /* 28px */
-margin-right: 0.5rem;
-}
+#cañas-container .material-symbols-rounded { color: #FFC107; font-size: 1.4rem; margin-right: 4px; }
 
-/* --- Barra de Navegación Inferior --- */
-.app-footer {
-position: fixed;
-bottom: 0;
-left: 0;
-right: 0;
-z-index: 20;
-display: flex;
-align-items: stretch;
-justify-content: space-around;
-height: 5rem;
-background-color: var(--color-superficie);
-box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-.nav-btn {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-width: 100%;
-height: 100%;
-font-size: 0.75rem;
-font-weight: 500;
-color: var(--color-texto-secundario);
-transition: color 0.2s ease-in-out;
-border: none;
-background: none;
-cursor: pointer;
-}
-/* ¡MODIFICADO! Estilo para el <span> del icono */
-.nav-btn .material-symbols-outlined {
-font-size: 1.5rem; /* 24px */
-margin-bottom: 0.25rem;
-transition: transform 0.2s ease-in-out;
-}
-.nav-btn.active {
-color: var(--color-primario);
-}
-.nav-btn.active .material-symbols-outlined {
-transform: scale(1.1);
-}
-
-/* --- Botones (Material Contained) --- */
+/* --- BOTONES --- */
 .btn {
-padding: 0.75rem 1.5rem;
-font-weight: 700;
-text-transform: uppercase;
-border-radius: 0.5rem;
-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-transform: scale(1);
-transition: all 0.2s ease-in-out;
-border: none;
-cursor: pointer;
+  padding: 0.8rem 1.5rem; font-family: 'Titan One', cursive; font-size: 1rem; text-transform: uppercase;
+  border-radius: var(--radius-btn); border: none; cursor: pointer; position: relative;
+  transition: transform 0.1s; box-shadow: 0 4px 0 rgba(0,0,0,0.2);
 }
-.btn:hover {
-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-.btn:focus {
-outline: none;
-box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.4);
-}
-.btn-primario {
-background-image: linear-gradient(to right, #3F51B5, #3949AB);
-color: white;
-}
-.btn-primario:hover {
-background-image: linear-gradient(to right, #3949AB, #303F9F);
-}
-.btn-acento {
-background-image: linear-gradient(to right, #009688, #00897B);
-color: white;
-}
-.btn-acento:hover {
-background-image: linear-gradient(to right, #00897B, #00796B);
-}
+.btn:active { transform: translateY(4px); box-shadow: 0 0 0 rgba(0,0,0,0.2); }
+.btn-primario { background-color: var(--color-primary); color: white; box-shadow: 0 4px 0 var(--color-primary-dark); }
+.btn-acento { background-color: var(--color-secondary); color: white; box-shadow: 0 4px 0 var(--color-secondary-dark); }
+
 .btn-icono {
-padding: 0.75rem;
-border-radius: 50%;
-color: var(--color-texto-secundario); /* ¡MODIFICADO! Usar color de tema */
-background: none;
-border: none;
-cursor: pointer;
-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  width: 3rem; height: 3rem; border-radius: 50%; background: white; border: 2px solid #ECEFF1;
+  color: var(--color-text); display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 0 #CFD8DC; cursor: pointer; transition: transform 0.1s;
 }
-.btn-icono:hover {
-background-color: #E5E7EB;
-color: var(--color-primario); /* ¡MODIFICADO! */
-}
-.btn-icono:focus {
-outline: none;
-box-shadow: 0 0 0 3px rgba(156, 163, 175, 0.5);
-}
-/* ¡MODIFICADO! Estilo para el <span> del icono */
-.btn-icono .material-symbols-outlined {
-font-size: 1.5rem; /* 24px */
-display: block; /* Asegura que el span se comporte bien */
-}
+.btn-icono:active { transform: translateY(4px); box-shadow: none; }
 
-
-/* --- Tarjetas (Material Surface) --- */
+/* --- TARJETAS --- */
 .tarjeta {
-background-color: var(--color-superficie);
-border-radius: 1rem;
-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-overflow: hidden;
-width: 100%;
-transition: all 0.3s ease-in-out;
+  background-color: var(--color-card-bg); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft); border: 2px solid white; overflow: hidden;
+  width: 100%; margin-bottom: 1.5rem; position: relative;
 }
 
-/* --- Barras de Progreso --- */
 .progress-bar {
-width: 100%;
-background-color: #E0E0E0;
-border-radius: 9999px;
-height: 1rem;
-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
-overflow: hidden;
+  width: 100%; background-color: #CFD8DC; border-radius: 99px; height: 1.2rem;
+  border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); overflow: hidden; position: relative;
 }
 .progress-bar-inner {
-height: 100%;
-border-radius: 9999px;
-transition: width 0.7s ease-out;
-background-color: var(--color-acento);
-}
-.progress-text {
-text-align: center;
-font-size: 0.875rem;
-margin-top: 0.5rem;
-font-weight: 500;
-color: var(--color-acento);
+  height: 100%; background: linear-gradient(90deg, #66BB6A, #43A047);
+  border-radius: 99px; transition: width 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* --- Contenido de las Vistas (dentro de <main>) --- */
-main {
-max-width: 42rem;
-margin-left: auto;
-margin-right: auto;
-}
-.vista-contenido {
-padding: 1.5rem;
-}
-.hidden {
-display: none !important;
-}
+/* --- CONTENEDORES --- */
+main { max-width: 30rem; margin: 0 auto; }
+.vista-contenido { padding: 1rem; animation: fadeIn 0.4s ease-out; }
+.hidden { display: none !important; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-/* --- Overlays (Juego, Carga, Modal) --- */
-.vista-overlay {
-position: fixed;
-inset: 0;
-z-index: 30;
-padding: 0;
-margin: 0;
-transition: opacity 0.3s ease-in-out;
-background-color: var(--color-fondo);
-}
-.vista-overlay.hidden {
-opacity: 0;
-pointer-events: none;
-}
-.modal-backdrop {
-position: fixed;
-inset: 0;
-z-index: 40;
-display: flex;
-align-items: center;
-justify-content: center;
-padding: 1rem;
-background-color: rgba(0, 0, 0, 0.7);
-backdrop-filter: blur(4px);
-transition: opacity 0.3s ease-in-out;
-}
-.modal-backdrop.hidden {
-opacity: 0;
-pointer-events: none;
-}
-
-/* --- Thumbnails de Categoría --- */
+/* --- THUMBNAILS (GALERÍA) --- */
 .thumbnail {
-width: 7rem;
-height: 7rem;
-flex-shrink: 0;
-border-radius: 0.75rem;
-overflow: hidden;
-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-cursor: pointer;
-transform: scale(1);
-transition: all 0.3s ease-in-out;
-border: 4px solid transparent;
+  width: 6.5rem; height: 6.5rem; flex-shrink: 0; border-radius: var(--radius-md);
+  overflow: hidden; border: 3px solid white; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  cursor: pointer; transition: transform 0.2s; position: relative; background: #eee;
 }
-.thumbnail:hover {
-transform: scale(1.05);
-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-.thumbnail.completed {
-border-color: var(--color-acento);
-}
-.thumbnail img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-transition: filter 0.3s ease-in-out;
-}
-.thumbnail:not(.completed) img {
-filter: grayscale(100%);
-opacity: 0.8;
+.thumbnail:active { transform: scale(0.95); }
+
+/* LÓGICA VISUAL: GRIS VS COLOR */
+.thumbnail:not(.completed) img { filter: grayscale(100%) contrast(0.8); opacity: 0.6; transition: all 0.3s ease; }
+.thumbnail.completed { border-color: var(--color-secondary) !important; box-shadow: 0 0 10px rgba(46, 125, 50, 0.4); }
+.thumbnail.completed img { filter: none !important; opacity: 1 !important; }
+.thumbnail.completed::after {
+  content: '✓'; position: absolute; bottom: 0; right: 0; background: var(--color-secondary);
+  color: white; width: 1.5rem; height: 1.5rem; border-top-left-radius: 10px;
+  display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9rem;
 }
 
-/* --- Piezas del Rompecabezas (Estilo limpio) --- */
+/* --- JUEGO (Puzzle Grid) --- */
+#puzzle-container {
+  background: #78909C; padding: 10px; border-radius: 12px; box-shadow: inset 0 4px 8px rgba(0,0,0,0.3);
+  width: 100%;
+}
+
 #puzzle-grid {
-border-radius: 0.75rem;
-overflow: hidden;
-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
-background-color: #E0E0E0;
-display: grid;
+  background-color: transparent;
+  display: grid;
+  gap: 0; /* Sin espacio para que se unan */
+  width: 100%;
 }
+
 .puzzle-piece {
-transition: transform 0.2s ease-out, opacity 0.2s ease, border 0.2s linear, visibility 0s;
-cursor: grab;
-border: 1px solid #BDBDBD;
-border-radius: 2px;
-background-size: cover;
-background-position: center;
+  background-size: cover; background-position: center; cursor: pointer; position: relative;
+  transition: transform 0.2s, opacity 0.2s, border 0.2s; box-sizing: border-box;
+  width: 100%; height: 100%;
+  min-height: 1px; 
 }
-.puzzle-piece:active {
-cursor: grabbing;
-}
+
+/* PIEZAS INCORRECTAS: Más chicas y con borde */
 .puzzle-piece.incorrect {
-border: 3px solid var(--color-primario);
-opacity: 0.8;
+  opacity: 0.7; border: 2px dashed #FF5252; border-radius: 8px; transform: scale(0.92); z-index: 1;
 }
+/* PIEZAS CORRECTAS: Tamaño completo y sin borde */
 .puzzle-piece.correct {
-border: none;
-opacity: 1;
-cursor: default;
+  opacity: 1; border: none !important; border-radius: 0 !important; transform: scale(1); z-index: 2;
 }
+.puzzle-piece.selected {
+  opacity: 1 !important; border: 3px solid #FFEB3B !important; border-radius: 8px; z-index: 10; transform: scale(0.95); box-shadow: 0 0 15px #FFEB3B;
+}
+@keyframes flashCorrect {
+  0% { filter: brightness(1); } 50% { filter: brightness(1.5) sepia(0.5) hue-rotate(90deg); } 100% { filter: brightness(1); }
+}
+.puzzle-piece.correct.flash { animation: flashCorrect 0.5s; }
 
-/* ¡MODIFICADO! La clase 'dragging' solo aplica opacidad para el ratón */
-.dragging {
-opacity: 0.2;
+/* --- VISTAS OVERLAY --- */
+.vista-overlay {
+  position: fixed; inset: 0; z-index: 200; background-color: var(--color-bg);
+  transition: opacity 0.3s; padding-top: 4rem;
 }
+.vista-overlay.hidden { opacity: 0; pointer-events: none; transform: scale(0.95); }
+.vista-overlay:not(.hidden) { animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+@keyframes popIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
 
-@keyframes pop {
-0% { transform: scale(1); }
-50% { transform: scale(1.08); }
-100% { transform: scale(1); }
-}
-.puzzle-piece.pop {
-animation: pop 0.3s ease-out;
-}
+/* --- CARRUSEL --- */
+.carousel-header { display: flex; align-items: center; padding: 0 0.5rem; margin-bottom: 1rem; }
+.carousel-nav { display: flex; align-items: center; justify-content: space-between; padding: 0 0.5rem; margin-bottom: 0.5rem; }
+.carousel-nav h2 { font-size: 1.4rem; color: var(--color-secondary-dark); }
 
-/* --- ¡NUEVO! Estilo para el "fantasma" táctil --- */
-#touch-ghost {
-position: fixed;
-z-index: 9999;
-pointer-events: none; /* No debe interferir con el drop */
-opacity: 0.8;
-transform: translate(-50%, -50%) scale(1.1); /* Centrado en el dedo y más grande */
-box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-border-radius: 4px;
-transition: transform 0.1s linear;
+/* --- MODALES --- */
+.modal-backdrop {
+  position: fixed; inset: 0; z-index: 300; display: flex; align-items: center; justify-content: center;
+  padding: 1.5rem; background-color: rgba(38, 50, 56, 0.9); backdrop-filter: blur(4px);
+  transition: opacity 0.3s ease;
 }
+.modal-backdrop.hidden { opacity: 0; pointer-events: none; }
 
-/* Scrollbar */
-.horizontal-scroll {
-display: flex;
-overflow-x: auto;
-gap: 1rem;
-padding-bottom: 0.5rem;
-}
-.horizontal-scroll::-webkit-scrollbar { height: 8px; }
-.horizontal-scroll::-webkit-scrollbar-track { background: #E0E0E0; border-radius: 4px; }
-.horizontal-scroll::-webkit-scrollbar-thumb { background: var(--color-primario); border-radius: 4px; }
-.horizontal-scroll::-webkit-scrollbar-thumb:hover { background: var(--color-primario-oscuro); }
+/* --- UTILIDADES --- */
+.flex { display: flex; } .justify-between { justify-content: space-between; }
+.items-center { align-items: center; } .text-center { text-align: center; }
+.w-full { width: 100%; } .p-4 { padding: 1rem; } .p-6 { padding: 1.5rem; }
 
-/* Animación modal */
-@keyframes modal-in {
-from { transform: scale(0.9); opacity: 0; }
-to { transform: scale(1); opacity: 1; }
+/* Loader */
+#pantalla-carga .animate-spin {
+  border: 6px solid rgba(255, 255, 255, 0.3); border-top-color: white; border-radius: 50%;
+  width: 50px; height: 50px; animation: spin 1s linear infinite; margin: 0 auto 1rem auto;
 }
-.animate-modal-in {
-animation: modal-in 0.3s ease-out;
-}
-
-/* --- Clases de utilidad --- */
-.w-full { width: 100%; }
-.max-w-md { max-width: 28rem; }
-.max-w-lg { max-width: 32rem; }
-.mx-auto { margin-left: auto; margin-right: auto; }
-.mb-2 { margin-bottom: 0.5rem; }
-.mb-4 { margin-bottom: 1rem; }
-.mb-6 { margin-bottom: 1.5rem; }
-.mb-8 { margin-bottom: 2rem; }
-.ml-2 { margin-left: 0.5rem; }
-.ml-4 { margin-left: 1rem; }
-.-ml-2 { margin-left: -0.5rem; }
-.mt-1 { margin-top: 0.25rem; }
-.mt-6 { margin-top: 1.5rem; }
-.mt-16 { margin-top: 4rem; }
-.p-2 { padding: 0.5rem; }
-.p-4 { padding: 1rem; }
-.p-6 { padding: 1.5rem; }
-.text-center { text-align: center; }
-.text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
-.text-2xl { font-size: 1.5rem; line-height: 2rem; }
-.text-base { font-size: 1rem; line-height: 1.5rem; }
-.text-sm { font-size: 0.875rem; line-height: 1.25rem; }
-.font-bold { font-weight: 700; }
-.font-extrabold { font-weight: 800; }
-.font-medium { font-weight: 500; }
-.h-8 { height: 2rem; }
-.h-80 { height: 20rem; }
-.flex { display: flex; }
-.flex-col { flex-direction: column; }
-.items-center { align-items: center; }
-.justify-center { justify-content: center; }
-.justify-between { justify-content: space-between; }
-.z-50 { z-index: 50; }
-.animate-spin {
-animation: spin 1s linear infinite;
-}
-@keyframes spin {
-from { transform: rotate(0deg); }
-to { transform: rotate(360deg); }
-}
-
+@keyframes spin { to { transform: rotate(360deg); } }
 </style>
 </head>
-<body class="w-full min-h-screen overflow-x-hidden">
+<body>
 
-<!-- --- App Shell: Header --- -->
+<!-- HEADER -->
 <header class="app-header">
-<h1>Esencia Tica</h1>
-<div id="cañas-container">
-<!-- ¡MODIFICADO! Icono de Google -->
-<span class="material-symbols-outlined">compost</span>
-<span id="cañas-display">0</span>
-</div>
+  <h1>Esencia Tica</h1>
+  <div id="cañas-container">
+    <span class="material-symbols-rounded">eco</span>
+    <span id="cañas-display">0</span>
+  </div>
 </header>
 
-<!-- --- App Shell: Contenido Principal --- -->
 <main>
+  <!-- VISTA INICIO -->
+  <div id="vista-principal" class="vista-contenido">
+    <div class="tarjeta" style="border-bottom: 6px solid #ECEFF1;">
+      <img id="main-image" src="" alt="Destacado" style="width:100%; height:18rem; object-fit:cover;">
+      <div class="p-6">
+        <h2 id="main-title" style="font-size: 1.5rem; margin-bottom: 0.5rem;"></h2>
+        <p style="color: #78909C; font-weight: 700; font-size: 0.9rem;">¡PUZZLE DESTACADO!</p>
+      </div>
+    </div>
 
-<!-- Vista 1: Contenido Principal -->
-<div id="vista-principal" class="vista-contenido">
-<h2 class="text-3xl font-bold mb-4">Bienvenido</h2>
-<div class="tarjeta mb-8">
-<img id="main-image" src="https://placehold.co/600x800/E0E0E0/757575?text=Cargando..." alt="Rompecabezas destacado" class="w-full h-80" style="object-fit: cover;">
-<div class="p-6">
-<h3 id="main-title" class="text-2xl font-bold mb-4"></h3>
+    <div class="tarjeta p-4">
+      <div class="flex justify-between items-center mb-2">
+        <span style="font-weight:800; color:#546E7A;">Tu Progreso</span>
+        <span id="progress-text" style="font-weight:900; color:var(--color-secondary);">0%</span>
+      </div>
+      <div class="progress-bar">
+        <div id="progress-bar-inner" class="progress-bar-inner" style="width: 0%;"></div>
+      </div>
+    </div>
 
-</div>
-</div>
-<div class="w-full mb-8" style="padding-left: 0.5rem; padding-right: 0.5rem;">
-<p class="mb-2 text-sm font-medium" style="color: var(--color-texto-secundario);">Progreso Total</p>
-<div class="progress-bar">
-<div id="progress-bar-inner" class="progress-bar-inner" style="width: 0%;"></div>
-</div>
-<p id="progress-text" class="progress-text mt-1">0%</p>
-</div>
-<button id="btn-jugar" class="btn btn-primario w-full">Ir a la Galería</button>
-</div>
+    <button id="btn-jugar" class="btn btn-primario w-full" style="font-size: 1.2rem; padding: 1rem;">
+      ¡IR A LA GALERÍA!
+    </button>
+  </div>
 
-<!-- Vista 2: Contenido de Categorías -->
-<div id="vista-categorias" class="vista-contenido hidden">
-<h2 class="text-3xl font-bold mb-6">Galería de Puzzles</h2>
-<div id="categorias-container">
-</div>
-</div>
+  <!-- VISTA GALERÍA -->
+  <div id="vista-categorias" class="vista-contenido hidden">
+    <div class="carousel-header">
+      <button id="btn-back-home" class="btn-icono" style="background-color: #E3F2FD; border-color: #90CAF9;">
+        <span class="material-symbols-rounded" style="color: #1565C0;">arrow_back</span>
+      </button>
+      <span style="font-weight: 900; color: var(--color-secondary); font-size: 1.1rem; flex: 1; text-align: center; padding-right: 3rem;">Galería</span>
+    </div>
+
+    <div class="carousel-nav">
+      <button id="carousel-btn-prev" class="btn-icono">
+        <span class="material-symbols-rounded">chevron_left</span>
+      </button>
+      <h2 id="carousel-title">Categoría</h2>
+      <button id="carousel-btn-next" class="btn-icono">
+        <span class="material-symbols-rounded">chevron_right</span>
+      </button>
+    </div>
+    
+    <div id="categorias-container" style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; scrollbar-width: none;"></div>
+  </div>
 
 </main>
 
-<!-- --- App Shell: Footer (Navegación) --- -->
-<footer class="app-footer">
-<button id="nav-btn-inicio" class="nav-btn active">
-<!-- ¡MODIFICADO! Icono de Google -->
-<span class="material-symbols-outlined">home</span>
-<span>Inicio</span>
-</button>
-<button id="nav-btn-categorias" class="nav-btn">
-<!-- ¡MODIFICADO! Icono de Google -->
-<span class="material-symbols-outlined">grid_view</span>
-<span>Galería</span>
-</button>
-</footer>
+<!-- JUEGO OVERLAY -->
+<div id="pantalla-juego" class="vista-overlay hidden">
+  <div style="display:flex; justify-content:space-between; align-items:center; padding: 0 1rem; margin-bottom: 1rem;">
+    <button id="btn-volver-desde-juego" class="btn-icono" style="background: #FFEBEE; color: #D32F2F; border-color: #FFCDD2;">
+      <span class="material-symbols-rounded">close</span>
+    </button>
+    
+    <div style="display:flex; gap: 0.5rem;">
+      <button id="btn-resolver-pieza" class="btn-icono" style="background: #E3F2FD; color: #1976D2; border-color: #BBDEFB;">
+        <span class="material-symbols-rounded">auto_fix</span>
+      </button>
+      <button id="btn-preview-puzzle" class="btn-icono">
+        <span class="material-symbols-rounded">visibility</span>
+      </button>
+    </div>
+  </div>
 
+  <div style="max-width: 24rem; margin: 0 auto; padding: 0 1rem;">
+    <div style="display:flex; justify-content:space-between; margin-bottom: 0.5rem; font-family:'Nunito'; font-weight:900; color:var(--color-text);">
+      <div id="display-movimientos" style="background: white; padding: 0.3rem 0.8rem; border-radius: 12px; box-shadow: 0 2px 0 #CFD8DC;">Mov: 0</div>
+      <div id="display-tiempo" style="background: white; padding: 0.3rem 0.8rem; border-radius: 12px; box-shadow: 0 2px 0 #CFD8DC;">0s</div>
+    </div>
 
-<!-- --- VISTAS OVERLAY --- -->
+    <div id="puzzle-container">
+      <div id="puzzle-grid"></div>
+    </div>
 
-<div id="pantalla-juego" class="vista-overlay hidden flex flex-col items-center">
-<header class="app-header w-full">
-<button id="btn-volver-desde-juego" class="btn-icono -ml-2">
-<!-- ¡MODIFICADO! Icono de Google -->
-<span class="material-symbols-outlined">close</span>
-</button>
-<h1 class="ml-4">Resolviendo Puzzle</h1>
-<button id="btn-preview-puzzle" class="btn-icono">
-<!-- ¡MODIFICADO! Icono de Google -->
-<span class="material-symbols-outlined">visibility</span>
-</button>
-</header>
-<div class="w-full max-w-lg mx-auto p-4 mt-16">
-<div id="puzzle-container" class="tarjeta p-2">
-<div id="puzzle-grid">
-</div>
-</div>
-<div id="win-message" class="text-3xl font-extrabold mt-6 h-8 text-center" style="color: var(--color-acento);"></div>
-</div>
+    <div id="win-message" style="margin-top: 1.5rem; text-align: center; font-family: 'Titan One'; font-size: 1.8rem; color: var(--color-primary); height: 2.5rem;"></div>
+  </div>
 </div>
 
+<!-- MODALES -->
 <div id="modal-info" class="modal-backdrop hidden">
-<div class="tarjeta max-w-md w-full animate-modal-in">
-<img id="modal-img" src="" alt="Imagen completada" class="w-full h-80" style="object-fit: cover;">
-<div class="p-6">
-<h2 id="modal-nombre" class="text-3xl font-bold mb-2"></h2>
-<p id="modal-desc" class="text-base mb-6" style="color: var(--color-texto-secundario);"></p>
-<button id="btn-cerrar-modal" class="btn btn-primario w-full">Cerrar</button>
-</div>
-</div>
-</div>
-
-<div id="modal-preview" class="modal-backdrop hidden" style="z-index: 45;">
-<div class="tarjeta max-w-md w-full animate-modal-in" style="position: relative;">
-
-<img id="modal-preview-img" src="" alt="Previsualización" class="w-full h-80" style="object-fit: contain; padding: 1rem;">
-<button id="btn-cerrar-preview" class="btn btn-primario w-full" style="border-radius: 0 0 1rem 1rem;">Cerrar</button>
-</div>
+  <div class="tarjeta animate-modal-in" style="max-width: 20rem; margin: 0;">
+    <img id="modal-img" src="" style="width:100%; height:14rem; object-fit:cover;">
+    <div class="p-6 text-center">
+      <h2 id="modal-nombre" style="margin-bottom: 0.5rem; line-height: 1.2;"></h2>
+      <p id="modal-desc" style="color: #546E7A; font-size: 0.9rem; margin-bottom: 1.5rem; line-height: 1.4;"></p>
+      <button id="btn-cerrar-modal" class="btn btn-primario w-full">¡GENIAL!</button>
+    </div>
+  </div>
 </div>
 
-<div id="modal-alerta" class="modal-backdrop hidden" style="z-index: 55;">
-<div class="tarjeta max-w-md w-full animate-modal-in">
-<div class="p-6">
-<h2 class="text-2xl font-bold mb-4">Aviso</h2>
-<p id="modal-alerta-texto" class="text-base mb-6" style="color: var(--color-texto-secundario);">No tienes suficientes cañas.</p>
-<button id="btn-cerrar-alerta" class="btn btn-primario w-full">Entendido</button>
-</div>
-</div>
-</div>
-
-<div id="pantalla-carga" class="modal-backdrop hidden z-50">
-<div class="text-center">
-<div class="animate-spin" style="border: 4px dashed var(--color-primario); width: 4rem; height: 4rem; border-radius: 50%; margin-bottom: 1rem; margin-left: auto; margin-right: auto;"></div>
-<p class="text-2xl font-bold" style="color: white;">Cargando...</p>
-</div>
+<div id="modal-preview" class="modal-backdrop hidden">
+  <div class="tarjeta animate-modal-in" style="max-width: 20rem;">
+    <div style="padding: 0.5rem;">
+      <img id="modal-preview-img" src="" style="width:100%; border-radius: 12px;">
+    </div>
+    <button id="btn-cerrar-preview" class="btn btn-primario w-full" style="border-radius: 0 0 24px 24px; border-top: none;">VOLVER</button>
+  </div>
 </div>
 
+<div id="modal-alerta" class="modal-backdrop hidden">
+  <div class="tarjeta animate-modal-in" style="max-width: 18rem; padding: 1.5rem; text-align: center;">
+    <span class="material-symbols-rounded" style="font-size: 3rem; color: #FFC107; margin-bottom: 1rem;">warning</span>
+    <h2 style="font-size: 1.2rem; margin-bottom: 0.5rem;">¡Faltan Cañas!</h2>
+    <p id="modal-alerta-texto" style="color: #546E7A; margin-bottom: 1.5rem; font-size: 0.9rem;"></p>
+    <button id="btn-cerrar-alerta" class="btn btn-acento w-full">Entendido</button>
+  </div>
+</div>
+
+<div id="pantalla-carga" class="modal-backdrop hidden">
+  <div class="text-center">
+    <div class="animate-spin"></div>
+    <p style="color: white; font-family: 'Titan One'; font-size: 1.2rem; letter-spacing: 1px;">CARGANDO...</p>
+  </div>
+</div>
 
 <script>
-// --- 1. ESTRUCTURA DE DATOS ---
-const PUZZLE_DATA = [
-  {
-    "id": "guaria_morada",
-    "nombre": "La Guaria Morada",
-    "categoria": "Símbolos nacionales",
-    "descripcion": "Flor nacional desde 1939; una orquídea violeta símbolo de belleza y esperanza. imagen",
-    "url": "https://yosoywill.github.io/Esencia-Tica/images/guaria_morada.PNG"
-  },
-  {
-    "id": "yiguirro",
-    "nombre": "Yigüirro",
-    "categoria": "Símbolos nacionales",
-    "descripcion": "Ave nacional desde 1977; su canto anuncia la llegada de la estación lluviosa. imagen Por Greg Gilbert from Dahlonega Area, Georgia, USA",
-    "url": "https://yosoywill.github.io/Esencia-Tica/images/yiguirro.PNG"
-  },
-  {
-    "id": "venado_colablanca",
-    "nombre": "Venado Cola Blanca",
-    "categoria": "Símbolos nacionales",
-    "descripcion": "Declarado símbolo de la fauna costarricense en 1995. Representa la vida silvestre del país. imagen Por D. Gordon E. Robertson",
-    "url": "https://yosoywill.github.io/Esencia-Tica/images/venado_colablanca.PNG"
-  },
-  {
-    "id": "marimba",
-    "nombre": "La Marimba",
-    "categoria": "Símbolos nacionales",
-    "descripcion": "Instrumento musical nacional desde 1996; presente en celebraciones populares. imagen Por Cristina Valencia",
-    "url": "https://yosoywill.github.io/Esencia-Tica/images/marimba.PNG"
-  },
-  {
-    "id": "carreta_tica",
-    "nombre": "La Carreta",
-    "categoria": "Símbolos nacionales",
-    "descripcion": "Declarada símbolo nacional en 1988; representa el trabajo campesino y el arte popular. imagen Por The LEAF Project",
-    "url": "https://yosoywill.github.io/Esencia-Tica/images/carreta_tica.PNG"
-  },
-  {
-    "id": "arbol_guanacaste",
-    "nombre": "Árbol de Guanacaste",
-    "categoria": "Símbolos nacionales",
-    "descripcion": "Símbolo desde 1959; representa la protección y el valor de los recursos naturales. imagen Por Avancari",
-    "url": "https://yosoywill.github.io/Esencia-Tica/images/arbol_guanacaste.PNG"
-  },
-  {
-    "id": "bandera_cr",
-    "nombre": "Bandera de Costa Rica",
-    "categoria": "Símbolos nacionales",
-    "descripcion": "Desde 1948; el azul representa el cielo, el blanco la paz y el rojo la valentía. imagen Por Lex.mercurio",
-    "url": "https://yosoywill.github.io/Esencia-Tica/images/bandera_cr.PNG"
-  },
-  {
-    "id": "escudo_cr",
-    "nombre": "Escudo Nacional",
-    "categoria": "Símbolos nacionales",
-    "descripcion": "Declarado en 1948; representa los volcanes, mares y prosperidad del país. imagen",
-    "url": "https://yosoywill.github.io/Esencia-Tica/images/escudo_cr.PNG"
-  },
-  {
-    "id": "himno_cr",
-    "nombre": "Himno Nacional de Costa Rica",
-    "categoria": "Símbolos nacionales",
-    "descripcion": "Declarado en 1949; símbolo de identidad y patriotismo. imagen",
-    "url": "https://yosoywill.github.io/Esencia-Tica/images/himno_cr.PNG"
-  },
-  {
-    "id": "teatro_nacional",
-    "nombre": "Teatro Nacional",
-    "categoria": "Símbolos nacionales",
-    "descripcion": "Edificio histórico inaugurado en 1897; joya arquitectónica nacional. imagen Por MadriCR",
-    "url": "https://yosoywill.github.io/Esencia-Tica/images/teatro_nacional.PNG"
-  },
-  {
-    "id": "cafe_cr",
-    "nombre": "Café de Costa Rica",
-    "categoria": "Símbolos nacionales",
-    "descripcion": "Declarado símbolo nacional en 2020; producto icónico en la historia económica del país. imagen Por Rodtico21",
-    "url": "https://yosoywill.github.io/Esencia-Tica/images/cafe_cr.PNG"
-  },
-  {
-    "id": "perezoso_cr",
-    "nombre": "El Perezoso",
-    "categoria": "Símbolos nacionales",
-    "descripcion": "Declarado símbolo nacional de la fauna silvestre en 2021. imagen Por Jsfouche",
-    "url": "https://yosoywill.github.io/Esencia-Tica/images/perezoso_cr.PNG"
-  },
-  {
-    "id": "boyeo_cr",
-    "nombre": "El Boyeo",
-    "categoria": "Símbolos nacionales",
-    "descripcion": "Declarado símbolo nacional en 2022 junto con la carreta costarricense. imagen https://www.mcj.go.cr/",
-    "url": "https://yosoywill.github.io/Esencia-Tica/images/boyeo_cr.PNG"
-  },
-  {
-    "id": "mariposa_morpho",
-    "nombre": "Mariposa Morpho",
-    "categoria": "Símbolos nacionales",
-    "descripcion": "Declarada símbolo nacional en 2022; destaca por su color azul brillante. imagen Por Photo by David J. Stang",
-    "url": "https://yosoywill.github.io/Esencia-Tica/images/mariposa_morpho.PNG"
-  },
-  {
-    "id": "esferas_diquis",
-    "nombre": "Esferas Indígenas Precolombinas",
-    "categoria": "Símbolos nacionales",
-    "descripcion": "Declaradas Patrimonio de la Humanidad y símbolo nacional en 2014. imagen Por Rodtico21",
-    "url": "https://yosoywill.github.io/Esencia-Tica/images/esferas_diquis.PNG"
-  },
-  {
-    "id": "los_crestones",
-    "nombre": "Los Crestones del Chirripó",
-    "categoria": "Símbolos nacionales",
-    "descripcion": "Declarados símbolo nacional en 2011; ícono natural y turístico. imagen https://www.presidencia.go.cr/",
-    "url": "https://yosoywill.github.io/Esencia-Tica/images/los_crestones.PNG"
-  },
-  {
-    "id": "manati",
-    "nombre": "El Manatí",
-    "categoria": "Símbolos nacionales",
-    "descripcion": "Símbolo nacional desde 2014; representa la fauna marina costarricense. imagen Por Galen Rathbun",
-    "url": "https://yosoywill.github.io/Esencia-Tica/images/manati.PNG"
-  },
-  {
-    "id": "antorcha_independencia",
-    "nombre": "La Antorcha de la Independencia",
-    "categoria": "Símbolos nacionales",
-    "descripcion": "Declarada símbolo nacional en 2005; símbolo de libertad e independencia. imagen Por Erick Chavarría",
-    "url": "https://yosoywill.github.io/Esencia-Tica/images/antorcha_independencia.PNG"
-  },
-  {
-    "id": "mascaradas_ticas",
-    "nombre": "Las Mascaradas",
-    "categoria": "Símbolos nacionales",
-    "descripcion": "Declaradas símbolo nacional en 2022; tradición festiva popular del Valle Central. imagen https://cnnespanol.cnn.com/",
-    "url": "https://yosoywill.github.io/Esencia-Tica/images/mascaradas_ticas.PNG"
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+function playSound(type) {
+  if (!audioCtx) return;
+  if (audioCtx.state === 'suspended') audioCtx.resume();
+  const oscillator = audioCtx.createOscillator();
+  const gainNode = audioCtx.createGain();
+  gainNode.connect(audioCtx.destination);
+  oscillator.connect(gainNode);
+  const now = audioCtx.currentTime;
+
+  if (type === 'swap') {
+    oscillator.type = 'triangle'; oscillator.frequency.setValueAtTime(150, now);
+    oscillator.frequency.exponentialRampToValueAtTime(300, now + 0.1);
+    gainNode.gain.setValueAtTime(0.2, now); gainNode.gain.exponentialRampToValueAtTime(0.01, now + 0.1);
+  } else if (type === 'correct') {
+    oscillator.type = 'sine'; oscillator.frequency.setValueAtTime(500, now);
+    oscillator.frequency.setValueAtTime(1000, now + 0.1);
+    gainNode.gain.setValueAtTime(0.2, now); gainNode.gain.linearRampToValueAtTime(0, now + 0.2);
+  } else if (type === 'win') {
+    oscillator.type = 'square'; oscillator.frequency.setValueAtTime(400, now); 
+    oscillator.frequency.setValueAtTime(600, now + 0.1); oscillator.frequency.setValueAtTime(800, now + 0.2); 
+    gainNode.gain.setValueAtTime(0.1, now); gainNode.gain.linearRampToValueAtTime(0, now + 0.4);
+  } else if (type === 'select') {
+    oscillator.type = 'sine'; oscillator.frequency.setValueAtTime(400, now);
+    gainNode.gain.setValueAtTime(0.1, now); gainNode.gain.exponentialRampToValueAtTime(0.01, now + 0.05);
   }
-];
-
-// --- 2. MANEJO de ESTADO (localStorage) ---
-const STORAGE_KEY = 'juego_puzzle_completados';
-const STORAGE_KEY_CAÑAS = 'juego_puzzle_cañas';
-
-function getCañas() {
-const cañas = localStorage.getItem(STORAGE_KEY_CAÑAS);
-return cañas ? parseInt(cañas, 10) : 0;
+  oscillator.start(now); oscillator.stop(now + 0.4);
 }
 
-function setCañas(amount) {
-localStorage.setItem(STORAGE_KEY_CAÑAS, amount.toString());
-}
-
-function addCañas(amount) {
-let currentCañas = getCañas();
-currentCañas += amount;
-setCañas(currentCañas);
-renderCañasUI();
-}
-
-function getCompletados() {
-const data = localStorage.getItem(STORAGE_KEY);
-return data ? JSON.parse(data) : [];
-}
-
-function marcarComoCompletado(puzzleId) {
-let completados = getCompletados();
-if (!completados.includes(puzzleId)) {
-completados.push(puzzleId);
-localStorage.setItem(STORAGE_KEY, JSON.stringify(completados));
-addCañas(10);
-renderProgreso();
-}
-}
-
-function estaCompletado(puzzleId) {
-return getCompletados().includes(puzzleId);
-}
-
-// --- 3. LÓGICA CLAVE (Progreso y Dificultad) ---
-function getProgreso() {
-const totalPuzzles = PUZZLE_DATA.length;
-const completados = getCompletados().length;
-if (totalPuzzles === 0) return 0;
-const porcentaje = (completados / totalPuzzles) * 100;
-return Math.floor(porcentaje);
-}
-
-function getDificultad() {
-const porcentaje = getProgreso();
-const nivel = Math.floor(porcentaje / 5);
-
-switch (nivel) {
-case 0: return { rows: 4, cols: 3 };
-case 1: return { rows: 5, cols: 4 };
-case 2: return { rows: 6, cols: 5 };
-case 3: return { rows: 7, cols: 6 };
-default: return { rows: 8, cols: 7 };
-}
-}
-
-function vibrate(ms) {
-if (navigator.vibrate) {
-navigator.vibrate(ms);
-}
-}
-
-// --- 4. LÓGICA DEL JUEGO (Puzzle) ---
-let currentGame = {
-puzzleId: null,
-rows: 0,
-cols: 0,
-totalPieces: 0,
-draggedTile: null,
-imageUrl: '',
-touchGhost: null // ¡NUEVO! Para el fantasma táctil
-};
-
-const puzzleGrid = document.getElementById('puzzle-grid');
-const winMessageEl = document.getElementById('win-message');
-
-function iniciarJuego(puzzleId) {
-const puzzle = PUZZLE_DATA.find(p => p.id === puzzleId);
-if (!puzzle) return;
-
-const { rows, cols } = getDificultad();
-currentGame.puzzleId = puzzleId;
-currentGame.rows = rows;
-currentGame.cols = cols;
-currentGame.totalPieces = rows * cols;
-currentGame.draggedTile = null;
-currentGame.imageUrl = puzzle.url;
-
-let pieces = [];
-for (let i = 0; i < currentGame.totalPieces; i++) {
-pieces.push(i);
-}
-
-for (let i = pieces.length - 1; i > 0; i--) {
-const j = Math.floor(Math.random() * (i + 1));
-[pieces[i], pieces[j]] = [pieces[j], pieces[i]];
-}
-
-puzzleGrid.innerHTML = '';
-winMessageEl.textContent = '';
-puzzleGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
-puzzleGrid.style.aspectRatio = `${cols} / ${rows}`;
-
-for (let i = 0; i < currentGame.totalPieces; i++) {
-const pieceNumber = pieces[i];
-const tile = document.createElement('div');
-tile.classList.add('puzzle-piece');
-tile.dataset.slot = i;
-tile.dataset.piece = pieceNumber;
-tile.draggable = true;
-
-tile.style.backgroundImage = `url('${currentGame.imageUrl}')`;
-tile.style.backgroundPosition = getBackgroundPosition(pieceNumber);
-tile.style.backgroundSize = `${cols * 100}% ${rows * 100}%`;
-
-tile.addEventListener('dragstart', handleDragStart);
-tile.addEventListener('dragover', handleDragOver);
-tile.addEventListener('drop', handleDrop);
-tile.addEventListener('dragend', handleDragEnd);
-
-tile.addEventListener('touchstart', handleTouchStart, { passive: false });
-tile.addEventListener('touchmove', handleTouchMove, { passive: false });
-tile.addEventListener('touchend', handleTouchEnd);
-
-puzzleGrid.appendChild(tile);
-}
-checkBoardState();
-}
-
-function getBackgroundPosition(pieceNumber) {
-const { rows, cols } = currentGame;
-const xPercent = (pieceNumber % cols) * 100 / (cols - 1);
-const yPercent = Math.floor(pieceNumber / cols) * 100 / (rows - 1);
-const x = isNaN(xPercent) ? '0%' : `${xPercent}%`;
-const y = isNaN(yPercent) ? '0%' : `${yPercent}%`;
-return `${x} ${y}`;
-}
-
-// --- MANEJADORES DE DRAG & DROP (Ratón) ---
-
-function handleDragStart(e) {
-const tile = e.currentTarget;
-if (winMessageEl.textContent || tile.classList.contains('correct')) {
-e.preventDefault();
-return;
-}
-currentGame.draggedTile = tile;
-e.dataTransfer.effectAllowed = 'move';
-setTimeout(() => {
-tile.classList.add('dragging'); // Solo opacidad para el ratón
-}, 0);
-}
-
-function handleDragOver(e) { e.preventDefault(); }
-
-function handleDrop(e) {
-e.preventDefault();
-const droppedOnTile = e.currentTarget;
-if (currentGame.draggedTile && currentGame.draggedTile !== droppedOnTile) {
-if (droppedOnTile.classList.contains('correct')) {
-return;
-}
-swapTiles(currentGame.draggedTile, droppedOnTile);
-checkBoardState();
-}
-}
-
-function handleDragEnd(e) {
-e.target.classList.remove('dragging');
-currentGame.draggedTile = null;
-}
-
-// --- MANEJADORES TÁCTILES (¡MODIFICADOS con Fantasma!) ---
-
-function handleTouchStart(e) {
-e.preventDefault();
-const tile = e.currentTarget;
-if (winMessageEl.textContent || tile.classList.contains('correct')) {
-return;
-}
-vibrate(50);
-currentGame.draggedTile = tile;
-
-// ¡NUEVO! Crear el fantasma
-const touch = e.touches[0];
-const ghost = document.createElement('div');
-ghost.id = 'touch-ghost';
-// Copiar estilos de la pieza
-ghost.style.width = `${tile.offsetWidth}px`;
-ghost.style.height = `${tile.offsetHeight}px`;
-ghost.style.backgroundImage = tile.style.backgroundImage;
-ghost.style.backgroundPosition = tile.style.backgroundPosition;
-ghost.style.backgroundSize = tile.style.backgroundSize;
-// Posicionar en el dedo
-ghost.style.left = `${touch.clientX}px`;
-ghost.style.top = `${touch.clientY}px`;
-
-document.body.appendChild(ghost);
-currentGame.touchGhost = ghost;
-
-// Ocultar la pieza original
-tile.style.visibility = 'hidden';
-}
-
-function handleTouchMove(e) {
-e.preventDefault();
-if (!currentGame.touchGhost) { return; }
-
-// Mover el fantasma
-const touch = e.touches[0];
-currentGame.touchGhost.style.left = `${touch.clientX}px`;
-currentGame.touchGhost.style.top = `${touch.clientY}px`;
-}
-
-function handleTouchEnd(e) {
-if (!currentGame.draggedTile) { return; }
-
-// ¡NUEVO! Eliminar fantasma
-currentGame.touchGhost.remove();
-currentGame.touchGhost = null;
-
-// Encontrar sobre qué se soltó
-const touch = e.changedTouches[0];
-const droppedOnElement = document.elementFromPoint(touch.clientX, touch.clientY);
-
-// Mostrar la pieza original de nuevo
-currentGame.draggedTile.style.visibility = '';
-
-if (droppedOnElement &&
-droppedOnElement.classList.contains('puzzle-piece') &&
-droppedOnElement !== currentGame.draggedTile) {
-if (droppedOnElement.classList.contains('correct')) {
-currentGame.draggedTile = null;
-return;
-}
-swapTiles(currentGame.draggedTile, droppedOnElement);
-checkBoardState();
-}
-
-currentGame.draggedTile = null;
-}
-
-
-function swapTiles(tile1, tile2) {
-const piece1 = tile1.dataset.piece;
-const piece2 = tile2.dataset.piece;
-
-tile1.dataset.piece = piece2;
-tile2.dataset.piece = piece1;
-
-tile1.style.backgroundPosition = getBackgroundPosition(piece2);
-tile2.style.backgroundPosition = getBackgroundPosition(piece1);
-}
-
-function checkBoardState() {
-const allTiles = puzzleGrid.querySelectorAll('.puzzle-piece');
-let isWin = true;
-
-for (const tile of allTiles) {
-const isCorrect = tile.dataset.slot === tile.dataset.piece;
-
-if (isCorrect) {
-if (!tile.classList.contains('correct')) {
-tile.classList.add('pop');
-vibrate(100);
-setTimeout(() => {
-tile.classList.remove('pop');
-}, 300);
-}
-tile.classList.add('correct');
-tile.classList.remove('incorrect');
-tile.draggable = false;
-tile.style.cursor = 'default';
-} else {
-isWin = false;
-tile.classList.add('incorrect');
-tile.classList.remove('correct');
-tile.draggable = true;
-tile.style.cursor = 'grab';
-}
-}
-
-if (isWin) {
-winMessageEl.textContent = '¡Completado!';
-marcarComoCompletado(currentGame.puzzleId);
-setTimeout(() => {
-renderModal(currentGame.puzzleId);
-}, 1000);
-}
-}
-
-// --- 5. LÓGICA DE NAVEGACIÓN Y RENDERIZADO ---
-
-const vistasContenido = {
-principal: document.getElementById('vista-principal'),
-categorias: document.getElementById('vista-categorias'),
-};
-const vistasOverlay = {
-juego: document.getElementById('pantalla-juego'),
-modal: document.getElementById('modal-info'),
-carga: document.getElementById('pantalla-carga'),
-preview: document.getElementById('modal-preview'),
-alerta: document.getElementById('modal-alerta')
-};
-const navBtnInicio = document.getElementById('nav-btn-inicio');
-const navBtnCategorias = document.getElementById('nav-btn-categorias');
-const mainImage = document.getElementById('main-image');
-const mainTitle = document.getElementById('main-title');
-const progressBarInner = document.getElementById('progress-bar-inner');
-const progressText = document.getElementById('progress-text');
-const categoriasContainer = document.getElementById('categorias-container');
-const btnJugar = document.getElementById('btn-jugar');
-const btnVolverDesdeJuego = document.getElementById('btn-volver-desde-juego');
-const btnCerrarModal = document.getElementById('btn-cerrar-modal');
-const modalImg = document.getElementById('modal-img');
-const modalNombre = document.getElementById('modal-nombre');
-const modalDesc = document.getElementById('modal-desc');
-
-const cañasDisplay = document.getElementById('cañas-display');
-const btnPreviewPuzzle = document.getElementById('btn-preview-puzzle');
-const modalPreviewImg = document.getElementById('modal-preview-img');
-const btnCerrarPreview = document.getElementById('btn-cerrar-preview');
-const modalAlertaTexto = document.getElementById('modal-alerta-texto');
-const btnCerrarAlerta = document.getElementById('btn-cerrar-alerta');
-
-
-function showView(viewId) {
-Object.values(vistasOverlay).forEach(vista => vista.classList.add('hidden'));
-
-if (viewId === 'principal') {
-vistasContenido.principal.classList.remove('hidden');
-vistasContenido.categorias.classList.add('hidden');
-navBtnInicio.classList.add('active');
-navBtnCategorias.classList.remove('active');
-window.scrollTo(0, 0);
-} else if (viewId === 'categorias') {
-vistasContenido.principal.classList.add('hidden');
-vistasContenido.categorias.classList.remove('hidden');
-navBtnInicio.classList.remove('active');
-navBtnCategorias.classList.add('active');
-window.scrollTo(0, 0);
-} else if (viewId === 'juego') {
-vistasOverlay.juego.classList.remove('hidden');
-navBtnInicio.classList.remove('active');
-navBtnCategorias.classList.remove('active');
-window.scrollTo(0, 0);
-}
-}
-
-function showLoader(show) {
-if (show) {
-vistasOverlay.carga.classList.remove('hidden');
-} else {
-vistasOverlay.carga.classList.add('hidden');
-}
-}
-
-function preloadImage(url) {
-return new Promise((resolve, reject) => {
-const img = new Image();
-img.src = url;
-img.onload = () => resolve(img);
-img.onerror = () => reject(new Error(`Failed to load image: ${url}`));
-});
-}
-
-function renderCañasUI() {
-cañasDisplay.textContent = getCañas();
-}
-
-function renderPrincipal() {
-const randomPuzzle = PUZZLE_DATA[Math.floor(Math.random() * PUZZLE_DATA.length)];
-mainImage.src = randomPuzzle.url;
-mainTitle.textContent = randomPuzzle.nombre;
-renderProgreso();
-}
-
-function renderProgreso() {
-const porcentaje = getProgreso();
-progressBarInner.style.width = `${porcentaje}%`;
-progressText.textContent = `${porcentaje}%`;
-}
-
-function renderCategorias() {
-categoriasContainer.innerHTML = '';
-const grupos = PUZZLE_DATA.reduce((acc, puzzle) => {
-if (!acc[puzzle.categoria]) {
-acc[puzzle.categoria] = [];
-}
-acc[puzzle.categoria].push(puzzle);
-return acc;
-}, {});
-
-for (const categoria in grupos) {
-const section = document.createElement('section');
-section.className = 'tarjeta p-4 mb-8';
-section.innerHTML = `<h3 class="text-2xl font-bold mb-4 ml-2">${categoria}</h3>`;
-const grid = document.createElement('div');
-grid.className = 'horizontal-scroll';
-
-grupos[categoria].forEach(puzzle => {
-const completado = estaCompletado(puzzle.id);
-const thumbnail = document.createElement('div');
-thumbnail.className = 'thumbnail';
-thumbnail.dataset.id = puzzle.id;
-thumbnail.innerHTML = `<img src="${puzzle.url}" alt="${puzzle.nombre}">`;
-
-if (completado) {
-thumbnail.classList.add('completed');
-}
-
-thumbnail.addEventListener('click', handleThumbnailClick);
-grid.appendChild(thumbnail);
-});
-section.appendChild(grid);
-categoriasContainer.appendChild(section);
-}
-}
-
-function renderModal(puzzleId) {
-const puzzle = PUZZLE_DATA.find(p => p.id === puzzleId);
-if (!puzzle) return;
-
-modalImg.src = puzzle.url;
-modalNombre.textContent = puzzle.nombre;
-modalDesc.textContent = puzzle.descripcion;
-vistasOverlay.modal.classList.remove('hidden');
-}
-
-// --- 6. MANEJADORES DE EVENTOS ---
-async function handleThumbnailClick(event) {
-const puzzleId = event.currentTarget.dataset.id;
-if (!puzzleId) return;
-
-const puzzle = PUZZLE_DATA.find(p => p.id === puzzleId);
-if (!puzzle) return;
-
-if (estaCompletado(puzzleId)) {
-renderModal(puzzleId);
-} else {
-showLoader(true);
-try {
-await preloadImage(puzzle.url);
-iniciarJuego(puzzleId);
-showView('juego');
-} catch (error) {
-console.error("No se pudo cargar la imagen del puzzle:", error);
-} finally {
-showLoader(false);
-}
-}
-}
-
-navBtnInicio.addEventListener('click', () => {
-renderPrincipal();
-showView('principal');
-});
-
-navBtnCategorias.addEventListener('click', () => {
-renderCategorias();
-showView('categorias');
-});
-
-btnJugar.addEventListener('click', () => {
-renderCategorias();
-showView('categorias');
-});
-
-btnVolverDesdeJuego.addEventListener('click', () => {
-renderCategorias();
-showView('categorias');
-});
-
-btnCerrarModal.addEventListener('click', () => {
-vistasOverlay.modal.classList.add('hidden');
-if (winMessageEl.textContent) {
-renderCategorias();
-showView('categorias');
-}
-});
-
-btnPreviewPuzzle.addEventListener('click', () => {
-const currentCañas = getCañas();
-if (currentCañas >= 5) {
-addCañas(-5);
-modalPreviewImg.src = currentGame.imageUrl;
-vistasOverlay.preview.classList.remove('hidden');
-} else {
-modalAlertaTexto.textContent = `¡No tienes suficientes cañas! Necesitas 5 y solo tienes ${currentCañas}.`;
-vistasOverlay.alerta.classList.remove('hidden');
-}
-});
-
-btnCerrarPreview.addEventListener('click', () => {
-vistasOverlay.preview.classList.add('hidden');
-});
-
-btnCerrarAlerta.addEventListener('click', () => {
-vistasOverlay.alerta.classList.add('hidden');
-});
-
-
-// --- 7. INICIALIZACIÓN ---
-document.addEventListener('DOMContentLoaded', () => {
-renderPrincipal();
-showView('principal');
-renderCañasUI();
-});
-
-</script>
-</body>
-</html>
+const PUZZLE_DATA = [
+  { "id": "guaria_morada", "nombre": "La Guaria Morada", "categoria": "Símbolos nacionales", "descripcion": "Flor nacional desde 1939; una orquídea violeta símbolo de belleza y esperanza.", "url": "https://yosoywill.github.io/Esencia-Tica/images/guaria_morada.PNG" },
+  { "id": "yiguirro", "nombre": "Yigüirro", "categoria": "Símbolos nacionales", "descripcion": "Ave nacional desde 1977; su canto anuncia la llegada de la estación lluviosa.", "url": "https://yosoywill.github.io/Esencia-Tica/images/yiguirro.PNG" },
+  { "id": "venado_colablanca", "nombre": "Venado Cola Blanca", "categoria": "Símbolos nacionales", "descripcion": "Declarado símbolo de la fauna costarricense en 1995.", "url": "https://yosoywill.github.io/Esencia-Tica/images/venado_colablanca.PNG" },
+  { "id": "marimba", "nombre": "La Marimba", "categoria": "Símbolos nacionales", "descripcion": "Instrumento musical nacional desde 1996.", "url": "https://yosoywill.github.io/Esencia-Tica/images/marimba.PNG" },
+  { "id": "carreta_tica", "nombre": "La Carreta", "categoria": "Símbolos nacionales", "descripcion": "Símbolo del trabajo campesino y el arte popular.", "url": "https://yosoywill.github.io/Esencia-Tica/images/carreta_tica.PNG" },
+  { "id": "arbol_guanacaste", "nombre": "Árbol de Guanacaste", "categoria": "Símbolos nacionales", "descripcion": "Símbolo de protección y recursos naturales.", "url": "https://yosoywill.github.io/Esencia-Tica/images/arbol_guanacaste.PNG" },
+  { "id": "bandera_cr", "nombre": "Bandera de Costa Rica", "categoria": "Símbolos nacionales", "descripcion": "Azul (cielo), blanco (paz), rojo (valentía).", "url": "https://yosoywill.github.io/Esencia-Tica/images/bandera_cr.PNG" },
+  { "id": "escudo_cr", "nombre": "Escudo Nacional", "categoria": "Símbolos nacionales", "descripcion": "Volcanes, mares y prosperidad.", "url": "https://yosoywill.github.io/Esencia-Tica/images/escudo_cr.PNG" },
+  { "id": "himno_cr", "nombre": "Himno Nacional", "categoria": "Símbolos nacionales", "descripcion": "Identidad y patriotismo costarricense.", "url": "https://yosoywill.github.io/Esencia-Tica/images/himno_cr.PNG" },
+  { "id": "teatro_nacional", "nombre": "Teatro Nacional", "categoria": "Símbolos nacionales", "descripcion": "Joya arquitectónica inaugurada en 1897.", "url": "https://yosoywill.github.io/Esencia-Tica/images/teatro_nacional.PNG" },
+  { "id": "cafe_cr", "nombre": "Café de Costa Rica", "categoria": "Símbolos nacionales", "descripcion": "Grano de oro, motor histórico de la economía.", "url": "https://yosoywill.github.io/Esencia-Tica/images/cafe_cr.PNG" },
+  { "id": "perezoso_cr", "nombre": "El Perezoso", "categoria": "Símbolos nacionales", "descripcion": "Símbolo de la fauna silvestre y vida tranquila.", "url": "https://yosoywill.github.io/Esencia-Tica/images/perezoso_cr.PNG" },
+  { "id": "boyeo_cr", "nombre": "El Boyeo", "categoria": "Símbolos nacionales", "descripcion": "Tradición del boyeo y la carreta.", "url": "https://yosoywill.github.io/Esencia-Tica/images/boyeo_cr.PNG" },
+  { "id": "mariposa_morpho", "nombre": "Mariposa Morpho", "categoria": "Símbolos nacionales", "descripcion": "Belleza azul de los bosques tropicales.", "url": "https://yosoywill.github.io/Esencia-Tica/images/mariposa_morpho.PNG" },
+  { "id": "esferas_diquis", "nombre": "Esferas Precolombinas", "categoria": "Símbolos nacionales", "descripcion": "Misterio y legado de los ancestros.", "url": "https://yosoywill.github.io/Esencia-Tica/images/esferas_diquis.PNG" },
+  { "id": "los_crestones", "nombre": "Crestones del Chirripó", "categoria": "Símbolos nacionales", "descripcion": "Formaciones rocosas en el techo del país.", "url": "https://yosoywill.github.io/Esencia-Tica/images/los_crestones.PNG" },
+  { "id": "manati", "nombre": "El Manatí", "categoria": "Símbolos nacionales", "descripcion": "Gigante amable de los canales de Tortuguero.", "url": "https://yosoywill.github.io/Esencia-Tica/images/manati.PNG" },
+  { "id": "antorcha_independencia", "nombre": "Antorcha Independencia", "categoria": "Símbolos nacionales", "descripcion": "Llama de la libertad que recorre Centroamérica.", "url": "https://yosoywill.github.io/Esencia-Tica/images/antorcha_independencia.PNG" },
+  { "id": "mascaradas_ticas", "nombre": "Mascaradas", "categoria": "Símbolos nacionales", "descripcion": "Alegría y fiesta popular.", "url": "https://yosoywill.github.io/Esencia-Tica
