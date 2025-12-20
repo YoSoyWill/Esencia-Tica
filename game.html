@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="color-scheme" content="light dark">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>World of Colors: AI Edition</title>
+<!-- FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  /* PALETTE */
+  --color-primary: #D500F9;
+  --color-primary-dark: #AA00FF;
+  --color-secondary: #00B0FF;
+  --color-secondary-dark: #0091EA;
+  --color-accent: #FFD600;
+  --color-text: #263238;
+  --color-card-bg: rgba(255, 255, 255, 0.95);
+  
+  --shadow-soft: 0 10px 30px rgba(0,0,0,0.1);
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-btn: 14px;
+  
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+body {
+  background: linear-gradient(120deg, #E0C3FC 0%, #8EC5FC 50%, #C2E9FB 100%);
+  background-size: 200% 200%;
+  animation: softGradient 10s ease infinite;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  user-select: none;
+  height: 100vh;
+  overscroll-behavior: none;
+  overflow-x: hidden;
+}
+
+@keyframes softGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h1, h2, h3 { font-family: var(--font-heading); letter-spacing: -0.5px; color: var(--color-text); font-weight: 800; }
+
+/* ICONS */
+.icon-svg { width: 1.5rem; height: 1.5rem; fill: currentColor; display: inline-block; vertical-align: middle; }
+.icon-svg-lg { width: 2.5rem; height: 2.5rem; }
+.icon-svg-xl { width: 4rem; height: 4rem; }
+
+/* HEADER */
+.app-header {
+  position: fixed; top: 0.8rem; left: 0.8rem; right: 0.8rem; z-index: 250;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 4.2rem; padding: 0 0.8rem;
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 16px; 
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08); 
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.app-header h1 { 
+  font-size: 1.2rem; margin: 0; 
+  background: linear-gradient(90deg, #D500F9, #2979FF, #00E676, #FFD600, #D500F9); 
+  background-size: 300% auto;
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; 
+  animation: shineText 5s linear infinite;
+  position: absolute; left: 50%; transform: translateX(-50%);
+  white-space: nowrap; pointer-events: none; text-transform: uppercase; font-weight: 900;
+}
+
+@keyframes shineText { to { background-position: 300% center; } }
+
+#header-left { z-index: 10; display: flex; align-items: center; min-width: 3rem; }
+
+#coins-wrapper { display: flex; align-items: center; gap: 0.5rem; z-index: 10; }
+#coins-container {
+  display: flex; align-items: center;
+  background-color: #F5F5F5; padding: 0.4rem 0.8rem;
+  border-radius: 12px; border: 1px solid #E0E0E0;
+  font-family: var(--font-heading); color: #37474F; font-size: 1rem; font-weight: 700;
+  transition: transform 0.1s;
+}
+#coins-container.bump { transform: scale(1.3); background-color: var(--color-accent); border-color: #FBC02D; color: #3E2723; }
+.coin-icon { color: #FFD600; margin-right: 6px; width: 1.4rem; height: 1.4rem; filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1)); }
+
+#btn-add-coins {
+  background: var(--color-text); color: white; border: none; border-radius: 12px;
+  width: 2.4rem; height: 2.4rem; display: flex; align-items: center; justify-content: center;
+  font-weight: bold; font-size: 1.4rem; cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: transform 0.1s;
+}
+#btn-add-coins:active { transform: scale(0.9); }
+
+/* BUTTONS */
+.btn {
+  padding: 1rem 1.5rem; font-family: var(--font-heading); font-size: 1rem; text-transform: uppercase;
+  border-radius: var(--radius-btn); border: none; cursor: pointer; position: relative;
+  transition: transform 0.1s, box-shadow 0.1s; 
+  display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+  font-weight: 700; letter-spacing: 0.5px;
+}
+.btn:active { transform: translateY(2px); box-shadow: none !important; }
+.btn:disabled { opacity: 0.7; cursor: not-allowed; transform: none !important; }
+
+.btn-primary { background: linear-gradient(135deg, #D500F9 0%, #AA00FF 100%); color: white; box-shadow: 0 8px 20px rgba(213, 0, 249, 0.3); }
+.btn-accent { background: linear-gradient(135deg, #00B0FF 0%, #0091EA 100%); color: white; box-shadow: 0 8px 20px rgba(0, 176, 255, 0.3); }
+.btn-ai { background: linear-gradient(135deg, #FF4081 0%, #F50057 100%); color: white; box-shadow: 0 8px 20px rgba(245, 0, 87, 0.3); }
+.btn-neutral { background: white; color: #546E7A; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #ECEFF1; }
+
+.btn-icon {
+  width: 3.2rem; height: 3.2rem; border-radius: 14px; background: white; border: 1px solid #F5F5F5;
+  color: var(--color-text); display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05); cursor: pointer; transition: all 0.2s; position: relative;
+}
+.btn-icon:active { transform: scale(0.95); }
+.cost-badge-icon {
+  position: absolute; bottom: -6px; right: -6px;
+  background: var(--color-text); color: var(--color-accent); font-size: 0.7rem; font-weight: 700; font-family: var(--font-body);
+  padding: 2px 6px; border-radius: 6px; border: 2px solid white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* CARDS */
+.card {
+  background-color: var(--color-card-bg); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft); border: 1px solid rgba(255,255,255,0.6);
+  overflow: hidden; width: 100%; margin-bottom: 1.5rem; position: relative;
+  backdrop-filter: blur(12px);
+}
+.card-featured { cursor: pointer; transition: transform 0.1s; }
+.card-featured:active { transform: scale(0.98); }
+
+.progress-bar { width: 100%; background-color: #F5F5F5; border-radius: 99px; height: 1.2rem; overflow: hidden; }
+.progress-bar-inner { height: 100%; background: linear-gradient(90deg, #D500F9, #00B0FF); border-radius: 99px; transition: width 0.5s; }
+
+/* AI INPUT STYLES - 2:3 RATIO */
+.input-group { margin-bottom: 0.5rem; position: relative; display: flex; gap: 0.5rem; }
+.input-neumorphic {
+  width: 100%; padding: 1rem; border: 2px solid #E0E0E0; border-radius: 16px;
+  font-family: var(--font-body); font-size: 1rem; outline: none; transition: border-color 0.3s;
+  background: #FAFAFA; color: #37474F;
+}
+.input-neumorphic:focus { border-color: var(--color-primary); background: white; }
+.ai-preview-container {
+  width: 100%; 
+  aspect-ratio: 2 / 3; /* FORCE 2:3 RATIO */
+  height: auto;
+  max-height: 60vh; /* Prevent it from being too tall on some screens */
+  background: #EEE; border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden; position: relative; margin-bottom: 1rem;
+  border: 2px dashed #B0BEC5;
+  margin-left: auto; margin-right: auto;
+}
+.ai-loading {
+  position: absolute; inset: 0; background: rgba(255,255,255,0.8);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  z-index: 10; font-weight: bold; color: var(--color-primary);
+}
+.spinner {
+  width: 40px; height: 40px; border: 4px solid #f3f3f3; border-top: 4px solid var(--color-primary);
+  border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 10px;
+}
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* CONTAINERS */
+main { max-width: 30rem; margin: 0 auto; }
+.view-content { padding: 1rem; animation: fadeIn 0.4s ease-out; }
+.hidden { display: none !important; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+
+/* THUMBNAILS & GRID */
+.thumbnail {
+  width: 6.8rem; height: 6.8rem; flex-shrink: 0; border-radius: var(--radius-md);
+  overflow: hidden; box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  cursor: pointer; transition: transform 0.2s; position: relative; background: #fff;
+  display: flex; align-items: center; justify-content: center;
+}
+.thumbnail:active { transform: scale(0.92); }
+.thumbnail img { width: 100%; height: 100%; object-fit: cover; }
+.thumbnail:not(.completed) img { filter: grayscale(100%); opacity: 0.6; }
+.thumbnail.completed { box-shadow: 0 0 0 3px var(--color-secondary); }
+.thumbnail.completed img { filter: none !important; opacity: 1 !important; }
+.thumbnail.completed::after {
+  content: '✓'; position: absolute; bottom: 0; right: 0; background: var(--color-secondary);
+  color: white; width: 1.6rem; height: 1.6rem; border-top-left-radius: 12px;
+  display: flex; align-items: center; justify-content: center; font-weight: bold;
+}
+
+/* GAME BOARD */
+#puzzle-container { background: white; padding: 10px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); width: 100%; }
+#puzzle-grid { background-color: #EEE; display: grid; gap: 2px; width: 100%; border-radius: 12px; overflow: hidden; }
+.puzzle-piece {
+  background-size: cover; background-position: center; cursor: pointer; position: relative;
+  transition: transform 0.2s, opacity 0.2s; box-sizing: border-box; width: 100%; height: 100%;
+}
+.puzzle-piece.incorrect { opacity: 0.9; transform: scale(0.96); border-radius: 4px; z-index: 1; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1); }
+.puzzle-piece.correct { opacity: 1; border-radius: 0 !important; transform: scale(1); z-index: 2; box-shadow: none; }
+.puzzle-piece.selected { opacity: 1 !important; border: 3px solid var(--color-accent) !important; border-radius: 8px; z-index: 10; transform: scale(1.02); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+@keyframes flashCorrect { 0% { filter: brightness(1); } 50% { filter: brightness(1.3); } 100% { filter: brightness(1); } }
+.puzzle-piece.correct.flash { animation: flashCorrect 0.4s ease-out; }
+#touch-ghost { position: fixed; z-index: 9999; opacity: 0.9; pointer-events: none; transform: translate(-50%, -50%) scale(1.1); border: 3px solid white; border-radius: 8px; box-shadow: 0 15px 40px rgba(0,0,0,0.3); background-color: #fff; }
+
+/* OVERLAYS */
+.view-overlay { position: fixed; inset: 0; z-index: 200; background: #F5F7FA; transition: opacity 0.3s; padding-top: 4rem; overflow-y: auto; }
+.view-overlay.hidden { opacity: 0; pointer-events: none; transform: scale(0.98); }
+.view-overlay:not(.hidden) { animation: popIn 0.3s cubic-bezier(0.2, 0.8, 0.2, 1); }
+@keyframes popIn { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: scale(1); } }
+#game-screen { padding-top: 6rem; }
+
+/* CAROUSEL & MODALS */
+.carousel-nav { display: flex; align-items: center; justify-content: space-between; padding: 0 1rem; margin-bottom: 0.8rem; }
+.modal-backdrop {
+  position: fixed; inset: 0; z-index: 300; display: flex; align-items: center; justify-content: center;
+  padding: 1.5rem; background-color: rgba(38, 50, 56, 0.6); backdrop-filter: blur(5px); transition: opacity 0.3s;
+}
+.modal-backdrop.hidden { opacity: 0; pointer-events: none; }
+.animate-modal-in { animation: modalUp 0.3s ease-out; }
+@keyframes modalUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+.levels-grid { display: grid; grid-template-columns: 1fr; gap: 0.8rem; width: 100%; margin-bottom: 1rem; }
+
+/* UTILS */
+.flex { display: flex; } .justify-between { justify-content: space-between; }
+.w-full { width: 100%; } .p-4 { padding: 1rem; } .p-6 { padding: 1.5rem; } .text-center { text-align: center; }
+
+/* FOOTER BUTTONS */
+.bottom-actions { margin-top: 1.5rem; display: flex; justify-content: center; gap: 1rem; }
+.btn-mini-action {
+  background: white; color: #546E7A; border: 1px solid #CFD8DC; padding: 0.6rem 1.2rem;
+  border-radius: 12px; font-size: 0.9rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05); cursor: pointer; font-family: var(--font-body);
+}
+
+/* TUTORIAL & CONFIG */
+/* Increased min-height and added padding to prevent visualization jumps */
+.tutorial-step-content { 
+  min-height: 140px; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  text-align: center; 
+  margin-bottom: 1.5rem; 
+}
+/* ADDED: Tutorial Navigation Container */
+.tutorial-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 0.5rem;
+  margin-top: 1rem;
+}
+
+.step-dots { display: flex; gap: 0.5rem; }
+.step-dot { width: 8px; height: 8px; border-radius: 50%; background: #E0E0E0; transition: background 0.3s; }
+.step-dot.active { background: var(--color-primary); transform: scale(1.3); }
+.config-section { background: #F5F5F5; border-radius: 12px; padding: 1rem; margin-bottom: 1rem; }
+.mode-selector { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem; }
+.mode-btn { 
+  background: white; border: 1px solid #CFD8DC; border-radius: 10px; padding: 0.8rem 0.5rem; 
+  display: flex; flex-direction: column; align-items: center; gap: 0.4rem; cursor: pointer; 
+  color: #78909C; font-size: 0.8rem; font-weight: 600; font-family: var(--font-body);
+}
+.mode-btn.active { border-color: var(--color-secondary); color: var(--color-secondary); background: #E1F5FE; }
+
+/* PARTICLES */
+.particle-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 900; }
+.particle { position: absolute; width: 10px; height: 10px; border-radius: 50%; animation: explode 1s cubic-bezier(0, .9, .57, 1) forwards; }
+@keyframes explode { 0% { transform: translateY(0) scale(1); opacity: 1; } 100% { transform: translateY(100px) scale(0); opacity: 0; } }
+.flying-coin { position: fixed; z-index: 1000; width: 2rem; height: 2rem; color: #FFD600; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); pointer-events: none; transition: all 0.8s cubic-bezier(0.5, 0.05, 0.2, 1.2); }
+</style>
+</head>
+<body>
+
+<!-- SVG SYMBOLS -->
+<svg style="display:none">
+  <symbol id="icon-back" viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></symbol>
+  <symbol id="icon-coin" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05.69 1.64 1.83 1.64 1.22 0 1.95-.56 1.95-1.23 0-.93-.71-1.53-2.35-1.98-2.37-.65-3.51-1.57-3.51-3.41-.01-1.51 1.23-2.73 2.96-3.04V4h2.67v1.93c1.71.36 3.16 1.46 3.27 3.4h-1.96c-.1-1.05-.69-1.64-1.83-1.64-1.22 0-1.95.56-1.95 1.23 0 .93.71 1.53 2.35 1.98 2.37.65 3.51 1.57 3.51 3.41.02 1.51-1.22 2.73-2.96 3.04z"/></symbol>
+  <symbol id="icon-chevron-left" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></symbol>
+  <symbol id="icon-chevron-right" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></symbol>
+  <symbol id="icon-settings" viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 00.12-.61l-1.92-3.32a.488.488 0 00-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 00-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.04.17 0 .4.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 00-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.58 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.04-.22 0-.45-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></symbol>
+  <symbol id="icon-info" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></symbol>
+  <symbol id="icon-school" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></symbol>
+  <symbol id="icon-volume-up" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></symbol>
+  <symbol id="icon-volume-off" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></symbol>
+  <symbol id="icon-auto-fix" viewBox="0 0 24 24"><path d="M7.5 5.6L10 7 8.6 4.5 10 2 7.5 3.4 5 2l1.4 2.5L5 7zm12 9.8L17 14l1.4 2.5L21 14l-2.6-1.4L17 10l-1.4 2.5L13 14l2.5 1.4zM22 2l-2.5 1.4L17 2l1.4 2.5L17 7l2.5-1.4L22 7l-1.4-2.5zm-7.63 5.29c-.39-.39-1.02-.39-1.41 0L1.29 18.96c-.39.39-.39 1.02 0 1.41l2.34 2.34c.39.39 1.02.39 1.41 0L16.7 11.05c.39-.39.39-1.02 0-1.41l-2.33-2.35z"/></symbol>
+  <symbol id="icon-visibility" viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-1.34-3-3-1.34-3-3-3z"/></symbol>
+  <symbol id="icon-touch-app" viewBox="0 0 24 24"><path d="M9 11.24V7.5C9 6.12 10.12 5 11.5 5S14 6.12 14 7.5v3.74c1.21-.81 2-2.18 2-3.74C16 5.01 13.99 3 11.5 3S7 5.01 7 7.5c0 1.56.79 2.93 2 3.74zm9.84 4.63l-4.54-2.26c-.17-.07-.35-.11-.54-.11H13v-6c0-.83-.67-1.5-1.5-1.5S10 6.67 10 7.5v10.74l-3.43-.72c-.08-.01-.15-.03-.24-.03-.31 0-.59.13-.79.33l-.79.8 4.94 4.94c.27.27.65.44 1.06.44h6.79c.75 0 1.33-.55 1.44-1.28l.75-5.27c.01-.07.02-.14.02-.2 0-.62-.38-1.16-.91-1.42z"/></symbol>
+  <symbol id="icon-pan-tool-alt" viewBox="0 0 24 24"><path d="M21 11l-5.17-5.17-1.42 1.41 2.76 2.76H12v2h5.17l-2.76 2.76 1.41 1.41L21 11zM7 3l1.41 1.41L5.65 7.17H12v2H5.65l2.76 2.76L7 13.34 2.34 8.68 7 3z"/></symbol>
+  <symbol id="icon-auto-awesome" viewBox="0 0 24 24"><path d="M19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25L19 9zm-7.5.5L9 4 6.5 9.5 1 12l5.5 2.5L9 20l2.5-5.5L17 12l-5.5-2.5zM19 15l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25L19 15z"/></symbol>
+  <symbol id="icon-magic" viewBox="0 0 24 24"><path d="M7.5 5.6L10 7 8.6 4.5 10 2 7.5 3.4 5 2l1.4 2.5L5 7zm12 9.8L17 14l1.4 2.5L21 14l-2.6-1.4L17 10l-1.4 2.5L13 14l2.5 1.4zM22 2l-2.5 1.4L17 2l1.4 2.5L17 7l2.5-1.4L22 7l-1.4-2.5zm-7.63 5.29c-.39-.39-1.02-.39-1.41 0L1.29 18.96c-.39.39-.39 1.02 0 1.41l2.34 2.34c.39.39 1.02.39 1.41 0L16.7 11.05c.39-.39.39-1.02 0-1.41l-2.33-2.35z"/></symbol>
+  <symbol id="icon-video-ad" viewBox="0 0 24 24"><path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM8 15c0-1.66 1.34-3 3-3 .35 0 .69.07 1 .18V6h5v2h-3v7.03A3.003 3.003 0 0 1 8 15z"/></symbol>
+  <symbol id="icon-delete" viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></symbol>
+</svg>
+
+<!-- HEADER -->
+<header class="app-header">
+  <div id="header-left">
+    <button id="header-back-btn" class="btn-icon hidden" style="width: 2.8rem; height: 2.8rem; border-color: transparent;">
+      <svg class="icon-svg"><use href="#icon-back"></use></svg>
+    </button>
+  </div>
+  
+  <h1>World of Colors</h1>
+  
+  <div id="coins-wrapper">
+    <div id="coins-container">
+      <svg class="icon-svg coin-icon"><use href="#icon-coin"></use></svg>
+      <span id="coins-display">0</span>
+    </div>
+    <button id="btn-add-coins" title="Watch ad to earn coins">+</button>
+  </div>
+</header>
+
+<main>
+  <!-- HOME VIEW -->
+  <div id="view-home" class="view-content">
+    <div id="card-featured" class="card card-featured">
+      <img id="main-image" src="" alt="Featured" style="width:100%; height:20rem; object-fit:cover;">
+      <div class="p-6">
+        <h2 id="main-title" style="font-size: 1.6rem; margin-bottom: 0.5rem; color: var(--color-text);"></h2>
+        <p style="color: #546E7A; font-weight: 600; font-size: 0.9rem; text-transform:uppercase; letter-spacing:1px;">Puzzle Available! (Tap to Play)</p>
+      </div>
+    </div>
+
+    <div class="card p-4">
+      <div class="flex justify-between items-center mb-2">
+        <span style="font-weight:700; color:#546E7A; font-size:1rem;">Your Progress</span>
+        <span id="progress-text" style="font-weight:800; color:var(--color-primary); font-size:1.1rem;">0%</span>
+      </div>
+      <div class="progress-bar"><div id="progress-bar-inner" class="progress-bar-inner" style="width: 0%;"></div></div>
+    </div>
+
+    <div style="display:flex; gap:0.8rem; margin-bottom: 1.5rem;">
+      <button id="btn-play" class="btn btn-primary" style="flex:2; font-size: 1.2rem;">PLAY!</button>
+      <button id="btn-ai" class="btn btn-ai" style="flex:1;">
+        <svg class="icon-svg" style="margin-right:0.2rem"><use href="#icon-magic"></use></svg> AI
+      </button>
+      <button id="btn-tutorial" class="btn btn-accent" style="padding: 1rem;"><svg class="icon-svg"><use href="#icon-school"></use></svg></button>
+    </div>
+
+    <div class="bottom-actions">
+      <button id="btn-config" class="btn-mini-action"><svg class="icon-svg" style="margin-right:6px;"><use href="#icon-settings"></use></svg> Settings</button>
+    </div>
+  </div>
+
+  <!-- AI CREATOR VIEW (NEW) -->
+  <div id="view-ai-creator" class="view-content hidden">
+    <div class="card p-4">
+      <h2 style="margin-bottom:1rem; text-align:center;">Chroma Creator</h2>
+      <p style="color:#546E7A; font-size:0.9rem; margin-bottom:0.5rem; text-align:center;">
+        Describe an image and the AI will create a unique puzzle for you!<br>
+        <strong style="color:var(--color-secondary); font-size:0.8rem; display:block; margin-top:5px;">(Format: 2:3 Vertical)</strong>
+      </p>
+      
+      <div class="input-group">
+        <input type="text" id="ai-prompt-input" class="input-neumorphic" placeholder="E.g., A robot eating Gallo Pinto in space..." style="padding-right: 3rem;">
+        <button id="btn-clear-ai" class="btn-icon" style="position: absolute; right: 4px; top: 4px; width: 2.5rem; height: 2.5rem; border: none; background: transparent; color: #B0BEC5; box-shadow: none;">
+          <svg class="icon-svg"><use href="#icon-delete"></use></svg>
+        </button>
+      </div>
+      
+      <!-- WARNING MESSAGE -->
+      <p style="font-size:0.75rem; color:#D32F2F; margin-bottom:1rem; text-align:center; font-weight:600;">
+        ⚠️ Warning: NSFW, violent, or hateful content is prohibited and will be blocked.
+      </p>
+
+      <div id="ai-preview" class="ai-preview-container">
+        <div id="ai-loading" class="ai-loading hidden">
+          <div class="spinner"></div>
+          <span>Dreaming...</span>
+        </div>
+        <img id="ai-generated-image" src="" style="width:100%; height:100%; object-fit:cover; display:none;">
+        <div id="ai-placeholder-text" style="color:#90A4AE; font-weight:600;">Image will appear here</div>
+      </div>
+
+      <button id="btn-generate-ai" class="btn btn-ai w-full" style="margin-bottom:0.8rem;">Generate Image</button>
+      <button id="btn-play-ai" class="btn btn-primary w-full hidden">PLAY THIS PUZZLE!</button>
+      
+      <div id="ai-limit-msg" style="text-align:center; font-size:0.8rem; color:#78909C; margin-top:0.5rem;">
+        1 Free Generation per Day.
+      </div>
+    </div>
+  </div>
+
+  <!-- GALLERY VIEW -->
+  <div id="view-categories" class="view-content hidden">
+    <div class="carousel-nav">
+      <button id="carousel-btn-prev" class="btn-icon"><svg class="icon-svg"><use href="#icon-chevron-left"></use></svg></button>
+      <h2 id="carousel-title">Category</h2>
+      <button id="carousel-btn-next" class="btn-icon"><svg class="icon-svg"><use href="#icon-chevron-right"></use></svg></button>
+    </div>
+    <div id="categories-container" style="display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; scrollbar-width: none;"></div>
+  </div>
+
+</main>
+
+<!-- GAME OVERLAY -->
+<div id="game-screen" class="view-overlay hidden">
+  <div style="display:flex; justify-content:flex-end; align-items:center; padding: 0 1rem; margin-bottom: 1rem;">
+    <div style="display:flex; gap: 0.8rem;">
+      <button id="btn-change-diff" class="btn-icon" style="color: #F57C00;">
+        <svg class="icon-svg"><use href="#icon-settings"></use></svg>
+        <div class="cost-badge-icon">50</div>
+      </button>
+      <button id="btn-solve-piece" class="btn-icon" style="color: #1976D2;">
+        <svg class="icon-svg"><use href="#icon-auto-fix"></use></svg>
+        <div class="cost-badge-icon">10</div>
+      </button>
+      <button id="btn-preview-puzzle" class="btn-icon">
+        <svg class="icon-svg"><use href="#icon-visibility"></use></svg>
+        <div class="cost-badge-icon">2</div>
+      </button>
+    </div>
+  </div>
+
+  <div style="width: 100%; max-width: 40rem; margin: 0 auto; padding: 0 0.5rem;">
+    <div style="display:flex; justify-content:space-between; margin-bottom: 0.8rem; font-family:var(--font-heading); font-weight:700; color:#37474F;">
+      <div id="display-moves" style="background: white; padding: 0.5rem 1rem; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">Moves: 0</div>
+      <div id="display-time" style="background: white; padding: 0.5rem 1rem; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">0s</div>
+    </div>
+    <div id="puzzle-container"><div id="puzzle-grid"></div></div>
+    <div id="win-message" style="margin-top: 1.5rem; text-align: center; font-family: var(--font-heading); font-size: 2rem; color: #2E7D32; height: 3rem;"></div>
+  </div>
+</div>
+
+<!-- INFO / WIN MODAL -->
+<div id="modal-info" class="modal-backdrop hidden">
+  <div class="card animate-modal-in" style="max-width: 20rem; margin: 0; border: none;">
+    <img id="modal-img" src="" style="width:100%; height:14rem; object-fit:cover;">
+    <div class="p-6 text-center">
+      <h2 id="modal-name" style="margin-bottom: 0.5rem; line-height: 1.2; color: var(--color-text);"></h2>
+      <p id="modal-desc" style="color: #546E7A; font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.5;"></p>
+      <div style="display:grid; gap: 0.8rem;">
+        <button id="btn-close-modal" class="btn btn-primary w-full">CLOSE</button>
+        <button id="btn-replay-modal" class="btn btn-neutral w-full">PLAY AGAIN</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DIFFICULTY MODAL -->
+<div id="modal-difficulty" class="modal-backdrop hidden">
+  <div class="card animate-modal-in" style="max-width: 20rem; padding: 1.8rem;">
+    <h2 class="text-center" style="margin-bottom: 1.5rem;">Choose Difficulty</h2>
+    <div class="levels-grid">
+      <button id="btn-diff-easy" class="btn btn-neutral">Easy (3x4)</button>
+      <button id="btn-diff-normal" class="btn btn-primary">Normal (4x5)</button>
+      <button id="btn-diff-hard" class="btn btn-accent">Hard (5x6)</button>
+    </div>
+    <button id="btn-cancel-diff" class="btn w-full" style="background:transparent; color:#90A4AE; border: 1px solid #CFD8DC; margin-top: 0.5rem; border-radius: 12px; padding: 0.8rem;">Cancel</button>
+  </div>
+</div>
+
+<!-- PREVIEW MODAL -->
+<div id="modal-preview" class="modal-backdrop hidden">
+  <div class="card animate-modal-in" style="max-width: 20rem;">
+    <div style="padding: 0.8rem;">
+      <img id="modal-preview-img" src="" style="width:100%; border-radius: 16px;">
+    </div>
+    <button id="btn-close-preview" class="btn btn-primary w-full" style="border-radius: 0 0 24px 24px; border-top: none;">BACK</button>
+  </div>
+</div>
+
+<!-- ALERT MODAL -->
+<div id="modal-alert" class="modal-backdrop hidden">
+  <div class="card animate-modal-in" style="max-width: 18rem; padding: 2rem; text-align: center;">
+    <svg class="icon-svg-xl" style="color: #FFD600; margin-bottom: 1rem;"><use href="#icon-info"></use></svg>
+    <h2 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Not enough Coins!</h2>
+    <p id="modal-alert-text" style="color: #546E7A; margin-bottom: 1.5rem; font-size: 0.95rem;"></p>
+    <button id="btn-close-alert" class="btn btn-accent w-full">Got it</button>
+  </div>
+</div>
+
+<!-- CONFIRM AD MODAL -->
+<div id="modal-ad-confirm" class="modal-backdrop hidden">
+  <div class="card animate-modal-in" style="max-width: 18rem; padding: 2rem; text-align: center;">
+    <svg class="icon-svg-xl" style="color: var(--color-primary); margin-bottom: 1rem;"><use href="#icon-video-ad"></use></svg>
+    <h2 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Daily Limit Reached</h2>
+    <p style="color: #546E7A; margin-bottom: 1.5rem; font-size: 0.95rem;">Watch a short ad to generate another image?</p>
+    <div style="display:grid; gap:0.5rem">
+      <button id="btn-watch-ad-gen" class="btn btn-primary w-full">Watch Ad</button>
+      <button id="btn-cancel-ad-gen" class="btn btn-neutral w-full">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- CONFIG MODAL -->
+<div id="modal-config" class="modal-backdrop hidden">
+  <div class="card animate-modal-in" style="max-width: 22rem; padding: 1.8rem;">
+    <h2 class="text-center" style="margin-bottom: 1.5rem;">Settings</h2>
+    <div class="config-section">
+      <span class="config-label">Sounds</span>
+      <button id="btn-toggle-sound-cfg" class="btn btn-neutral w-full" style="justify-content: space-between;">
+        <span id="txt-sound-cfg">On</span><svg class="icon-svg" id="icon-sound-cfg"><use href="#icon-volume-up"></use></svg>
+      </button>
+    </div>
+    <div class="config-section">
+      <span class="config-label">Control Mode</span>
+      <div class="mode-selector">
+        <div class="mode-btn" data-mode="click" onclick="setGameMode('click')">
+          <svg class="icon-svg-lg"><use href="#icon-touch-app"></use></svg>Click Only
+        </div>
+        <div class="mode-btn" data-mode="hybrid" onclick="setGameMode('hybrid')">
+          <svg class="icon-svg-lg"><use href="#icon-auto-awesome"></use></svg>Hybrid
+        </div>
+        <div class="mode-btn" data-mode="drag" onclick="setGameMode('drag')">
+          <svg class="icon-svg-lg"><use href="#icon-pan-tool-alt"></use></svg>Drag
+        </div>
+      </div>
+      <p id="mode-desc" style="font-size: 0.85rem; color: #78909C; margin-top: 0.8rem; text-align: center; line-height: 1.4;">Tap two pieces to swap them or drag one over another.</p>
+    </div>
+    <button id="btn-close-config" class="btn btn-primary w-full">Save</button>
+  </div>
+</div>
+
+<!-- TUTORIAL MODAL -->
+<div id="modal-tutorial" class="modal-backdrop hidden">
+  <div class="card animate-modal-in" style="max-width: 22rem; padding: 2rem;">
+    <div style="text-align: center; margin-bottom: 1rem;">
+      <svg class="icon-svg-xl" style="color: var(--color-primary); margin-bottom: 0.5rem;"><use href="#icon-school"></use></svg>
+      <h2 id="tut-title" style="font-size: 1.6rem;">Tutorial</h2>
+    </div>
+    <div class="tutorial-step-content">
+      <svg class="icon-svg-xl" id="tut-icon-display" style="color: #B0BEC5; margin-bottom: 1.2rem;"><use id="tut-use" href="#icon-info"></use></svg>
+      <p id="tut-text" style="color: #455A64; font-size: 1rem; line-height: 1.5; padding: 0 1rem;">Tutorial text...</p>
+    </div>
+    <div class="tutorial-nav">
+      <button id="btn-tut-prev" class="btn-icon" style="width: 3rem; height: 3rem;"><svg class="icon-svg"><use href="#icon-chevron-left"></use></svg></button>
+      <div class="step-dots" id="tut-dots">
+        <div class="step-dot"></div><div class="step-dot"></div><div class="step-dot"></div><div class="step-dot"></div>
+      </div>
+      <button id="btn-tut-next" class="btn-icon" style="width: 3rem; height: 3rem;"><svg class="icon-svg"><use href="#icon-chevron-right"></use></svg></button>
+    </div>
+    <button id="btn-tut-end" class="btn btn-primary w-full hidden" style="margin-top: 1.5rem;">Let's Play!</button>
+  </div>
+</div>
+
+<script>
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+let isSoundEnabled = localStorage.getItem('wc_sound') !== 'off';
+let pendingDifficultyCost = 0;
+let inputMode = localStorage.getItem('wc_input_mode') || 'hybrid';
+let winsForAd = 0;
+let generatedPuzzleData = null; // Store the AI generated puzzle info
+let pendingAiGen = false; // Flag for waiting for ad to finish
+
+// ANDROID INTERFACE & ADS
+function callShowInterstitial() { if (window.Android && window.Android.showInterstitial) window.Android.showInterstitial(); }
+function callShowRewarded() { 
+  if (window.Android && window.Android.showRewarded) window.Android.showRewarded(); 
+  else { console.log("Simulating Reward"); setTimeout(() => window.rewardUser(50), 1000); }
+}
+
+// Rewarded Callback Wrapper
+window.rewardUser = function(amount) {
+  if (pendingAiGen) {
+    // If we were waiting for an ad to generate AI image
+    pendingAiGen = false;
+    performAIGeneration(); // Proceed with generation
+    // Don't alert coins, user gets the image instead
+  } else {
+    // Standard coin reward
+    addCoins(amount);
+    alert("You earned " + amount + " Coins!");
+  }
+};
+
+// AUDIO SYSTEM
+function toggleSound() { isSoundEnabled = !isSoundEnabled; localStorage.setItem('wc_sound', isSoundEnabled ? 'on' : 'off'); updateSoundUI(); }
+function updateSoundUI() {
+  const txt = document.getElementById('txt-sound-cfg');
+  const useTag = document.querySelector('#icon-sound-cfg use');
+  if(txt && useTag) {
+    if(isSoundEnabled) { txt.textContent = 'On'; useTag.setAttribute('href', '#icon-volume-up'); } 
+    else { txt.textContent = 'Off'; useTag.setAttribute('href', '#icon-volume-off'); }
+  }
+}
+function playSound(type) {
+  if (!isSoundEnabled || !audioCtx) return;
+  if (audioCtx.state === 'suspended') audioCtx.resume();
+  const oscillator = audioCtx.createOscillator();
+  const gainNode = audioCtx.createGain();
+  gainNode.connect(audioCtx.destination);
+  oscillator.connect(gainNode);
+  const now = audioCtx.currentTime;
+  
+  if (type === 'swap') {
+    oscillator.type = 'triangle'; oscillator.frequency.setValueAtTime(150, now);
+    oscillator.frequency.exponentialRampToValueAtTime(300, now + 0.1);
+    gainNode.gain.setValueAtTime(0.2, now); gainNode.gain.exponentialRampToValueAtTime(0.01, now + 0.1);
+  } else if (type === 'correct') {
+    oscillator.type = 'sine'; oscillator.frequency.setValueAtTime(500, now);
+    oscillator.frequency.setValueAtTime(1000, now + 0.1);
+    gainNode.gain.setValueAtTime(0.2, now); gainNode.gain.linearRampToValueAtTime(0, now + 0.2);
+  } else if (type === 'win') {
+    oscillator.type = 'square'; oscillator.frequency.setValueAtTime(400, now); 
+    oscillator.frequency.setValueAtTime(600, now + 0.1); oscillator.frequency.setValueAtTime(800, now + 0.2); 
+    gainNode.gain.setValueAtTime(0.1, now); gainNode.gain.linearRampToValueAtTime(0, now + 0.4);
+  } else if (type === 'select') {
+    oscillator.type = 'sine'; oscillator.frequency.setValueAtTime(400, now);
+    gainNode.gain.setValueAtTime(0.1, now); gainNode.gain.exponentialRampToValueAtTime(0.01, now + 0.05);
+  }
+  oscillator.start(now); oscillator.stop(now + 0.4);
+}
+
+// CONFIG
+function setGameMode(mode) { inputMode = mode; localStorage.setItem('wc_input_mode', mode); updateConfigUI(); }
+function updateConfigUI() {
+  document.querySelectorAll('.mode-btn').forEach(btn => { btn.classList.toggle('active', btn.dataset.mode === inputMode); });
+  const desc = document.getElementById('mode-desc');
+  if(desc) {
+    if(inputMode === 'click') desc.textContent = "Tap a piece to select it, then tap another to swap them.";
+    else if(inputMode === 'drag') desc.textContent = "Drag and drop pieces to swap them.";
+    else desc.textContent = "Tap two pieces to swap them OR drag one over another.";
+  }
+}
+
+// DATA
+const PUZZLE_DATA = [
+  { "id": "guaria_morada", "nombre": "Guaria Morada", "categoria": "National Symbols", "descripcion": "National flower since 1939.", "url": "https://yosoywill.github.io/Esencia-Tica/images/guaria_morada.PNG" },
+  { "id": "yiguirro", "nombre": "Yigüirro", "categoria": "National Symbols", "descripcion": "National bird since 1977.", "url": "https://yosoywill.github.io/Esencia-Tica/images/yiguirro.PNG" },
+  { "id": "venado", "nombre": "White-tailed Deer", "categoria": "National Symbols", "descripcion": "Symbol of the Costa Rican fauna.", "url": "https://yosoywill.github.io/Esencia-Tica/images/venado_colablanca.PNG" },
+  { "id": "marimba", "nombre": "The Marimba", "categoria": "National Symbols", "descripcion": "National musical instrument.", "url": "https://yosoywill.github.io/Esencia-Tica/images/marimba.PNG" },
+  { "id": "carreta", "nombre": "Oxcart", "categoria": "National Symbols", "descripcion": "Symbol of rural labor.", "url": "https://yosoywill.github.io/Esencia-Tica/images/carreta_tica.PNG" },
+  { "id": "guanacaste", "nombre": "Guanacaste Tree", "categoria": "National Symbols", "descripcion": "Symbol of protection.", "url": "https://yosoywill.github.io/Esencia-Tica/images/arbol_guanacaste.PNG" },
+  { "id": "bandera", "nombre": "Flag of Costa Rica", "categoria": "National Symbols", "descripcion": "Blue, white, red.", "url": "https://yosoywill.github.io/Esencia-Tica/images/bandera_cr.PNG" },
+  { "id": "escudo", "nombre": "National Coat of Arms", "categoria": "National Symbols", "descripcion": "Volcanoes and oceans.", "url": "https://yosoywill.github.io/Esencia-Tica/images/escudo_cr.PNG" },
+  { "id": "teatro", "nombre": "National Theatre", "categoria": "National Symbols", "descripcion": "Architectural jewel.", "url": "https://yosoywill.github.io/Esencia-Tica/images/teatro_nacional.PNG" },
+  { "id": "cafe", "nombre": "Costa Rican Coffee", "categoria": "National Symbols", "descripcion": "The Golden Bean.", "url": "https://yosoywill.github.io/Esencia-Tica/images/cafe_cr.PNG" },
+  { "id": "perezoso", "nombre": "Sloth", "categoria": "National Symbols", "descripcion": "Symbol of wildlife.", "url": "https://yosoywill.github.io/Esencia-Tica/images/perezoso_cr.PNG" },
+  { "id": "morpho", "nombre": "Morpho Butterfly", "categoria": "National Symbols", "descripcion": "Blue beauty.", "url": "https://yosoywill.github.io/Esencia-Tica/images/mariposa_morpho.PNG" },
+  { "id": "esferas", "nombre": "Stone Spheres", "categoria": "National Symbols", "descripcion": "Ancestral mystery.", "url": "https://yosoywill.github.io/Esencia-Tica/images/esferas_diquis.PNG" },
+  { "id": "manati", "nombre": "Manatee", "categoria": "National Symbols", "descripcion": "Gentle giant.", "url": "https://yosoywill.github.io/Esencia-Tica/images/manati.PNG" },
+  { "id": "arenal", "nombre": "Arenal Volcano", "categoria": "National Parks", "descripcion": "The perfect cone.", "url": "https://www.sinac.go.cr/ES/turismo/Imagenes%20ASP/VolcanArenal.jpg" },
+  { "id": "manuel_antonio", "nombre": "Manuel Antonio", "categoria": "National Parks", "descripcion": "Beaches and monkeys.", "url": "https://www.sinac.go.cr/ES/turismo/Imagenes%20ASP/ManuelAntonio.jpg" },
+  { "id": "tortuguero", "nombre": "Tortuguero", "categoria": "National Parks", "descripcion": "Turtle nesting grounds.", "url": "https://www.sinac.go.cr/ES/turismo/Imagenes%20ASP/Tortuguero.jpg" },
+  { "id": "poas", "nombre": "Poás Volcano", "categoria": "National Parks", "descripcion": "Massive crater.", "url": "https://www.sinac.go.cr/ES/turismo/Imagenes%20ASP/VolcanPoas.jpg" },
+  { "id": "rio_celeste", "nombre": "Tenorio Volcano", "categoria": "National Parks", "descripcion": "Sky blue river.", "url": "https://www.sinac.go.cr/ES/turismo/Imagenes%20ASP/R%C3%ADo%20Celeste.JPG" }
+];
+
+// STATE MANAGEMENT
+const STORAGE_KEY = 'wc_progress';
+const STORAGE_KEY_COINS = 'wc_coins';
+function getCoins() { return parseInt(localStorage.getItem(STORAGE_KEY_COINS) || '0', 10); }
+function setCoins(amount) { localStorage.setItem(STORAGE_KEY_COINS, amount.toString()); renderCoinsUI(); }
+function addCoins(amount) {
+  setCoins(getCoins() + amount);
+  const display = document.getElementById('coins-display');
+  if(display) { display.style.transform = 'scale(1.5)'; display.style.color = amount > 0 ? '#FFD600' : '#D500F9'; setTimeout(() => { display.style.transform = 'scale(1)'; display.style.color = ''; }, 300); }
+}
+function getCompleted() { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); }
+function markAsCompleted(puzzleId) {
+  let completed = getCompleted();
+  if (!completed.includes(puzzleId) && !puzzleId.startsWith('ai_gen_')) { // Don't save AI puzzles as "completed" in permanent list
+    completed.push(puzzleId); localStorage.setItem(STORAGE_KEY, JSON.stringify(completed));
+    addCoins(25); renderProgress();
+  } else if (puzzleId.startsWith('ai_gen_')) {
+    addCoins(10); // Smaller reward for custom puzzles
+  }
+}
+function isCompleted(puzzleId) { return getCompleted().includes(puzzleId); }
+function getProgress() { if (PUZZLE_DATA.length === 0) return 0; return Math.floor((getCompleted().length / PUZZLE_DATA.length) * 100); }
+function getAutoDifficulty() {
+  const level = Math.floor(getProgress() / 15);
+  return level === 0 ? {rows:4,cols:3} : level === 1 ? {rows:5,cols:4} : level === 2 ? {rows:6,cols:5} : level === 3 ? {rows:7,cols:6} : {rows:8,cols:6};
+}
+function vibrate(ms) { if (navigator.vibrate && isSoundEnabled) navigator.vibrate(ms); }
+
+let currentGame = { puzzleId: null, rows: 0, cols: 0, totalPieces: 0, draggedTile: null, selectedTile: null, imageUrl: '', touchGhost: null, moves: 0, startTime: 0, timeIntervalId: null };
+let carouselState = { currentIndex: 0, titles: [], total: 0 };
+let tempSelectedPuzzle = null; 
+let currentFeaturedPuzzle = null;
+let currentViewName = 'home';
+const views = { home: 'view-home', categories: 'view-categories', game: 'game-screen', ai: 'view-ai-creator' };
+
+// NAVIGATION
+function showView(viewName) {
+  currentViewName = viewName;
+  const backBtn = document.getElementById('header-back-btn');
+  Object.values(views).forEach(id => { const el = document.getElementById(id); if(el) el.classList.add('hidden'); });
+  const targetView = document.getElementById(views[viewName]);
+  if(targetView) targetView.classList.remove('hidden');
+  
+  if (viewName === 'game') { if(backBtn) backBtn.classList.remove('hidden'); } 
+  else if (viewName === 'home') { if(backBtn) backBtn.classList.add('hidden'); }
+  else if (viewName === 'ai') { if(backBtn) backBtn.classList.remove('hidden'); }
+  else if (viewName === 'categories') { if(backBtn) backBtn.classList.remove('hidden'); renderCategories(); }
+}
+function handleBack() {
+  if (currentViewName === 'game') { showView('categories'); clearInterval(currentGame.timeIntervalId); } 
+  else if (currentViewName === 'categories' || currentViewName === 'ai') { showView('home'); }
+}
+
+// GAME LOGIC
+function clickPuzzle(puzzle) {
+  pendingDifficultyCost = 0;
+  if (isCompleted(puzzle.id)) { tempSelectedPuzzle = puzzle; renderModal(puzzle.id); } 
+  else { const autoDiff = getAutoDifficulty(); startGame(puzzle.id, autoDiff.rows, autoDiff.cols); showView('game'); }
+}
+function openDifficultyModal(puzzle) {
+  if (typeof puzzle === 'string') puzzle = PUZZLE_DATA.find(p => p.id === puzzle) || generatedPuzzleData;
+  tempSelectedPuzzle = puzzle;
+  const modal = document.getElementById('modal-difficulty'); if(modal) modal.classList.remove('hidden');
+}
+function manualStart(rows, cols) {
+  if (pendingDifficultyCost > 0) { addCoins(-pendingDifficultyCost); pendingDifficultyCost = 0; }
+  const modal = document.getElementById('modal-difficulty'); if(modal) modal.classList.add('hidden');
+  if(tempSelectedPuzzle) { startGame(tempSelectedPuzzle.id, rows, cols); showView('game'); }
+}
+
+function startGame(puzzleId, rows, cols) {
+  // Check if it's standard or AI generated
+  let puzzle = PUZZLE_DATA.find(p => p.id === puzzleId);
+  if (!puzzle && generatedPuzzleData && generatedPuzzleData.id === puzzleId) {
+    puzzle = generatedPuzzleData;
+  }
+  if (!puzzle) return;
+  
+  currentGame = { ...currentGame, puzzleId, rows, cols, totalPieces: rows*cols, imageUrl: puzzle.url, moves: 0, startTime: Date.now() };
+  if (currentGame.timeIntervalId) clearInterval(currentGame.timeIntervalId);
+  
+  const displayTime = document.getElementById('display-time');
+  if(displayTime) {
+    currentGame.timeIntervalId = setInterval(() => { displayTime.textContent = `${Math.floor((Date.now() - currentGame.startTime) / 1000)}s`; }, 1000);
+    displayTime.textContent = '0s';
+  }
+  const displayMoves = document.getElementById('display-moves');
+  if(displayMoves) displayMoves.textContent = 'Moves: 0'; 
+
+  let pieces = Array.from({length: currentGame.totalPieces}, (_, i) => i);
+  shuffleArray(pieces);
+
+  const puzzleGrid = document.getElementById('puzzle-grid');
+  const winMessageEl = document.getElementById('win-message');
+  if(puzzleGrid) {
+      puzzleGrid.innerHTML = ''; 
+      puzzleGrid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`; 
+      puzzleGrid.style.aspectRatio = `${cols}/${rows}`;
+  }
+  if(winMessageEl) winMessageEl.textContent = '';
+
+  if(puzzleGrid) {
+      pieces.forEach((pieceNumber, i) => {
+        const tile = document.createElement('div');
+        tile.classList.add('puzzle-piece'); tile.dataset.slot = i; tile.dataset.piece = pieceNumber; 
+        tile.draggable = (inputMode !== 'click');
+        tile.style.backgroundImage = `url('${currentGame.imageUrl}')`;
+        const xPercent = (pieceNumber % cols) * 100 / (cols - 1);
+        const yPercent = Math.floor(pieceNumber / cols) * 100 / (rows - 1);
+        tile.style.backgroundPosition = `${isNaN(xPercent)?0:xPercent}% ${isNaN(yPercent)?0:yPercent}%`;
+        tile.style.backgroundSize = `${cols * 100}% ${rows * 100}%`;
+        
+        tile.addEventListener('dragstart', handleDragStart); tile.addEventListener('dragover', e => e.preventDefault());
+        tile.addEventListener('drop', handleDrop); tile.addEventListener('dragend', handleDragEnd);
+        tile.addEventListener('touchstart', handleTouchStart, {passive:false}); tile.addEventListener('touchmove', handleTouchMove, {passive:false}); tile.addEventListener('touchend', handleTouchEnd);
+        tile.addEventListener('click', handleTileClick);
+        puzzleGrid.appendChild(tile);
+      });
+  }
+  checkBoardState(true);
+}
+
+// INPUT HANDLERS
+function handleTileClick(e) {
+  if (inputMode === 'drag') return;
+  const tile = e.currentTarget;
+  const winMessageEl = document.getElementById('win-message');
+  if ((winMessageEl && winMessageEl.textContent) || tile.classList.contains('correct')) return;
+  vibrate(10);
+  if (currentGame.selectedTile && currentGame.selectedTile !== tile) {
+    playSound('swap'); swapTiles(currentGame.selectedTile, tile);
+    currentGame.selectedTile.classList.remove('selected'); currentGame.selectedTile = null; checkBoardState();
+  } else if (currentGame.selectedTile === tile) {
+    tile.classList.remove('selected'); currentGame.selectedTile = null;
+  } else {
+    if (currentGame.selectedTile) currentGame.selectedTile.classList.remove('selected');
+    tile.classList.add('selected'); currentGame.selectedTile = tile; playSound('select');
+  }
+}
+function handleDragStart(e) {
+  if (inputMode === 'click') { e.preventDefault(); return; }
+  const winMessageEl = document.getElementById('win-message');
+  if ((winMessageEl && winMessageEl.textContent) || e.currentTarget.classList.contains('correct')) { e.preventDefault(); return; }
+  if (currentGame.selectedTile) { currentGame.selectedTile.classList.remove('selected'); currentGame.selectedTile = null; }
+  const tile = e.currentTarget; currentGame.draggedTile = tile; e.dataTransfer.effectAllowed = 'move';
+  setTimeout(()=> { if(tile) tile.style.opacity = '0.5'; }, 0);
+}
+function handleDrop(e) {
+  e.preventDefault();
+  if (currentGame.draggedTile && currentGame.draggedTile !== e.currentTarget && !e.currentTarget.classList.contains('correct')) {
+    playSound('swap'); swapTiles(currentGame.draggedTile, e.currentTarget); checkBoardState();
+  }
+}
+function handleDragEnd(e) { if(e.target) e.target.style.opacity = ''; checkBoardState(true); currentGame.draggedTile = null; }
+
+// TOUCH HANDLERS
+function handleTouchStart(e) {
+  if (inputMode === 'click') return;
+  const winMessageEl = document.getElementById('win-message');
+  if ((winMessageEl && winMessageEl.textContent) || e.currentTarget.classList.contains('correct')) return;
+  if (audioCtx.state === 'suspended') audioCtx.resume();
+  currentGame.draggedTile = e.currentTarget;
+  const touch = e.touches[0];
+  const ghost = document.createElement('div'); ghost.id = 'touch-ghost';
+  ghost.style.width = `${e.currentTarget.offsetWidth}px`; ghost.style.height = `${e.currentTarget.offsetHeight}px`;
+  ghost.style.backgroundImage = e.currentTarget.style.backgroundImage;
+  ghost.style.backgroundPosition = e.currentTarget.style.backgroundPosition;
+  ghost.style.backgroundSize = e.currentTarget.style.backgroundSize;
+  ghost.style.left = `${touch.clientX}px`; ghost.style.top = `${touch.clientY}px`;
+  document.body.appendChild(ghost); currentGame.touchGhost = ghost;
+}
+function handleTouchMove(e) {
+  if (!currentGame.touchGhost) return;
+  if (e.cancelable) e.preventDefault();
+  const touch = e.touches[0];
+  currentGame.touchGhost.style.left = `${touch.clientX}px`; currentGame.touchGhost.style.top = `${touch.clientY}px`;
+  if (currentGame.draggedTile) currentGame.draggedTile.style.opacity = '0.3';
+}
+function handleTouchEnd(e) {
+  if (currentGame.touchGhost) { currentGame.touchGhost.remove(); currentGame.touchGhost = null; }
+  if (!currentGame.draggedTile) return;
+  currentGame.draggedTile.style.opacity = '';
+  const target = document.elementFromPoint(e.changedTouches[0].clientX, e.changedTouches[0].clientY);
+  if (target && target.classList.contains('puzzle-piece') && target !== currentGame.draggedTile && !target.classList.contains('correct')) {
+    playSound('swap'); swapTiles(currentGame.draggedTile, target); checkBoardState();
+  }
+  currentGame.draggedTile = null;
+}
+
+function swapTiles(t1, t2) {
+  const p1 = t1.dataset.piece, p2 = t2.dataset.piece;
+  t1.dataset.piece = p2; t2.dataset.piece = p1;
+  const { rows, cols } = currentGame;
+  [t1, t2].forEach(t => {
+    const pn = t.dataset.piece;
+    const xp = (pn % cols) * 100 / (cols - 1), yp = Math.floor(pn / cols) * 100 / (rows - 1);
+    t.style.backgroundPosition = `${isNaN(xp)?0:xp}% ${isNaN(yp)?0:yp}%`;
+  });
+  currentGame.moves++; 
+  const displayMoves = document.getElementById('display-moves'); if(displayMoves) displayMoves.textContent = `Moves: ${currentGame.moves}`;
+}
+
+// WIN CONDITIONS
+function checkBoardState(silent = false) {
+  let win = true;
+  document.querySelectorAll('.puzzle-piece').forEach(tile => {
+    const correct = tile.dataset.slot === tile.dataset.piece;
+    tile.classList.remove('incorrect', 'selected');
+    if (correct) {
+      if (!tile.classList.contains('correct') && !silent) {
+        vibrate(50); playSound('correct'); tile.classList.add('correct', 'flash');
+        setTimeout(() => tile.classList.remove('flash'), 600);
+      } else if (silent) tile.classList.add('correct');
+      tile.draggable = false;
+    } else {
+      win = false; tile.classList.add('incorrect'); tile.classList.remove('correct');
+    }
+  });
+  if (win && !silent) {
+    const winMessageEl = document.getElementById('win-message');
+    if(winMessageEl) winMessageEl.textContent = 'MAGNIFICENT!';
+    clearInterval(currentGame.timeIntervalId); playSound('win');
+    markAsCompleted(currentGame.puzzleId);
+    celebrateWin();
+    winsForAd++;
+    if(winsForAd >= 3) { winsForAd = 0; setTimeout(callShowInterstitial, 1500); }
+    setTimeout(() => { if(!currentGame.puzzleId.startsWith('ai_gen_')) renderModal(currentGame.puzzleId); }, 2000); 
+  }
+}
+
+// VISUALS
+function createParticle(x, y) {
+  const particle = document.createElement('div'); particle.className = 'particle';
+  const colors = ['#D500F9', '#00B0FF', '#FFD600', '#00E676', '#FFFFFF'];
+  particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+  const angle = Math.random() * Math.PI * 2; const velocity = 2 + Math.random() * 4;
+  const tx = Math.cos(angle) * velocity * 60; const ty = Math.sin(angle) * velocity * 60 - 100;
+  particle.style.left = `${x}px`; particle.style.top = `${y}px`; particle.style.transform = `rotate(${Math.random() * 360}deg)`;
+  document.body.appendChild(particle); setTimeout(() => particle.remove(), 2000);
+}
+function celebrateWin() {
+  const cx = window.innerWidth / 2; const cy = window.innerHeight / 2;
+  for(let i=0; i<40; i++) setTimeout(() => createParticle(cx, cy), i * 20);
+  setTimeout(() => { for(let i=0; i<30; i++) createParticle(cx, cy); }, 400);
+  setTimeout(() => flyCoins(10), 300); 
+}
+function flyCoins(amount) {
+  const container = document.getElementById('coins-container'); if(!container) return;
+  const targetRect = container.getBoundingClientRect(); const startX = window.innerWidth / 2; const startY = window.innerHeight / 2;
+  for(let i=0; i<amount; i++) {
+    setTimeout(() => {
+      const el = document.createElement('div'); el.className = 'flying-coin';
+      el.innerHTML = '<svg class="icon-svg"><use href="#icon-coin"></use></svg>';
+      el.style.left = `${startX}px`; el.style.top = `${startY}px`;
+      document.body.appendChild(el); el.getBoundingClientRect(); 
+      el.style.left = `${targetRect.left + 10}px`; el.style.top = `${targetRect.top + 5}px`; el.style.transform = `scale(0.5)`;
+      setTimeout(() => { el.remove(); container.classList.remove('bump'); void container.offsetWidth; container.classList.add('bump'); }, 800); 
+    }, i * 80); 
+  }
+}
+
+// RENDERING
+function renderProgress() {
+  const pc = getProgress();
+  const bar = document.getElementById('progress-bar-inner'); const txt = document.getElementById('progress-text');
+  if(bar) bar.style.width = `${pc}%`; if(txt) txt.textContent = `${pc}%`;
+}
+function renderHome() {
+  if (PUZZLE_DATA.length > 0) {
+    const uncompleted = PUZZLE_DATA.filter(p => !isCompleted(p.id));
+    const pool = uncompleted.length > 0 ? uncompleted : PUZZLE_DATA;
+    currentFeaturedPuzzle = pool[Math.floor(Math.random() * pool.length)];
+    const img = document.getElementById('main-image'); const title = document.getElementById('main-title');
+    if(img) img.src = currentFeaturedPuzzle.url; if(title) title.textContent = currentFeaturedPuzzle.nombre;
+  }
+  renderProgress();
+}
+function shuffleArray(array) { for (let i = array.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [array[i], array[j]] = [array[j], array[i]]; } }
+function renderCategories() {
+  const container = document.getElementById('categories-container'); if (!container) return;
+  container.innerHTML = ''; carouselState.titles = [];
+  const groups = {}; PUZZLE_DATA.forEach(p => { if (!groups[p.categoria]) groups[p.categoria] = []; groups[p.categoria].push(p); });
+  let categories = Object.keys(groups); shuffleArray(categories);
+  categories.forEach(cat => {
+    carouselState.titles.push(cat);
+    let items = groups[cat]; shuffleArray(items);
+    const slide = document.createElement('div'); slide.className = 'card-category'; slide.style.minWidth = '100%';
+    const card = document.createElement('div'); card.className = 'card p-4';
+    const grid = document.createElement('div'); grid.style.display = 'flex'; grid.style.flexWrap = 'wrap'; grid.style.justifyContent = 'center'; grid.style.gap = '1rem';
+    items.forEach(p => {
+      const done = isCompleted(p.id);
+      const thumb = document.createElement('div'); thumb.className = `thumbnail ${done ? 'completed' : ''}`;
+      thumb.onclick = () => clickPuzzle(p); thumb.innerHTML = `<img src="${p.url}" alt="${p.nombre}">`; grid.appendChild(thumb);
+    });
+    card.appendChild(grid); slide.appendChild(card); container.appendChild(slide);
+  });
+  carouselState.total = carouselState.titles.length; updateCarouselState();
+}
+function updateCarouselState() {
+  if (carouselState.total === 0) return;
+  const title = document.getElementById('carousel-title');
+  const btnPrev = document.getElementById('carousel-btn-prev'); const btnNext = document.getElementById('carousel-btn-next');
+  if(title) title.textContent = carouselState.titles[carouselState.currentIndex];
+  if(btnPrev) btnPrev.disabled = carouselState.currentIndex === 0;
+  if(btnNext) btnNext.disabled = carouselState.currentIndex === carouselState.total - 1;
+}
+function renderCoinsUI() { const el = document.getElementById('coins-display'); if(el) el.textContent = getCoins(); }
+function renderModal(id) {
+  let p = PUZZLE_DATA.find(x => x.id === id); 
+  // Handle AI case
+  if (!p && generatedPuzzleData && generatedPuzzleData.id === id) p = generatedPuzzleData;
+  if(!p) return;
+  
+  const img = document.getElementById('modal-img'); const name = document.getElementById('modal-name'); const desc = document.getElementById('modal-desc');
+  const modal = document.getElementById('modal-info');
+  if(img) img.src = p.url; if(name) name.textContent = p.nombre; if(desc) desc.innerHTML = p.descripcion; 
+  if(modal) modal.classList.remove('hidden');
+}
+
+// AI GENERATION LOGIC - NEW: Daily Limit + 2:3 Ratio
+function checkAiDailyLimit() {
+  const lastDate = localStorage.getItem('wc_last_ai_date');
+  const today = new Date().toDateString();
+  return lastDate === today; // Returns true if limit reached
+}
+
+function initiateAIGeneration() {
+  const promptInput = document.getElementById('ai-prompt-input');
+  if(!promptInput.value.trim()) { alert("Please type something!"); return; }
+
+  if (checkAiDailyLimit()) {
+    // Limit reached, ask for ad
+    const modal = document.getElementById('modal-ad-confirm');
+    if (modal) modal.classList.remove('hidden');
+  } else {
+    // Free to go
+    performAIGeneration();
+  }
+}
+
+function performAIGeneration() {
+  const promptInput = document.getElementById('ai-prompt-input');
+  const previewImg = document.getElementById('ai-generated-image');
+  const placeholder = document.getElementById('ai-placeholder-text');
+  const loader = document.getElementById('ai-loading');
+  const btnPlay = document.getElementById('btn-play-ai');
+  const btnGenAI = document.getElementById('btn-generate-ai');
+  
+  const prompt = promptInput.value.trim();
+  
+  // Disable button
+  if(btnGenAI) {
+      btnGenAI.disabled = true;
+      btnGenAI.textContent = "Generating...";
+      btnGenAI.style.opacity = "0.7";
+  }
+
+  // Set Limit Flag
+  localStorage.setItem('wc_last_ai_date', new Date().toDateString());
+  
+  // Reset UI
+  previewImg.style.display = 'none';
+  placeholder.style.display = 'none';
+  loader.classList.remove('hidden');
+  btnPlay.classList.add('hidden');
+  
+  // Pollinations AI - FORCE 2:3 RATIO (768x1152)
+  const encodedPrompt = encodeURIComponent(prompt);
+  const randomSeed = Math.floor(Math.random() * 999999);
+  const imageUrl = `https://image.pollinations.ai/prompt/${encodedPrompt}?width=768&height=1152&nologo=true&seed=${randomSeed}&model=flux`;
+  
+  const imgLoader = new Image();
+  imgLoader.onload = () => {
+    loader.classList.add('hidden');
+    previewImg.src = imageUrl;
+    previewImg.style.display = 'block';
+    
+    generatedPuzzleData = {
+      id: `ai_gen_${Date.now()}`,
+      nombre: "AI Creation",
+      categoria: "AI Studio",
+      descripcion: `Generated from: "${prompt}"`,
+      url: imageUrl
+    };
+    
+    btnPlay.classList.remove('hidden');
+    
+    // Re-enable button
+    if(btnGenAI) {
+        btnGenAI.disabled = false;
+        btnGenAI.textContent = "Generate Image";
+        btnGenAI.style.opacity = "1";
+    }
+  };
+  imgLoader.onerror = () => {
+    loader.classList.add('hidden');
+    placeholder.style.display = 'block';
+    placeholder.textContent = "Error generating image. Try simpler words.";
+    
+    // Re-enable button
+    if(btnGenAI) {
+        btnGenAI.disabled = false;
+        btnGenAI.textContent = "Generate Image";
+        btnGenAI.style.opacity = "1";
+    }
+  };
+  imgLoader.src = imageUrl;
+}
+
+// TUTORIAL STEPS
+let tutStep = 0;
+const tutorialData = [
+  { icon: '#icon-settings', title: 'Goal', text: 'Swap pieces to complete the image. Use the reference picture if you get stuck!' },
+  { icon: '#icon-touch-app', title: 'Controls', text: 'PLACEHOLDER' }, 
+  { icon: '#icon-magic', title: 'Chroma Creator', text: 'Type a prompt to create a unique AI puzzle! (1 Free Daily Generation)' },
+  { icon: '#icon-auto-fix', title: 'Power-ups', text: 'Wand (10 Coins): Fixes a piece.\nEye (2 Coins): Peeks at the solution.' }
+];
+function updateTutorialStep() {
+  const data = tutorialData[tutStep];
+  document.getElementById('tut-title').textContent = data.title;
+  if(tutStep === 1) { 
+     if(inputMode === 'click') document.getElementById('tut-text').textContent = "Click Mode: Tap a piece to select it, then tap another to swap them.";
+     else if(inputMode === 'drag') document.getElementById('tut-text').textContent = "Drag Mode: Hold a piece and drag it over another to swap them.";
+     else document.getElementById('tut-text').textContent = "Hybrid Mode: You can tap two pieces to swap them OR drag and drop. Your choice!";
+  } else { document.getElementById('tut-text').textContent = data.text; }
+  document.getElementById('tut-use').setAttribute('href', data.icon);
+  const dots = document.getElementById('tut-dots').children;
+  for(let i=0; i<dots.length; i++) dots[i].classList.toggle('active', i === tutStep);
+  document.getElementById('btn-tut-prev').disabled = (tutStep === 0);
+  if(tutStep === tutorialData.length - 1) {
+    document.getElementById('btn-tut-next').classList.add('hidden'); document.getElementById('btn-tut-end').classList.remove('hidden');
+  } else { document.getElementById('btn-tut-next').classList.remove('hidden'); document.getElementById('btn-tut-end').classList.add('hidden'); }
+}
+
+// INIT
+document.addEventListener('DOMContentLoaded', () => {
+  const btnPlay = document.getElementById('btn-play'); if(btnPlay) btnPlay.onclick = () => showView('categories');
+  const btnAI = document.getElementById('btn-ai'); if(btnAI) btnAI.onclick = () => showView('ai');
+  const btnBack = document.getElementById('header-back-btn'); if(btnBack) btnBack.onclick = handleBack;
+  const cardFeatured = document.getElementById('card-featured'); if(cardFeatured) cardFeatured.onclick = () => { if (currentFeaturedPuzzle) clickPuzzle(currentFeaturedPuzzle); };
+  
+  // Carousel
+  const cc = document.getElementById('categories-container'); if(cc) { cc.addEventListener('scroll', () => { clearTimeout(window.scrollTimer); window.scrollTimer = setTimeout(() => { const idx = Math.round(cc.scrollLeft / cc.clientWidth); if (idx !== carouselState.currentIndex) { carouselState.currentIndex = idx; updateCarouselState(); } }, 100); }); }
+  const btnPrev = document.getElementById('carousel-btn-prev'); if(btnPrev) btnPrev.onclick = () => { if(carouselState.currentIndex>0) { carouselState.currentIndex--; cc.scrollTo({left:cc.clientWidth*carouselState.currentIndex, behavior:'smooth'}); updateCarouselState(); }};
+  const btnNext = document.getElementById('carousel-btn-next'); if(btnNext) btnNext.onclick = () => { if(carouselState.currentIndex<carouselState.total-1) { carouselState.currentIndex++; cc.scrollTo({left:cc.clientWidth*carouselState.currentIndex, behavior:'smooth'}); updateCarouselState(); }};
+  
+  // AI Logic - UPDATED
+  const btnGenAI = document.getElementById('btn-generate-ai'); if(btnGenAI) btnGenAI.onclick = initiateAIGeneration;
+  const btnPlayAI = document.getElementById('btn-play-ai'); if(btnPlayAI) btnPlayAI.onclick = () => { if(generatedPuzzleData) clickPuzzle(generatedPuzzleData); };
+  const btnClearAI = document.getElementById('btn-clear-ai');
+  if (btnClearAI) {
+    btnClearAI.onclick = () => {
+        document.getElementById('ai-prompt-input').value = '';
+        document.getElementById('ai-generated-image').style.display = 'none';
+        document.getElementById('ai-placeholder-text').style.display = 'block';
+        document.getElementById('btn-play-ai').classList.add('hidden');
+        generatedPuzzleData = null;
+    };
+  }
+  
+  // Ad Confirmation Modal
+  const btnWatchAdGen = document.getElementById('btn-watch-ad-gen');
+  const btnCancelAdGen = document.getElementById('btn-cancel-ad-gen');
+  const modalAdConfirm = document.getElementById('modal-ad-confirm');
+  
+  if (btnWatchAdGen) btnWatchAdGen.onclick = () => {
+    modalAdConfirm.classList.add('hidden');
+    pendingAiGen = true; // Set flag
+    callShowRewarded(); // Trigger ad
+  };
+  if (btnCancelAdGen) btnCancelAdGen.onclick = () => {
+    modalAdConfirm.classList.add('hidden');
+  };
+  
+  // Modals & Powerups
+  const btnCloseModal = document.getElementById('btn-close-modal'); if(btnCloseModal) btnCloseModal.onclick = () => { const modal = document.getElementById('modal-info'); if(modal) modal.classList.add('hidden'); const winMessageEl = document.getElementById('win-message'); if(winMessageEl && winMessageEl.textContent) showView('categories'); };
+  const btnClosePreview = document.getElementById('btn-close-preview'); if(btnClosePreview) btnClosePreview.onclick = () => { const modal = document.getElementById('modal-preview'); if(modal) modal.classList.add('hidden'); };
+  const btnCloseAlert = document.getElementById('btn-close-alert'); if(btnCloseAlert) btnCloseAlert.onclick = () => { const modal = document.getElementById('modal-alert'); if(modal) modal.classList.add('hidden'); };
+  const btnCancelDiff = document.getElementById('btn-cancel-diff'); if(btnCancelDiff) btnCancelDiff.onclick = () => { const modal = document.getElementById('modal-difficulty'); if(modal) modal.classList.add('hidden'); pendingDifficultyCost = 0; };
+  const btnReplay = document.getElementById('btn-replay-modal'); if(btnReplay) btnReplay.onclick = () => { const modal = document.getElementById('modal-info'); if(modal) modal.classList.add('hidden'); pendingDifficultyCost = 0; const pId = currentGame.puzzleId || (tempSelectedPuzzle ? tempSelectedPuzzle.id : null); if(pId) openDifficultyModal(pId); };
+  const btnDiffEasy = document.getElementById('btn-diff-easy'); if(btnDiffEasy) btnDiffEasy.onclick = () => manualStart(4, 3);
+  const btnDiffNormal = document.getElementById('btn-diff-normal'); if(btnDiffNormal) btnDiffNormal.onclick = () => manualStart(5, 4);
+  const btnDiffHard = document.getElementById('btn-diff-hard'); if(btnDiffHard) btnDiffHard.onclick = () => manualStart(6, 5);
+
+  const btnPreview = document.getElementById('btn-preview-puzzle');
+  if(btnPreview) btnPreview.onclick = () => {
+    if(getCoins()>=2) { addCoins(-2); const img = document.getElementById('modal-preview-img'); const modal = document.getElementById('modal-preview'); if(img) img.src = currentGame.imageUrl; if(modal) modal.classList.remove('hidden'); } 
+    else { const txt = document.getElementById('modal-alert-text'); const modal = document.getElementById('modal-alert'); if(txt) txt.textContent = "You need 2 Coins."; if(modal) modal.classList.remove('hidden'); }
+  };
+  const btnSolve = document.getElementById('btn-solve-piece');
+  if(btnSolve) btnSolve.onclick = () => {
+    const winMessageEl = document.getElementById('win-message'); if(winMessageEl && winMessageEl.textContent) return;
+    if(getCoins()>=10) { const puzzleGrid = document.getElementById('puzzle-grid'); if(puzzleGrid) { const bad = puzzleGrid.querySelector('.puzzle-piece.incorrect'); if(bad) { addCoins(-10); const correctSlot = bad.dataset.slot; const good = puzzleGrid.querySelector(`.puzzle-piece[data-piece="${correctSlot}"]`); if(good) swapTiles(bad, good); checkBoardState(); } } } 
+    else { const txt = document.getElementById('modal-alert-text'); const modal = document.getElementById('modal-alert'); if(txt) txt.textContent = "You need 10 Coins."; if(modal) modal.classList.remove('hidden'); }
+  };
+  const btnChangeDiff = document.getElementById('btn-change-diff'); if(btnChangeDiff) btnChangeDiff.onclick = () => { if (getCoins() >= 50) { pendingDifficultyCost = 50; openDifficultyModal(currentGame.puzzleId); } else { const txt = document.getElementById('modal-alert-text'); const modal = document.getElementById('modal-alert'); if(txt) txt.textContent = "You need 50 Coins to change difficulty."; if(modal) modal.classList.remove('hidden'); } };
+  
+  // Tutorial & Config
+  const btnTutorial = document.getElementById('btn-tutorial'); const modalTutorial = document.getElementById('modal-tutorial'); const btnTutPrev = document.getElementById('btn-tut-prev'); const btnTutNext = document.getElementById('btn-tut-next'); const btnTutEnd = document.getElementById('btn-tut-end');
+  if(btnTutorial) btnTutorial.onclick = () => { tutStep = 0; updateTutorialStep(); if(modalTutorial) modalTutorial.classList.remove('hidden'); };
+  if(btnTutPrev) btnTutPrev.onclick = () => { if(tutStep > 0) { tutStep--; updateTutorialStep(); } };
+  if(btnTutNext) btnTutNext.onclick = () => { if(tutStep < tutorialData.length - 1) { tutStep++; updateTutorialStep(); } };
+  if(btnTutEnd) btnTutEnd.onclick = () => { if(modalTutorial) modalTutorial.classList.add('hidden'); };
+  const btnConfig = document.getElementById('btn-config'); const modalConfig = document.getElementById('modal-config'); const btnCloseConfig = document.getElementById('btn-close-config'); const btnToggleSoundCfg = document.getElementById('btn-toggle-sound-cfg');
+  if(btnConfig) btnConfig.onclick = () => { updateConfigUI(); if(modalConfig) modalConfig.classList.remove('hidden'); };
+  if(btnCloseConfig) btnCloseConfig.onclick = () => { if(modalConfig) modalConfig.classList.add('hidden'); };
+  if(btnToggleSoundCfg) btnToggleSoundCfg.onclick = toggleSound;
+
+  const btnAdd = document.getElementById('btn-add-coins'); if(btnAdd) btnAdd.onclick = callShowRewarded;
+
+  updateSoundUI(); updateConfigUI(); renderHome(); renderCoinsUI(); showView('home');
+});
+</script>
+</body>
+</html>
