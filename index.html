@@ -373,7 +373,8 @@ main { max-width: 30rem; margin: 0 auto; }
           <svg class="icon-svg"><use href="#icon-delete"></use></svg>
         </button>
       </div>
-      
+            <button id="btn-generate-ai" class="btn btn-ai w-full" style="margin-bottom:0.8rem;">Generate Image</button>
+      <button id="btn-play-ai" class="btn btn-primary w-full hidden">PLAY THIS PUZZLE!</button>
       <!-- WARNING MESSAGE -->
       <p style="font-size:0.75rem; color:#D32F2F; margin-bottom:1rem; text-align:center; font-weight:600;">
         ⚠️ Warning: NSFW, violent, or hateful content is prohibited and will be blocked.
@@ -388,8 +389,7 @@ main { max-width: 30rem; margin: 0 auto; }
         <div id="ai-placeholder-text" style="color:#90A4AE; font-weight:600;">Image will appear here</div>
       </div>
 
-      <button id="btn-generate-ai" class="btn btn-ai w-full" style="margin-bottom:0.8rem;">Generate Image</button>
-      <button id="btn-play-ai" class="btn btn-primary w-full hidden">PLAY THIS PUZZLE!</button>
+
       
       <div id="ai-limit-msg" style="text-align:center; font-size:0.8rem; color:#78909C; margin-top:0.5rem;">
         1 Free Generation per Day.
@@ -1022,7 +1022,7 @@ function performAIGeneration() {
   // Pollinations AI - FORCE 2:3 RATIO (768x1152)
   const encodedPrompt = encodeURIComponent(prompt);
   const randomSeed = Math.floor(Math.random() * 999999);
-  const imageUrl = `https://image.pollinations.ai/prompt/${encodedPrompt}?width=768&height=1152&nologo=true&seed=${randomSeed}&model=flux`;
+  const imageUrl = `https://image.pollinations.ai/prompt/${encodedPrompt}?width=600&height=800&nologo=true&seed=${randomSeed}&model=flux-schnell`;
   
   const imgLoader = new Image();
   imgLoader.onload = () => {
